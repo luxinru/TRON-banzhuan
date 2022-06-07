@@ -103,7 +103,7 @@
                 <span class="label">USD</span>
               </div>
             </div>
-            <div class="btns">
+            <!-- <div class="btns">
               <div
                 @click="
                   $router.push({ path: '/recharge-detail', query: { type: 3 } })
@@ -112,7 +112,7 @@
                 {{ $t('recharge') }}
               </div>
               <div>{{ $t('swap') }} TRC-USDT</div>
-            </div>
+            </div> -->
           </div>
         </van-swipe-item>
 
@@ -129,7 +129,7 @@
                 <span class="label">USD</span>
               </div>
             </div>
-            <div class="btns">
+            <!-- <div class="btns">
               <div
                 @click="
                   $router.push({ path: '/recharge-detail', query: { type: 4 } })
@@ -138,7 +138,7 @@
                 {{ $t('recharge') }}
               </div>
               <div>{{ $t('swap') }} TRC-USDT</div>
-            </div>
+            </div> -->
           </div>
         </van-swipe-item>
 
@@ -155,7 +155,7 @@
                 <span class="label">USD</span>
               </div>
             </div>
-            <div class="btns">
+            <!-- <div class="btns">
               <div
                 @click="
                   $router.push({ path: '/recharge-detail', query: { type: 5 } })
@@ -164,7 +164,7 @@
                 {{ $t('recharge') }}
               </div>
               <div>{{ $t('swap') }} TRC-USDT</div>
-            </div>
+            </div> -->
           </div>
         </van-swipe-item>
 
@@ -181,7 +181,7 @@
                 <span class="label">USD</span>
               </div>
             </div>
-            <div class="btns">
+            <!-- <div class="btns">
               <div
                 @click="
                   $router.push({ path: '/recharge-detail', query: { type: 6 } })
@@ -190,7 +190,7 @@
                 {{ $t('recharge') }}
               </div>
               <div>{{ $t('swap') }} TRC-USDT</div>
-            </div>
+            </div> -->
           </div>
         </van-swipe-item>
 
@@ -207,7 +207,7 @@
                 <span class="label">USD</span>
               </div>
             </div>
-            <div class="btns">
+            <!-- <div class="btns">
               <div
                 @click="
                   $router.push({ path: '/recharge-detail', query: { type: 7 } })
@@ -216,7 +216,7 @@
                 {{ $t('recharge') }}
               </div>
               <div>{{ $t('swap') }} TRC-USDT</div>
-            </div>
+            </div> -->
           </div>
         </van-swipe-item>
 
@@ -233,7 +233,7 @@
                 <span class="label">USD</span>
               </div>
             </div>
-            <div class="btns">
+            <!-- <div class="btns">
               <div
                 @click="
                   $router.push({ path: '/recharge-detail', query: { type: 8 } })
@@ -242,7 +242,7 @@
                 {{ $t('recharge') }}
               </div>
               <div>{{ $t('swap') }} TRC-USDT</div>
-            </div>
+            </div> -->
           </div>
         </van-swipe-item>
       </van-swipe>
