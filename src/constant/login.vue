@@ -7,47 +7,47 @@ export default {
 
   components: {},
 
-  data() {
+  data () {
     return {
       checked: false,
       data: {
         prefix: '',
         username: '',
-        password: '',
+        password: ''
       },
       showPopover: false,
       actions: LANGUAGE,
       footerType: 'n1',
       isShowTelAddressSelect: false,
       actionsText: '',
-      prefixActions: [],
+      prefixActions: []
     }
   },
 
   computed: {
-    showActions() {
+    showActions () {
       return this.prefixActions.filter(
         (item) => (item.name + '').indexOf(this.actionsText) > -1
       )
-    },
+    }
   },
 
-  mounted() {
+  mounted () {
     this.getMobilePrefix()
   },
 
   methods: {
-    toRoute(path, options) {
+    toRoute (path, options) {
       this.$router.push({
         path,
         query: options
       })
     },
-    getMobilePrefix() {
+    getMobilePrefix () {
       Fetch('/index/get_mobile_prefix', {}).then((res) => {
         this.prefixActions = res.data.map((action) => {
           return {
-            name: action.prefix,
+            name: action.prefix
           }
         })
         if (this.prefixActions.length) {
@@ -56,25 +56,25 @@ export default {
       })
     },
 
-    onSelect(item) {
+    onSelect (item) {
       this.isShowTelAddressSelect = false
       this.data.prefix = item.name
     },
 
-    onClickRemember() {
+    onClickRemember () {
       this.checked = !this.checked
     },
 
-    toRegister() {
+    toRegister () {
       this.$router.push('/register')
     },
 
-    onChangeLanguage(action) {
+    onChangeLanguage (action) {
       window.localStorage.setItem('lang', action.value)
       window.location.reload()
     },
 
-    handleSubmit() {
+    handleSubmit () {
       if (!this.data.username) {
         this.$notify(this.$t('mobile_phone_number_cannot_be_blank'))
         return
@@ -86,7 +86,7 @@ export default {
       }
 
       Fetch('/index/login', {
-        ...this.data,
+        ...this.data
       })
         .then((res) => {
           if (res.data.token) {
@@ -94,7 +94,7 @@ export default {
           }
           this.$notify({
             background: '#07c160',
-            message: this.$t('login_successful'),
+            message: this.$t('login_successful')
           })
         })
         .then(async () => {
@@ -104,15 +104,15 @@ export default {
 
           if (this.footerType === 'n2') {
             this.$router.replace({
-              path: /* this.$router.history.current.query.redirect || */ '/home',
+              path: /* this.$router.history.current.query.redirect || */ '/home'
             })
           } else {
             this.$router.replace({
-              path: /* this.$router.history.current.query.redirect || */ '/main-activity',
+              path: /* this.$router.history.current.query.redirect || */ '/main-activity'
             })
           }
         })
-    },
-  },
+    }
+  }
 }
 </script>

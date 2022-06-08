@@ -1,13 +1,17 @@
 export default {
   fee_to_account: 'Chi phí: {value1}. Mô tả {value2}',
   available_balance: 'Mẹo: Số dư có sẵn trong tài khoản hoa hồng: {value} TRX',
-  operable_conversion: 'Gợi ý: Số tiền chuyển đổi có thể thực hiện: {value} TRX',
+  operable_conversion:
+    'Gợi ý: Số tiền chuyển đổi có thể thực hiện: {value} TRX',
   first_level: 'Nạp tiền cho thành viên cấp 1, thưởng {value}%',
   second_level: 'Nạp tiền cho thành viên cấp 2, thưởng {value}%',
   three_level: 'Nạp tiền cho thành viên cấp 3, thưởng {value}%',
-  terarn_partners: 'Các đối tác của TERarn được hưởng {value}% từ thu nhập chia sẻ từ việc nạp tiền cho tất cả các thành viên cấp dưới.',
-  income_of_tomorrow: 'Nếu việc rút tiền được xác nhận, thì thu nhập ngày mai sẽ làm giảm thu nhập khai thác của {value}!',
-  holidays_are_counted_as_usual: '{value} ngày tự nhiên, ngày lễ được tính như bình thường',
+  terarn_partners:
+    'Các đối tác của TERarn được hưởng {value}% từ thu nhập chia sẻ từ việc nạp tiền cho tất cả các thành viên cấp dưới.',
+  income_of_tomorrow:
+    'Nếu việc rút tiền được xác nhận, thì thu nhập ngày mai sẽ làm giảm thu nhập khai thác của {value}!',
+  holidays_are_counted_as_usual:
+    '{value} ngày tự nhiên, ngày lễ được tính như bình thường',
   bound_wallet: '{value} ví ràng buộc',
   x_new_message: '{value} tin nhắn mới',
   x_bound_wallet: '{value} ví ràng buộc',
@@ -48,7 +52,8 @@ export default {
   deposit: 'đặt cọc',
   withdrawal: 'rút',
   trx_deposit_quantity: 'Số lượng tiền gửi TRX',
-  recharge_text: 'Gửi ít nhất 5TRX để kích hoạt tài khoản và mở chức năng rút tiền',
+  recharge_text:
+    'Gửi ít nhất 5TRX để kích hoạt tài khoản và mở chức năng rút tiền',
   team: 'đội của tôi',
   app_services: 'dịch vụ ứng dụng',
   profit_list: 'lợi nhuận của tôi',
@@ -62,28 +67,35 @@ export default {
   account: 'tài khoản',
   promotion: 'khuyến mãi',
   millionaire: 'Tham gia để trở thành triệu phú',
-  technology: 'Sử dụng công nghệ khai thác trên đám mây và Defi để đảm bảo doanh thu TRX tối đa cho tất cả người dùng',
+  technology:
+    'Sử dụng công nghệ khai thác trên đám mây và Defi để đảm bảo doanh thu TRX tối đa cho tất cả người dùng',
   details: 'Chi tiết',
   accumulated_profit: 'lợi nhuận tích lũy',
   membership: 'Số thành viên',
   about_us: 'về chúng tôi',
   we_are_at_our_best: 'Chúng tôi đang ở tốt nhất của chúng tôi',
-  cost_effective: 'Khai thác trên nền tảng đám mây cung cấp một cách hiệu quả về chi phí để khai thác Bitcoin Trx và các loại tiền điện tử khác. Đồng thời, cả giao dịch định lượng và công nghệ Defi sẽ cho phép bạn dễ dàng tham gia vào các giao dịch blockchain với số vốn nhỏ và có được thu nhập ổn định như bảo hiểm',
+  cost_effective:
+    'Khai thác trên nền tảng đám mây cung cấp một cách hiệu quả về chi phí để khai thác Bitcoin Trx và các loại tiền điện tử khác. Đồng thời, cả giao dịch định lượng và công nghệ Defi sẽ cho phép bạn dễ dàng tham gia vào các giao dịch blockchain với số vốn nhỏ và có được thu nhập ổn định như bảo hiểm',
   global_partners: 'đối tác toàn cầu',
 
   transfer_to_promotion_account: 'Gửi tiền vào tài khoản hoa hồng',
   trx_address: 'Địa chỉ TRX',
   copy_address: 'sao chép địa chỉ',
-  recharge_other_text: 'Vui lòng không ký quỹ bằng các tài sản không phải TRX khác. Đến sau khoảng 5-10 phút sau khi sạc lại',
-  investment_text: 'Nếu nó không được giao trong một thời gian dài, vui lòng làm mới trang này. Tiền gửi tối thiểu 5TRX',
+  recharge_other_text:
+    'Vui lòng không ký quỹ bằng các tài sản không phải TRX khác. Đến sau khoảng 5-10 phút sau khi sạc lại',
+  investment_text:
+    'Nếu nó không được giao trong một thời gian dài, vui lòng làm mới trang này. Tiền gửi tối thiểu 5TRX',
   recharge_completed: 'nạp tiền hoàn thành',
 
   transfer_to_basicaccount: 'Gửi tiền vào tài khoản cơ bản',
   investment_is_divided_into_two_modes: 'Có hai loại đầu tư',
-  recharge_text1: '1: Nạp tiền vào tài khoản cơ bản và nhận lợi ích mỗi ngày theo múi giờ Sri Lanka (sau 24:00)',
-  recharge_text2: '2: Nạp vào tài khoản hoa hồng, bạn có thể nhận thu nhập theo các chu kỳ khác nhau, và hoàn trả gốc và thu nhập khi hết hạn',
+  recharge_text1:
+    '1: Nạp tiền vào tài khoản cơ bản và nhận lợi ích mỗi ngày theo múi giờ Sri Lanka (sau 24:00)',
+  recharge_text2:
+    '2: Nạp vào tài khoản hoa hồng, bạn có thể nhận thu nhập theo các chu kỳ khác nhau, và hoàn trả gốc và thu nhập khi hết hạn',
   view_notes: 'Xem mô tả',
-  recharge_text3: 'Trước khi đầu tư, vui lòng chọn tài khoản cơ bản hoặc tài khoản hoa hồng để đầu tư tùy theo nhu cầu đầu tư của bạn. Đảm bảo chờ nạp tiền vào tài khoản. Đây là một câu hỏi rất quan trọng.',
+  recharge_text3:
+    'Trước khi đầu tư, vui lòng chọn tài khoản cơ bản hoặc tài khoản hoa hồng để đầu tư tùy theo nhu cầu đầu tư của bạn. Đảm bảo chờ nạp tiền vào tài khoản. Đây là một câu hỏi rất quan trọng.',
 
   basic_account_balance: 'Số dư tài khoản cơ bản',
   hour_withdrawal: 'rút tiền hàng giờ',
@@ -104,7 +116,8 @@ export default {
   or_friends_and_earn_rewards: 'hoặc bạn bè để kiếm phần thưởng',
   copy_link: 'sao chép đường dẫn',
   refer_and_earn_rewards: 'Tham khảo và nhận thưởng',
-  share_your_referal_link_and_start_earning: 'Chia sẻ liên kết giới thiệu của bạn và bắt đầu kiếm tiền',
+  share_your_referal_link_and_start_earning:
+    'Chia sẻ liên kết giới thiệu của bạn và bắt đầu kiếm tiền',
 
   trading_list: 'danh sách giao dịch',
 
@@ -123,7 +136,8 @@ export default {
   lev: 'lớp',
 
   mobile_number: 'Số điện thoại di động',
-  please_enter_your_mobile_phone_number: 'xin vui lòng điền số điện thoại của bạn',
+  please_enter_your_mobile_phone_number:
+    'xin vui lòng điền số điện thoại của bạn',
   login_password: 'mật khẩu đăng nhập',
   please_enter_your_login_password: 'Vui lòng nhập mật khẩu đăng nhập của bạn',
   remember_the_password: 'nhớ mật khẩu',
@@ -136,7 +150,8 @@ export default {
   attach: 'Xác minh đồ họa',
   please_enter_attach: 'Vui lòng nhập mã xác minh hình ảnh',
   encrypted_registration: 'Đăng ký được mã hóa',
-  register_text: 'Mật khẩu được lưu trữ riêng biệt và không thể lấy lại nếu bị mất. hãy nhớ mật khẩu của bạn',
+  register_text:
+    'Mật khẩu được lưu trữ riêng biệt và không thể lấy lại nếu bị mất. hãy nhớ mật khẩu của bạn',
   send_code: 'Gửi mã xác minh',
 
   mobile_phone_number_cannot_be_blank: 'Số điện thoại không được để trống',
@@ -148,12 +163,14 @@ export default {
   verification_passed: 'Đã xác minh',
   very_sorry_this_is_wrong: 'Tôi rất xin lỗi, điều này đã xảy ra sai',
   verification_failed: 'Xác minh không hoàn thành',
-  operating_environment: 'Phát hiện rằng môi trường hoạt động hiện tại của bạn đang gặp rủi ro, vui lòng nhập mã xác minh',
+  operating_environment:
+    'Phát hiện rằng môi trường hoạt động hiện tại của bạn đang gặp rủi ro, vui lòng nhập mã xác minh',
   incorrect_verification_code: 'Mã xác minh không chính xác, vui lòng nhập lại',
   sent_successfully: 'Gửi thành công',
   does_not_match: 'Mật khẩu mới không khớp với mật khẩu đã xác nhận',
   please_enter_verification_code: 'vui lòng nhập mã xác nhận',
-  please_agree_to_the_user_agreement: 'Vui lòng đồng ý với Thỏa thuận người dùng',
+  please_agree_to_the_user_agreement:
+    'Vui lòng đồng ý với Thỏa thuận người dùng',
   registration_success: 'đăng ký thành công',
   registration_failed: 'Đăng ký không thành công, vui lòng đăng ký lại',
   new_password_cannot_be_blank: 'Mật khẩu mới không được để trống',
@@ -167,7 +184,8 @@ export default {
   please_enter_the_investment_amount: 'Vui lòng nhập số tiền đầu tư',
   please_enter_transaction_password: 'Vui lòng nhập mật khẩu bảo mật',
   investment_success: 'đầu tư thành công',
-  please_click_refresh_every_few_minutes: 'Nếu không, hãy nhấp vào làm mới sau mỗi vài phút',
+  please_click_refresh_every_few_minutes:
+    'Nếu không, hãy nhấp vào làm mới sau mỗi vài phút',
   English: 'tiếng Anh',
   Japanese: 'tiếng Nhật',
   Korean: 'Hàn Quốc',
@@ -183,11 +201,13 @@ export default {
   all: 'tất cả',
   commission_account: 'Tài khoản hoa hồng',
   transfer_to_commission_account: 'Chuyển vào tài khoản hoa hồng',
-  not_allowed_temporarily: 'Vì thời hạn hợp đồng dưới 1 năm, tạm thời không được phép chuyển khoản vào tài khoản hoa hồng!',
+  not_allowed_temporarily:
+    'Vì thời hạn hợp đồng dưới 1 năm, tạm thời không được phép chuyển khoản vào tài khoản hoa hồng!',
 
   gift_account: 'tài khoản quà tặng',
   withdrawal_limit_remaining_today: 'Số tiền mặt còn lại có sẵn ngày hôm nay',
-  withdrawal_address_cannot_be_modified: '* Lời khuyên: Không thể sửa đổi địa chỉ rút tiền sau khi nhập! ! !',
+  withdrawal_address_cannot_be_modified:
+    '* Lời khuyên: Không thể sửa đổi địa chỉ rút tiền sau khi nhập! ! !',
   please_enter_the_withdrawal_address: 'Vui lòng nhập địa chỉ rút tiền',
   please_enter_withdrawal_limit: 'Vui lòng nhập số tiền rút',
   please_enter_the_withdrawal_password: 'Vui lòng nhập mật khẩu bảo mật',
@@ -202,9 +222,11 @@ export default {
 
   not_yet_open: 'Chưa mở',
 
-  t_address: 'Địa chỉ rút tiền bị sai, vui lòng nhập địa chỉ rút tiền bắt đầu bằng T',
+  t_address:
+    'Địa chỉ rút tiền bị sai, vui lòng nhập địa chỉ rút tiền bắt đầu bằng T',
   successful_verification: 'Xác minh thành công',
-  using_telegraph: 'Vui lòng sử dụng Telegraph để thêm bạn bè: {url} và gửi mã mời tài khoản của bạn: {code} để xác minh. Sau khi xác minh, bạn có thể gửi lệnh rút tiền.',
+  using_telegraph:
+    'Vui lòng sử dụng Telegraph để thêm bạn bè: {url} và gửi mã mời tài khoản của bạn: {code} để xác minh. Sau khi xác minh, bạn có thể gửi lệnh rút tiền.',
   open_link: 'mở liên kết',
   copy_invitation_code: 'Sao chép mã lời mời',
 
@@ -238,7 +260,8 @@ export default {
   Grade: 'lớp',
   Profit: 'thu nhập hàng ngày',
   daily_withdrawal: 'rút tiền hàng ngày',
-  customer_service: 'Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với dịch vụ khách hàng trực tuyến của chúng tôi',
+  customer_service:
+    'Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với dịch vụ khách hàng trực tuyến của chúng tôi',
   rebate_invitation: 'Lời mời giảm giá',
   recharge_rebate: 'nạp tiền giảm giá',
   mining_rebate: 'giảm giá khai thác',
@@ -262,7 +285,8 @@ export default {
   about: 'xung quanh',
   recommended_for_beginners: 'Được đề xuất cho người mới bắt đầu',
   More: 'Hơn',
-  simple_and_convenient: 'Đơn giản và tiện lợi, ngay cả người mới làm quen cũng có thể đầu tư',
+  simple_and_convenient:
+    'Đơn giản và tiện lợi, ngay cả người mới làm quen cũng có thể đầu tư',
   investment_cycle: 'chu kỳ đầu tư',
   account_balance: 'Số dư tài khoản',
   project_name: 'Tên dự án',
@@ -282,7 +306,8 @@ export default {
   dividend_method: 'Phương pháp cổ tức',
   repayment_at_maturity: 'Hoàn trả hàng ngày, hoàn trả khi đáo hạn',
   referral_reward: 'Phần thưởng giới thiệu',
-  click_member_center: 'Nhấp vào Trung tâm thành viên - Mời bạn bè - chuyển tiếp nó đến vòng kết nối bạn bè của bạn, miễn là bạn bè của bạn đăng ký làm thành viên cấp thông qua mã QR lời mời, nạp tiền và đầu tư thành công vào dự án hoàn trả một lần, bạn có thể nhận được phần thưởng 3.00% số tiền đầu tư của bạn bè, Sau khi đăng ký thành công hệ thống sẽ tự động tặng!',
+  click_member_center:
+    'Nhấp vào Trung tâm thành viên - Mời bạn bè - chuyển tiếp nó đến vòng kết nối bạn bè của bạn, miễn là bạn bè của bạn đăng ký làm thành viên cấp thông qua mã QR lời mời, nạp tiền và đầu tư thành công vào dự án hoàn trả một lần, bạn có thể nhận được phần thưởng 3.00% số tiền đầu tư của bạn bè, Sau khi đăng ký thành công hệ thống sẽ tự động tặng!',
   hours_settlement: 'Giải quyết trong 24 giờ',
   Login_account: 'Đăng nhập tài khoản',
   Please_enter_the_login_account: 'Vui lòng nhập tài khoản đăng nhập',
@@ -322,7 +347,8 @@ export default {
   Receivable_time: 'Thời gian phải thu',
   completed: 'hoàn thành',
   Set_a_new_login_password: 'Đặt mật khẩu đăng nhập mới',
-  email_verification: 'Vui lòng hoàn thành xác minh email, chú ý kiểm tra hộp thư rác',
+  email_verification:
+    'Vui lòng hoàn thành xác minh email, chú ý kiểm tra hộp thư rác',
   Please_enter_email_verification_code: 'Vui lòng nhập mã xác minh email',
   complete_verification: 'hoàn thành xác minh',
   Please_enter_the_password_again: 'Vui lòng nhập lại mật khẩu',
@@ -343,41 +369,54 @@ export default {
   Directly_to_account_balance: 'Trực tiếp vào số dư tài khoản',
   Accumulated_sign_in_rewards: 'Phần thưởng đăng nhập tích lũy',
   undone: 'hoàn tác',
-  please_pay_attention_to_check: 'Nhận xét: Bao lì xì nhận thưởng được cấp trực tiếp vào số dư tài khoản, các bạn chú ý kiểm tra nhé!',
+  please_pay_attention_to_check:
+    'Nhận xét: Bao lì xì nhận thưởng được cấp trực tiếp vào số dư tài khoản, các bạn chú ý kiểm tra nhé!',
   Go_to_investment_account: 'Chuyển đến tài khoản đầu tư',
   sign_in2: 'đăng nhập',
 
   verification_code: 'mã xác nhận',
   Invest_now: 'Đầu tư ngay bây giờ',
-  open_the_withdrawal_function: 'Nạp bất kỳ số tiền TRX nào để kích hoạt tài khoản và mở chức năng rút tiền',
+  open_the_withdrawal_function:
+    'Nạp bất kỳ số tiền TRX nào để kích hoạt tài khoản và mở chức năng rút tiền',
   contract: 'hợp đồng',
   Please_enter_the_investment_amount: 'Vui lòng nhập số tiền đầu tư',
   Please_enter_payment_password: 'Vui lòng nhập mật khẩu thanh toán',
-  less_than_the_minimum_investment_amount: 'Số tiền đầu tư không được nhỏ hơn số tiền đầu tư tối thiểu',
+  less_than_the_minimum_investment_amount:
+    'Số tiền đầu tư không được nhỏ hơn số tiền đầu tư tối thiểu',
   investment_success2: 'đầu tư thành công',
   Verify_phone_number: 'Xác minh số điện thoại',
   payment_password: 'mật khẩu thanh toán',
   Transfer_amount: 'Số tiền chuyển khoản',
 
-  YouTube_Blogger_Promoter_text: 'Nhận phần thưởng {value} TRX cho mỗi người bạn mời',
-  Invitation_to_register_successfully_and_reward_XTRX: 'Người dùng được mời sẽ được thưởng 2 TRX khi đăng ký thành công',
+  YouTube_Blogger_Promoter_text:
+    'Nhận phần thưởng {value} TRX cho mỗi người bạn mời',
+  Invitation_to_register_successfully_and_reward_XTRX:
+    'Người dùng được mời sẽ được thưởng 2 TRX khi đăng ký thành công',
   Follow_the_reward_XTRX: 'Theo dõi Phần thưởng: {value} TRX',
-  Invite_YouTube_bloggers_text3: '3. Sau khi mời một blogger YouTube trở thành người quảng bá, bạn sẽ nhận được phần thưởng trị giá {value} TRX cho mỗi thành viên mà anh ấy mời',
-  Number_of_people_eligible_for_the_award: 'Số người đủ điều kiện nhận phần thưởng: {value} người',
+  Invite_YouTube_bloggers_text3:
+    '3. Sau khi mời một blogger YouTube trở thành người quảng bá, bạn sẽ nhận được phần thưởng trị giá {value} TRX cho mỗi thành viên mà anh ấy mời',
+  Number_of_people_eligible_for_the_award:
+    'Số người đủ điều kiện nhận phần thưởng: {value} người',
   Reward_amount_XTRX: 'Số tiền thưởng: {value} TRX',
-  Reward_amount_introduction_text: 'Số lượng tích lũy của những người bạn được mời đạt {value1} phần thưởng đăng ký hàng ngày {value2} TRX',
+  Reward_amount_introduction_text:
+    'Số lượng tích lũy của những người bạn được mời đạt {value1} phần thưởng đăng ký hàng ngày {value2} TRX',
   Bounty_task: 'Nhiệm vụ tiền thưởng',
   Invite_Youtube_partners: 'Mời các blogger You Tube làm đối tác',
-  Invite_Youtube_partners_text: 'Đề xuất các blogger trên YouTube cùng nhau kiếm tiền',
+  Invite_Youtube_partners_text:
+    'Đề xuất các blogger trên YouTube cùng nhau kiếm tiền',
   Daily_check_in_tasks: 'Công việc đăng ký hàng ngày',
   Daily_check_in_tasks_text: 'Đăng ký hàng ngày để nhận phần thưởng',
   Invite_friends_task: 'Mời bạn bè nhiệm vụ',
   Invite_friends_task_text: 'Mời bạn bè đăng ký và rút tiền thành công',
-  YouTube_Blogger_Promoter: 'Đăng ký trở thành Nhà quảng cáo Blogger của YouTube',
-  Follow_Telegram_channel_tasks: 'Thực hiện theo các nhiệm vụ của kênh Telegram',
-  Follow_Telegram_channel_tasks_text: 'Theo dõi kênh Telegram được chỉ định để nhận phần thưởng',
+  YouTube_Blogger_Promoter:
+    'Đăng ký trở thành Nhà quảng cáo Blogger của YouTube',
+  Follow_Telegram_channel_tasks:
+    'Thực hiện theo các nhiệm vụ của kênh Telegram',
+  Follow_Telegram_channel_tasks_text:
+    'Theo dõi kênh Telegram được chỉ định để nhận phần thưởng',
   Participate_mining_investment: 'Tham gia đầu tư khai thác',
-  Participate_mining_investment_text: 'Lần đầu tiên tham gia phần thưởng đầu tư khai thác',
+  Participate_mining_investment_text:
+    'Lần đầu tiên tham gia phần thưởng đầu tư khai thác',
   go_to_pick_up: 'đi đón',
   received: 'nhận',
   invite_now: 'mời ngay bây giờ',
@@ -387,42 +426,57 @@ export default {
   Participate_in_mining: 'Tham gia khai thác',
   participated: 'đã tham gia',
   become_a_promoter: 'trở thành người quảng bá',
-  Advantages_of_Youtube_Blogger_Promoter: 'Ưu điểm của việc trở thành Nhà quảng cáo Blogger trên YouTube',
+  Advantages_of_Youtube_Blogger_Promoter:
+    'Ưu điểm của việc trở thành Nhà quảng cáo Blogger trên YouTube',
   Ordinary_member: 'Thành viên bình thường',
   Youtube_Blogger_Promoter: 'Người quảng cáo Blogger trên YouTube',
   No_Youtube_video_reward: 'Không có phần thưởng cho video trên YouTube',
   Have_Youtube_Video_Rewards: 'Đã nhận được phần thưởng trên video YouTube',
   low_task_reward: 'phần thưởng nhiệm vụ thấp',
-  Update_Youtube_blogger_task_rewards: 'Cập nhật phần thưởng nhiệm vụ blogger YouTube theo thời gian',
-  Apply_to_join_Youtube_Blogger_Promoter: 'Đăng ký tham gia Nhà quảng cáo Blogger của YouTube',
+  Update_Youtube_blogger_task_rewards:
+    'Cập nhật phần thưởng nhiệm vụ blogger YouTube theo thời gian',
+  Apply_to_join_Youtube_Blogger_Promoter:
+    'Đăng ký tham gia Nhà quảng cáo Blogger của YouTube',
   Your_Youtube_channel_link: 'Liên kết kênh YouTube của bạn',
-  Number_of_subscriptions_to_your_Youtube_channel: 'Số lượng đăng ký kênh YouTube của bạn',
+  Number_of_subscriptions_to_your_Youtube_channel:
+    'Số lượng đăng ký kênh YouTube của bạn',
   Your_Telegarm_account: 'Tài khoản Telegarm của bạn',
-  Youtube_profile_needs_your_Telegram_account_information: 'Hồ sơ YouTube cần thông tin tài khoản Telegram của bạn, quản trị viên sẽ xem xét!',
+  Youtube_profile_needs_your_Telegram_account_information:
+    'Hồ sơ YouTube cần thông tin tài khoản Telegram của bạn, quản trị viên sẽ xem xét!',
   Submit_review: 'Gửi đánh giá',
   Waiting_for_admin_review: 'Đang đợi quản trị viên xem xét',
-  please_follow_the_Telegram_channel: 'Để đảm bảo đánh giá thành công, vui lòng theo dõi kênh Telegram',
+  please_follow_the_Telegram_channel:
+    'Để đảm bảo đánh giá thành công, vui lòng theo dõi kênh Telegram',
   ok: 'VÂNG',
   Follow_Telegram_channel: 'Theo dõi kênh Telegram',
-  Please_follow_the_Telegram_channel_first_to_get_the_code: 'Các bạn vui lòng theo dõi kênh Telegram trước để lấy mã nhé',
-  Invite_Youtube_to_join_partner_instructions: 'Mời YouTube tham gia hướng dẫn đối tác',
-  Invite_YouTube_bloggers_text1: '1. Mời các blogger YouTube đăng ký thành công để trở thành người quảng bá và hệ thống sẽ tự động cấp phần thưởng',
-  Invite_YouTube_bloggers_text2: '2. Người viết blog YouTube cần đăng ký thông qua liên kết mời hoặc mã giới thiệu của bạn',
+  Please_follow_the_Telegram_channel_first_to_get_the_code:
+    'Các bạn vui lòng theo dõi kênh Telegram trước để lấy mã nhé',
+  Invite_Youtube_to_join_partner_instructions:
+    'Mời YouTube tham gia hướng dẫn đối tác',
+  Invite_YouTube_bloggers_text1:
+    '1. Mời các blogger YouTube đăng ký thành công để trở thành người quảng bá và hệ thống sẽ tự động cấp phần thưởng',
+  Invite_YouTube_bloggers_text2:
+    '2. Người viết blog YouTube cần đăng ký thông qua liên kết mời hoặc mã giới thiệu của bạn',
   my_youtube_blogger_list: 'danh sách blogger YouTube của tôi',
-  YouTube_bloggers_contribute_profits: 'Các blogger trên YouTube đóng góp lợi nhuận',
+  YouTube_bloggers_contribute_profits:
+    'Các blogger trên YouTube đóng góp lợi nhuận',
   my_youtube_blogger: 'blogger YouTube của tôi',
   my_invitation_reward: 'phần thưởng lời mời của tôi',
-  YouTube_Blogger_Referral_Member: 'Những người được giới thiệu bởi các blogger YouTube',
+  YouTube_Blogger_Referral_Member:
+    'Những người được giới thiệu bởi các blogger YouTube',
   my_reward: 'phần thưởng của tôi',
   bonus_time: 'thời gian thưởng',
   daily_check_in: 'nhận phòng hàng ngày',
   Invite_friends_to_withdraw_successfully: 'Mời bạn bè rút tiền thành công',
   Sign_in_task_reward_description: 'Đăng nhập mô tả phần thưởng nhiệm vụ',
-  Sign_in_task_reward_description_text1: 'Phần thưởng của nhiệm vụ đăng nhập tỷ lệ thuận với số lượng bạn bè được mời',
-  Sign_in_task_reward_description_text2: 'Càng nhiều lời mời, càng có nhiều phần thưởng đăng ký hàng ngày',
-  Sign_in_task_reward_description_text3: 'Sau khi mời bạn bè, hệ thống sẽ chỉ phát phần thưởng sau khi bạn bè hoàn thành việc rút tiền.',
+  Sign_in_task_reward_description_text1:
+    'Phần thưởng của nhiệm vụ đăng nhập tỷ lệ thuận với số lượng bạn bè được mời',
+  Sign_in_task_reward_description_text2:
+    'Càng nhiều lời mời, càng có nhiều phần thưởng đăng ký hàng ngày',
+  Sign_in_task_reward_description_text3:
+    'Sau khi mời bạn bè, hệ thống sẽ chỉ phát phần thưởng sau khi bạn bè hoàn thành việc rút tiền.',
   Reward_amount_introduction: 'Hướng dẫn kiếm phần thưởng',
-  Sign_in_now: 'ký ngay bây giờ',  
+  Sign_in_now: 'ký ngay bây giờ',
 
   task: 'Bài tập',
   please_enter: 'vui lòng nhập',
@@ -430,9 +484,11 @@ export default {
   Receive_award: 'Nhận giải thưởng',
   invite_to_join: 'mời tham gia',
   Please_select_an_area_code: 'Vui lòng chọn một mã vùng',
-  The_investment_amount_cannot_be_less_than_the_starting_investment_amount: 'Số tiền đầu tư không được nhỏ hơn số tiền đầu tư ban đầu',
+  The_investment_amount_cannot_be_less_than_the_starting_investment_amount:
+    'Số tiền đầu tư không được nhỏ hơn số tiền đầu tư ban đầu',
 
-  YouTube_profileTelegram_account_information: 'Hồ sơ YouTube cần thông tin tài khoản Telegram của bạn, quản trị viên sẽ xem xét!',
+  YouTube_profileTelegram_account_information:
+    'Hồ sơ YouTube cần thông tin tài khoản Telegram của bạn, quản trị viên sẽ xem xét!',
   Please_enter_the_area_code_to_search: 'Vui lòng nhập mã vùng để tìm kiếm0',
 
   back: 'trở về',

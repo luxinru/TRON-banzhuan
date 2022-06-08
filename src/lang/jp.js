@@ -4,16 +4,16 @@ export default {
   invest: '投資',
   share: '共有',
   mine: '私の',
-  swap:'スワップ',
-  macd:'MACD：概要MACDの背後にある概念はかなり単純です。基本的に、機器の26日と12日の指数移動平均（EMA）の差を計算します。 MACDを構成する2つの移動平均のうち、12日間のEMAが速いのに対し、26日間は遅いです。それらの値の計算では、両方の移動平均は、測定された期間の終値を使用します。 MACDチャートには、MACD自体の9日間のEMAもプロットされており、売買決定のトリガーとして機能します。 MACDは、自身の9日間のEMAを上回ったときに強気のシグナルを生成し、9日間のEMAを下回ったときに売りサインを送信します。',
-  mts:'MACDトレーディング戦略',
-  trade_num:'每天八利次数',
+  swap: 'スワップ',
+  macd: 'MACD：概要MACDの背後にある概念はかなり単純です。基本的に、機器の26日と12日の指数移動平均（EMA）の差を計算します。 MACDを構成する2つの移動平均のうち、12日間のEMAが速いのに対し、26日間は遅いです。それらの値の計算では、両方の移動平均は、測定された期間の終値を使用します。 MACDチャートには、MACD自体の9日間のEMAもプロットされており、売買決定のトリガーとして機能します。 MACDは、自身の9日間のEMAを上回ったときに強気のシグナルを生成し、9日間のEMAを下回ったときに売りサインを送信します。',
+  mts: 'MACDトレーディング戦略',
+  trade_num: '每天八利次数',
   change_password: 'パスワードを変更する',
   old_password: '以前のパスワード',
   new_password: '新しいパスワード',
   confrm_password: 'パスワードを認証する',
   confrm: '確認',
-  trade_fee:'引き出し手数料',
+  trade_fee: '引き出し手数料',
 
   change_security_password: 'セキュリティパスワードの変更',
   old_security_password: '古いセキュリティパスワード',
@@ -40,7 +40,8 @@ export default {
   deposit: '保証金',
   withdrawal: '撤退',
   trx_deposit_quantity: 'TRXデポジット量',
-  recharge_text: '少なくとも5 TRXをチャージしてアカウントを起動し、引き出し機能を開きます。',
+  recharge_text:
+    '少なくとも5 TRXをチャージしてアカウントを起動し、引き出し機能を開きます。',
   team: 'チーム',
   app_services: 'アプリサービス',
   proft_list: '利益リスト',
@@ -54,28 +55,35 @@ export default {
   account: 'アカウント',
   promotion: '昇進',
   millionaire: 'TRONミリオネアになるために参加する',
-  technology: 'クラウドマイニングとDefiテクノロジーを使用して、すべてのユーザーが最大のTRX収益を確実に得られるようにします',
+  technology:
+    'クラウドマイニングとDefiテクノロジーを使用して、すべてのユーザーが最大のTRX収益を確実に得られるようにします',
   details: '詳細',
   accumulated_profit: '累積利益',
   membership: 'メンバーシップ',
   about_us: '私たちに関しては',
   we_are_at_our_best: '私たちは最善を尽くしています',
-  cost_effective: 'クラウドマイニングは、ビットコインTrxおよびその他の暗号通貨の潜在的に費用効果の高いマイニング方法を提供しました。 同時に、定量的取引とDefi技術の両方により、少量の資本でブロックチェーン取引に簡単に参加でき、保険のような安定した収入を得ることができます',
+  cost_effective:
+    'クラウドマイニングは、ビットコインTrxおよびその他の暗号通貨の潜在的に費用効果の高いマイニング方法を提供しました。 同時に、定量的取引とDefi技術の両方により、少量の資本でブロックチェーン取引に簡単に参加でき、保険のような安定した収入を得ることができます',
   global_partners: 'グローバルパートナー',
 
   transfer_to_promotion_account: 'プロモーションアカウントに転送する',
   trx_address: 'TRXアドレス',
   copy_address: 'コピーアドレス',
-  recharge_other_text: '他の非TRXアセットを再充電しないでください。 充電後約5〜10分で記録されます',
-  investment_text: '長い間届いていない場合は、このページを更新してください。最低5TRX投資',
+  recharge_other_text:
+    '他の非TRXアセットを再充電しないでください。 充電後約5〜10分で記録されます',
+  investment_text:
+    '長い間届いていない場合は、このページを更新してください。最低5TRX投資',
   recharge_completed: '再充電が完了しました',
 
   transfer_to_basicaccount: 'ベーシックアカウントに移行',
   investment_is_divided_into_two_modes: '投資は2つのモードに分けられます',
-  recharge_text1: '1：基本アカウントにリチャージし、毎日スリランカのタイムゾーン（24:00以降）に従って収入を受け取ります',
-  recharge_text2: '2：プロモーションアカウントにリチャージし、異なるサイクルに従って収入を受け取ることができます、元本を返し、満期時の収入',
+  recharge_text1:
+    '1：基本アカウントにリチャージし、毎日スリランカのタイムゾーン（24:00以降）に従って収入を受け取ります',
+  recharge_text2:
+    '2：プロモーションアカウントにリチャージし、異なるサイクルに従って収入を受け取ることができます、元本を返し、満期時の収入',
   view_notes: 'メモを見る',
-  recharge_text3: '投資する前に、投資ニーズに応じて投資するベーシックアカウントまたはプロモーションアカウントを選択してください。アカウントが再チャージされるのを必ず待ってください。これは非常に重要な問題です。',
+  recharge_text3:
+    '投資する前に、投資ニーズに応じて投資するベーシックアカウントまたはプロモーションアカウントを選択してください。アカウントが再チャージされるのを必ず待ってください。これは非常に重要な問題です。',
 
   basic_account_balance: '基本口座残高（TRX）',
   hour_withdrawal: '24時間の撤退',
@@ -97,7 +105,8 @@ export default {
   or_friends_and_earn_rewards: 'または友達と報酬を獲得する',
   copy_link: 'リンクをコピーする',
   refer_and_earn_rewards: '紹介して報酬を獲得する',
-  share_your_referal_link_and_start_earning: 'あなたの紹介リンクを共有し、稼ぎ始めましょう',
+  share_your_referal_link_and_start_earning:
+    'あなたの紹介リンクを共有し、稼ぎ始めましょう',
 
   trading_list: 'トレーディングリスト',
 
@@ -123,17 +132,20 @@ export default {
   sign_in: 'サインイン',
   sign_up: 'サインアップ',
 
-  please_enter_your_security_password: 'セキュリティパスワードを入力してください',
+  please_enter_your_security_password:
+    'セキュリティパスワードを入力してください',
   invite_code: '招待コード',
   please_enter_your_invite_code: '招待コードを入力してください',
   attach: '添付',
   please_enter_attach: '添付を入力してください',
   encrypted_registration: '暗号化された登録',
-  register_text: 'パスワードは分散して保存され、紛失した後は取得できません。 パスワードを覚えておいてください',
+  register_text:
+    'パスワードは分散して保存され、紛失した後は取得できません。 パスワードを覚えておいてください',
   send_code: 'コードを送信',
 
   mobile_phone_number_cannot_be_blank: '携帯番号は空にできません',
-  login_password_cannot_be_blank: 'ログインパスワードを空にすることはできません',
+  login_password_cannot_be_blank:
+    'ログインパスワードを空にすることはできません',
   login_successful: 'ログイン成功',
   please_download: 'ログインに失敗しました。ダウンロードしてください。{url}',
   loading: 'ロード中...',
@@ -141,8 +153,10 @@ export default {
   verification_passed: '確認済み',
   very_sorry_this_is_wrong: 'すみません、これはうまくいきませんでした',
   verification_failed: '検証に失敗しました',
-  operating_environment: '現在の動作環境が危険にさらされていることが検出されました。確認コードを入力してください',
-  incorrect_verification_code: '確認コードが正しくありません。再入力してください',
+  operating_environment:
+    '現在の動作環境が危険にさらされていることが検出されました。確認コードを入力してください',
+  incorrect_verification_code:
+    '確認コードが正しくありません。再入力してください',
   sent_successfully: '正常に送信されました',
   does_not_match: '新しいパスワードと確認パスワードが一致しません',
   please_enter_verification_code: '確認コードを入力してください',
@@ -160,7 +174,8 @@ export default {
   please_enter_the_investment_amount: '投入金額を入力してください',
   please_enter_transaction_password: '支払いパスワードを入力してください',
   investment_success: '投資の成功',
-  please_click_refresh_every_few_minutes: '入金されていない場合は数分おきに更新をクリックしてください',
+  please_click_refresh_every_few_minutes:
+    '入金されていない場合は数分おきに更新をクリックしてください',
   English: '英語',
   Japanese: '日本語',
   Korean: '韓国語',
@@ -176,13 +191,15 @@ export default {
   all: 'すべて',
   commission_account: 'プロモートアカウント',
   transfer_to_commission_account: 'プロモーションアカウントに転送する',
-  not_allowed_temporarily: '契約期間が1年未満のため、一時的にコミッション口座への振込はできません！',
+  not_allowed_temporarily:
+    '契約期間が1年未満のため、一時的にコミッション口座への振込はできません！',
 
   available_balance: 'コミッション口座利用可能残高：{value}TRX',
   operable_conversion: '操作可能転換額：{value}TRX',
   gift_account: 'ギフトアカウント',
   withdrawal_limit_remaining_today: '今日は残りが現金化できます',
-  withdrawal_address_cannot_be_modified: '*ヒント:入力後の提示先は変更できません!!!',
+  withdrawal_address_cannot_be_modified:
+    '*ヒント:入力後の提示先は変更できません!!!',
   please_enter_the_withdrawal_address: '現金引き出し先住所を入力してください',
   please_enter_withdrawal_limit: '現金引き出し額を入力してください',
   please_enter_the_withdrawal_password: '支払いパスワードを入力してください',
@@ -199,7 +216,8 @@ export default {
 
   t_address: '出金先が間違っていますので、T先頭の出金先を入力してください',
   successful_verification: '検証に成功',
-  using_telegraph: 'Telegraphを使用して友達を追加してください: {url} アカウント招待コード: {code} を送信して検証します。検証後、コインを提出できます。',
+  using_telegraph:
+    'Telegraphを使用して友達を追加してください: {url} アカウント招待コード: {code} を送信して検証します。検証後、コインを提出できます。',
   open_link: 'リンクを開く',
   copy_invitation_code: '招待コードのコピー',
 
@@ -211,7 +229,8 @@ export default {
   total_reward: '総奨励金',
   person: '人',
   achievements: '実績',
-  terarn_partners: 'TErarnパートナーは、すべての下級会員がチャージした {value}%の株式収益を享受します。',
+  terarn_partners:
+    'TErarnパートナーは、すべての下級会員がチャージした {value}%の株式収益を享受します。',
   invitation_link: '招待リンク',
   invitation_code: '招待コード',
   all_subordinates: 'すべての部下',
@@ -237,12 +256,14 @@ export default {
   Grade: '等級',
   Profit: '収益',
   daily_withdrawal: '日次引き出し',
-  customer_service: '何か問題があれば、オンラインカスタマーサービスに連絡してください。',
+  customer_service:
+    '何か問題があれば、オンラインカスタマーサービスに連絡してください。',
   rebate_invitation: 'さいりを招く',
   recharge_rebate: 'チャージリターン',
   mining_rebate: '鉱山を掘って利益を取り戻す.',
   tips: 'ヒント',
-  income_of_tomorrow: '引き出しが確定すれば、明日の収益は {value} の掘削収入を減らすことになります!',
+  income_of_tomorrow:
+    '引き出しが確定すれば、明日の収益は {value} の掘削収入を減らすことになります!',
   cancel_withdrawal: '引き出しを取り消して収益を稼ぎ続ける',
   confirm_withdrawal: '引き出しを確定する',
 
@@ -283,7 +304,8 @@ export default {
   dividend_method: '配当方式',
   repayment_at_maturity: '毎日利子を返し,満期になったら元金を返す',
   referral_reward: '推薦奨励',
-  click_member_center: '会員センターをクリックして友达を招待します-あなたの友达の輪の中に転送して、あなたの友达がQRコードを招待して登録して級の会員になることを通じて(通って)、チャージしてそして成功して二次的な返済のプロジェクトに投資して、あなたはこの友达の投資金額の3.00%の奨励を得ることができて、登録が成功した後に、システムは',
+  click_member_center:
+    '会員センターをクリックして友达を招待します-あなたの友达の輪の中に転送して、あなたの友达がQRコードを招待して登録して級の会員になることを通じて(通って)、チャージしてそして成功して二次的な返済のプロジェクトに投資して、あなたはこの友达の投資金額の3.00%の奨励を得ることができて、登録が成功した後に、システムは',
   hours_settlement: '24時間決済',
   Login_account: 'ログインアカウント',
   Please_enter_the_login_account: 'ログインアカウントを入力してください',
@@ -324,8 +346,10 @@ export default {
   Receivable_time: '受取時間',
   completed: '完了',
   Set_a_new_login_password: '新しいログインパスワードの設定',
-  email_verification: 'メールボックスの検証を完了し、ゴミメールボックスの表示に注意してください。',
-  Please_enter_email_verification_code: 'メールボックスの認証コードを入力してください',
+  email_verification:
+    'メールボックスの検証を完了し、ゴミメールボックスの表示に注意してください。',
+  Please_enter_email_verification_code:
+    'メールボックスの認証コードを入力してください',
   complete_verification: '検証の完了',
   Please_enter_the_password_again: 'パスワードを再入力してください',
   Please_enter_the_invitation_code: '招待コードを入力してください(選択)',
@@ -345,41 +369,51 @@ export default {
   Directly_to_account_balance: '口座残高への直接発行',
   Accumulated_sign_in_rewards: '累計奨励金に署名する',
   undone: '未完了',
-  please_pay_attention_to_check: '備考:奨励のお年玉は直接口座の残高に配布して、査収に注意してください!',
+  please_pay_attention_to_check:
+    '備考:奨励のお年玉は直接口座の残高に配布して、査収に注意してください!',
   Go_to_investment_account: '投資口座に振り替える',
   sign_in2: 'にサイン',
 
   verification_code: '検証コード',
   Invest_now: '即時投資',
-  open_the_withdrawal_function: '任意の数のTRXをチャージしてアカウントをアクティブにし、引き出し機能を開きます。',
+  open_the_withdrawal_function:
+    '任意の数のTRXをチャージしてアカウントをアクティブにし、引き出し機能を開きます。',
   x_new_message: '{value} つの新しいメッセージ',
   contract: '契約書',
   Please_enter_the_investment_amount: '投入金額を入力してください',
   Please_enter_payment_password: '支払いパスワードを入力してください',
-  less_than_the_minimum_investment_amount: '投資金額は投資開始金額より小さくてはならない',
+  less_than_the_minimum_investment_amount:
+    '投資金額は投資開始金額より小さくてはならない',
   investment_success2: '投資成功',
   Verify_phone_number: '携帯番号の確認',
   payment_password: '支払いパスワード',
   Transfer_amount: '転入数量',
   x_bound_wallet: 'バインドされた財布{value}個',
 
-  Invitation_to_register_successfully_and_reward_XTRX: '招待登録成功奨励{value}TRX',
+  Invitation_to_register_successfully_and_reward_XTRX:
+    '招待登録成功奨励{value}TRX',
   Follow_the_reward_XTRX: '注目奨励:{value}TRX',
-  Invite_YouTube_bloggers_text3: '3.YouTubeブロガーをプロモーションに招待すると、彼が招待した会員一人一人にご褒美が与えられるのは{value}TRXです',
+  Invite_YouTube_bloggers_text3:
+    '3.YouTubeブロガーをプロモーションに招待すると、彼が招待した会員一人一人にご褒美が与えられるのは{value}TRXです',
   Number_of_people_eligible_for_the_award: '適合奨励人数:{value}人',
   Reward_amount_XTRX: '奨励金額：{value}TRX',
-  Reward_amount_introduction_text: '累積招待友達人数満{value 1}個毎日奨励{value 2}TRXにサイン',
+  Reward_amount_introduction_text:
+    '累積招待友達人数満{value 1}個毎日奨励{value 2}TRXにサイン',
   Bounty_task: 'ボーナスタスク',
   Invite_Youtube_partners: 'Youtubeブロガーをパートナーに招待',
-  Invite_Youtube_partners_text: 'Youtubetブロガーと一緒にお金を稼ぐことをお勧めします',
+  Invite_Youtube_partners_text:
+    'Youtubetブロガーと一緒にお金を稼ぐことをお勧めします',
   Daily_check_in_tasks: '毎日タスクに署名',
   Daily_check_in_tasks_text: '毎日サインして奨励金を受け取る',
   Invite_friends_task: '友達を招待する任務',
-  Invite_friends_task_text: '友達を招待して登録してお金を引き出すことに成功しました',
+  Invite_friends_task_text:
+    '友達を招待して登録してお金を引き出すことに成功しました',
   YouTube_Blogger_Promoter: 'YouTubeブロガーのプロモーションに応募',
-  YouTube_Blogger_Promoter_text: '登録会員1人につき{value} TRXのご褒美をお願いいたします',
+  YouTube_Blogger_Promoter_text:
+    '登録会員1人につき{value} TRXのご褒美をお願いいたします',
   Follow_Telegram_channel_tasks: 'Telegramチャンネルタスクに注目',
-  Follow_Telegram_channel_tasks_text: '指定されたTelegramチャンネルの奨励金に注目',
+  Follow_Telegram_channel_tasks_text:
+    '指定されたTelegramチャンネルの奨励金に注目',
   Participate_mining_investment: '掘削投資に参加する',
   Participate_mining_investment_text: '掘削投資奨励に初めて参加',
   go_to_pick_up: '受け取りに行く',
@@ -397,21 +431,29 @@ export default {
   No_Youtube_video_reward: 'Youtube動画奨励金なし',
   Have_Youtube_Video_Rewards: 'Youtubeのビデオ奨励金を持つ',
   low_task_reward: '任務奨励が少ない',
-  Update_Youtube_blogger_task_rewards: 'Youtubeブロガーのインセンティブを不定期に更新',
-  Apply_to_join_Youtube_Blogger_Promoter: 'Youtubeブロガープロモーションへの参加を申請',
+  Update_Youtube_blogger_task_rewards:
+    'Youtubeブロガーのインセンティブを不定期に更新',
+  Apply_to_join_Youtube_Blogger_Promoter:
+    'Youtubeブロガープロモーションへの参加を申請',
   Your_Youtube_channel_link: 'Youtubeチャンネルリンク',
   Number_of_subscriptions_to_your_Youtube_channel: 'Youtubeチャンネルの購読数',
   Your_Telegarm_account: 'Telegarmアカウント',
-  Youtube_profile_needs_your_Telegram_account_information: 'YoutubeプロフィールはTelegramアカウント情報が必要で、管理者が審査します!',
+  Youtube_profile_needs_your_Telegram_account_information:
+    'YoutubeプロフィールはTelegramアカウント情報が必要で、管理者が審査します!',
   Submit_review: 'レビューの送信',
   Waiting_for_admin_review: '管理者レビューの待機中',
-  please_follow_the_Telegram_channel: 'レビューの成功を保証するためにTelegramチャンネルに注目してください',
+  please_follow_the_Telegram_channel:
+    'レビューの成功を保証するためにTelegramチャンネルに注目してください',
   ok: 'はい',
   Follow_Telegram_channel: 'Telegramチャンネルに注目',
-  Please_follow_the_Telegram_channel_first_to_get_the_code: 'まずTelegramチャンネルに注目して受け取りコードを取得してください',
-  Invite_Youtube_to_join_partner_instructions: 'Youtubeのパートナーへの招待説明',
-  Invite_YouTube_bloggers_text1: '1.YouTubeブロガーにプロモーションシステムの自動奨励金の申請に成功させる',
-  Invite_YouTube_bloggers_text2: '2.Youtubeのブロガーは、招待リンクまたは推薦コードで登録する必要があります。',
+  Please_follow_the_Telegram_channel_first_to_get_the_code:
+    'まずTelegramチャンネルに注目して受け取りコードを取得してください',
+  Invite_Youtube_to_join_partner_instructions:
+    'Youtubeのパートナーへの招待説明',
+  Invite_YouTube_bloggers_text1:
+    '1.YouTubeブロガーにプロモーションシステムの自動奨励金の申請に成功させる',
+  Invite_YouTube_bloggers_text2:
+    '2.Youtubeのブロガーは、招待リンクまたは推薦コードで登録する必要があります。',
   my_youtube_blogger_list: '私のYouTubeブロガーリスト',
   YouTube_bloggers_contribute_profits: 'YouTubeブロガーが利益に貢献',
   my_youtube_blogger: '私のYouTubeブロガー',
@@ -420,11 +462,15 @@ export default {
   my_reward: '私のご褒美',
   bonus_time: '奨励時間',
   daily_check_in: '毎日チェックイン',
-  Invite_friends_to_withdraw_successfully: '友達を誘って人数を引き出すことに成功した。',
+  Invite_friends_to_withdraw_successfully:
+    '友達を誘って人数を引き出すことに成功した。',
   Sign_in_task_reward_description: 'タスク奨励の説明に署名',
-  Sign_in_task_reward_description_text1: '任務に署名した奨励金は友人を招待した人数に比例する。',
-  Sign_in_task_reward_description_text2: '招待人数が多ければ多いほど、毎日奨励金にサインすればするほど多くなります。',
-  Sign_in_task_reward_description_text3: '友達を招待した後に友達が金を引き出すことを完成する必要がある後に、システムはやっと奨励金を配ります',
+  Sign_in_task_reward_description_text1:
+    '任務に署名した奨励金は友人を招待した人数に比例する。',
+  Sign_in_task_reward_description_text2:
+    '招待人数が多ければ多いほど、毎日奨励金にサインすればするほど多くなります。',
+  Sign_in_task_reward_description_text3:
+    '友達を招待した後に友達が金を引き出すことを完成する必要がある後に、システムはやっと奨励金を配ります',
   Reward_amount_introduction: '奨励金の紹介',
   Sign_in_now: '今すぐチェックイン',
 
@@ -434,9 +480,11 @@ export default {
   Receive_award: '奨励金をもらう',
   invite_to_join: '参加を誘う',
   Please_select_an_area_code: 'セクション番号を選択してください',
-  The_investment_amount_cannot_be_less_than_the_starting_investment_amount: '投入金額は開始金額より小さくしてはならない',
+  The_investment_amount_cannot_be_less_than_the_starting_investment_amount:
+    '投入金額は開始金額より小さくしてはならない',
 
-  YouTube_profileTelegram_account_information: 'YouTubeプロフィールはTelegramアカウント情報が必要で、管理者が審査します!',
+  YouTube_profileTelegram_account_information:
+    'YouTubeプロフィールはTelegramアカウント情報が必要で、管理者が審査します!',
   Please_enter_the_area_code_to_search: '検索番号を入力してください',
 
   back: '引き返す',
@@ -445,7 +493,8 @@ export default {
   withdrawn: 'すでに現金を引き出した',
   did_not_pass: '不合格',
   Captcha: 'グラフィック検証コード',
-  Please_enter_the_graphic_verification_code: 'グラフィック認証コードを入力してください',
+  Please_enter_the_graphic_verification_code:
+    'グラフィック認証コードを入力してください',
 
   Recharge_total_reward: '総奨励金をチャージする',
   Total_contract_reward: '契約総奨励金',

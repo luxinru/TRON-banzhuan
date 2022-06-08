@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import App from './App.vue'
+// import App from './App.vue'
 import AppAlpha from './App-alpha.vue'
 import router from './router'
 import store from './store'
-import Vant from 'vant'
-import { Locale } from 'vant'
+import Vant, { Locale } from 'vant'
+
 import enUS from 'vant/es/locale/lang/en-US'
 import 'vant/lib/index.css'
 import VueI18n from 'vue-i18n'
@@ -22,6 +22,8 @@ import cn from './lang/cn'
 import hk from './lang/hk'
 import vi from './lang/vi'
 import fa from './lang/fa'
+// import VueSocketIO from 'vue-socket.io'
+import SocketIO from 'socket.io-client'
 
 Vue.use(VueI18n)
 
@@ -48,12 +50,10 @@ const i18n = new VueI18n({
 })
 
 Vue.use(Vant)
-Locale.use('en-US', enUS);
+Locale.use('en-US', enUS)
 
 Vue.config.productionTip = false
-import VueSocketIO from 'vue-socket.io'
-import SocketIO from "socket.io-client";
-Vue.prototype.SocketIO = SocketIO;
+Vue.prototype.SocketIO = SocketIO
 //  https://XXXXXX2120  是后台给你的长链接地址
 // Vue.use(new VueSocketIO({
 //   debug: true,  //测试的时候可以打开
@@ -77,12 +77,12 @@ router.beforeEach((to, from, next) => {
 console.log('process.env111 :>> ', process.env.NODE_ENV)
 
 const version = {
-  alpha: AppAlpha,
+  alpha: AppAlpha
 }
 
 new Vue({
   i18n,
   router,
   store,
-  render: h => h(version['alpha'])
+  render: (h) => h(version.alpha)
 }).$mount('#app')

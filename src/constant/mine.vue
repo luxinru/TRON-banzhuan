@@ -22,7 +22,7 @@ export default {
       google: '',
       showPopover: false,
       actions: LANGUAGE,
-      vip:'VIP-1'
+      vip: 'VIP-1'
     }
   },
 
@@ -40,11 +40,9 @@ export default {
     start () {
       Fetch('/user/info').then((res) => {
         this.data = res.data // res赋值
-        this.totalBalance = (
-          // Number(this.data.money) +
-          // Number(this.data.gift) +
-          Number(this.data.promotion)
-        ).toFixed(6)
+        this.totalBalance = // Number(this.data.money) +
+        // Number(this.data.gift) +
+        Number(this.data.promotion).toFixed(6)
       })
       Fetch('/user/get_sum_recharge', {}, null, false).then((ret) => {
         this.value = ret.data.sum_recharge

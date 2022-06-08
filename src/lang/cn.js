@@ -4,11 +4,11 @@ export default {
   invest: '投资',
   share: '分享',
   mine: '我的',
-  swap:'交换',
-  macd:'95%胜率！现役币圈“半神”的MACD交易策略是真的有利可图。MACD：概述MACD 背后的概念相当简单。本质上，它计算工具的 26 天和 12 天指数移动平均线(EMA) 之间的差异。在构成 MACD 的两条移动平均线中，12 日均线是较快的一条，而 26 日均线较慢。在计算它们的值时，两条移动平均线都使用所测量的任何时期的收盘价。在 MACD 图表上，还绘制了 MACD 本身的 9 天 EMA，它充当买卖决策的触发器。MACD 在其自身的 9 日均线上方移动时会产生看涨信号，而当其移动至其九日均线下方时会发出卖出信号。',
-  mts:'MACD交易策略',
-  trade_num:'每天套利次数',
-  trade_fee:'提现手续费',
+  swap: '交换',
+  macd: '95%胜率！现役币圈“半神”的MACD交易策略是真的有利可图。MACD：概述MACD 背后的概念相当简单。本质上，它计算工具的 26 天和 12 天指数移动平均线(EMA) 之间的差异。在构成 MACD 的两条移动平均线中，12 日均线是较快的一条，而 26 日均线较慢。在计算它们的值时，两条移动平均线都使用所测量的任何时期的收盘价。在 MACD 图表上，还绘制了 MACD 本身的 9 天 EMA，它充当买卖决策的触发器。MACD 在其自身的 9 日均线上方移动时会产生看涨信号，而当其移动至其九日均线下方时会发出卖出信号。',
+  mts: 'MACD交易策略',
+  trade_num: '每天套利次数',
+  trade_fee: '提现手续费',
 
   change_password: '修改密码',
   old_password: '旧密码',
@@ -61,7 +61,8 @@ export default {
   membership: '会员数量',
   about_us: '关于我们',
   we_are_at_our_best: '我们正处于最佳状态',
-  cost_effective: '云挖掘为比特币Trx和其他加密货币提供了一种潜在的经济高效的挖掘方式。同时，定量交易和Defi技术都将允许您以少量资本轻松参与区块链交易，并获得保险等稳定收入',
+  cost_effective:
+    '云挖掘为比特币Trx和其他加密货币提供了一种潜在的经济高效的挖掘方式。同时，定量交易和Defi技术都将允许您以少量资本轻松参与区块链交易，并获得保险等稳定收入',
   global_partners: '全球合作伙伴',
 
   transfer_to_promotion_account: '存入佣金账户',
@@ -74,9 +75,11 @@ export default {
   transfer_to_basicaccount: '存入基本账户',
   investment_is_divided_into_two_modes: '投资分为两种模式',
   recharge_text1: '1：充值到基础账户，每天按照斯里兰卡时区（24:00后）领取收益',
-  recharge_text2: '2：充值到佣金账户，可以按照不同周期获得收益，到期返还本金和收益',
+  recharge_text2:
+    '2：充值到佣金账户，可以按照不同周期获得收益，到期返还本金和收益',
   view_notes: '查看说明',
-  recharge_text3: '投资前，请根据您的投资需求选择基本账户或佣金账户进行投资。 请务必等待账户充值。 这是一个非常关键的问题。',
+  recharge_text3:
+    '投资前，请根据您的投资需求选择基本账户或佣金账户进行投资。 请务必等待账户充值。 这是一个非常关键的问题。',
 
   basic_account_balance: '基本账户余额',
   hour_withdrawal: '小时提现',
@@ -200,7 +203,8 @@ export default {
 
   t_address: '取款地址错误，请输入T 开头的取款地址',
   successful_verification: '验证成功',
-  using_telegraph: '请使用Telegraph添加好友：{url} 并发送您的帐户邀请码：{code} 进行验证。通过验证后，即可提交提币。',
+  using_telegraph:
+    '请使用Telegraph添加好友：{url} 并发送您的帐户邀请码：{code} 进行验证。通过验证后，即可提交提币。',
   open_link: '打开链接',
   copy_invitation_code: '复制邀请码',
 
@@ -284,7 +288,8 @@ export default {
   dividend_method: '分红方式',
   repayment_at_maturity: '每日返息，到期还本',
   referral_reward: '推荐奖励',
-  click_member_center: '点击会员中心一邀请好友-转发到您朋友圈里,只要您好友通过邀请二维码注册成为级会员,充值并成功投资次性还款项目,您就可以得到该好友投资金额3.00%的奖励,注册成功后,系统自动赠送!',
+  click_member_center:
+    '点击会员中心一邀请好友-转发到您朋友圈里,只要您好友通过邀请二维码注册成为级会员,充值并成功投资次性还款项目,您就可以得到该好友投资金额3.00%的奖励,注册成功后,系统自动赠送!',
   hours_settlement: '24小时结算',
   Login_account: '登陆账号',
   Please_enter_the_login_account: '请输入登陆账户',
@@ -346,7 +351,8 @@ export default {
   Directly_to_account_balance: '直接发放至账户余额',
   Accumulated_sign_in_rewards: '累计签到奖励',
   undone: '未完成',
-  please_pay_attention_to_check: '备注:奖励红包直接发放到账户余额中,请注意查收!',
+  please_pay_attention_to_check:
+    '备注:奖励红包直接发放到账户余额中,请注意查收!',
   Go_to_investment_account: '转到投资账户',
   sign_in2: '签到',
 
@@ -389,7 +395,8 @@ export default {
   Advantages_of_Youtube_Blogger_Promoter: '成为Youtube博主推广员的优势',
   Ordinary_member: '普通会员',
   Youtube_Blogger_Promoter: 'Youtube博主推广员',
-  Invitation_to_register_successfully_and_reward_XTRX: '邀请注册成功奖励{value}TRX',
+  Invitation_to_register_successfully_and_reward_XTRX:
+    '邀请注册成功奖励{value}TRX',
   No_Youtube_video_reward: '没有Youtube视频奖励',
   Have_Youtube_Video_Rewards: '拥有Youtube视频奖励',
   low_task_reward: '任务奖励少',
@@ -398,18 +405,23 @@ export default {
   Your_Youtube_channel_link: '您的Youtube频道链接',
   Number_of_subscriptions_to_your_Youtube_channel: '您的Youtube频道订阅数量',
   Your_Telegarm_account: '您的Telegarm账号',
-  Youtube_profile_needs_your_Telegram_account_information: 'Youtube简介需要有您的Telegram账户信息,管理员将进行审核!',
+  Youtube_profile_needs_your_Telegram_account_information:
+    'Youtube简介需要有您的Telegram账户信息,管理员将进行审核!',
   Submit_review: '提交审核',
   Waiting_for_admin_review: '等待管理员审核中',
   please_follow_the_Telegram_channel: '为了保证成功进行审核,请关注Telegram频道',
   ok: '好的',
   Follow_Telegram_channel: '关注Telegram频道',
   Follow_the_reward_XTRX: '关注奖励:{value}TRX',
-  Please_follow_the_Telegram_channel_first_to_get_the_code: '请先关注Telegram频道获得领取码',
+  Please_follow_the_Telegram_channel_first_to_get_the_code:
+    '请先关注Telegram频道获得领取码',
   Invite_Youtube_to_join_partner_instructions: '邀请Youtube加入合作伙伴说明',
-  Invite_YouTube_bloggers_text1: '1.邀请YouTube博主成功申请成为推广员系统自动发放奖励',
-  Invite_YouTube_bloggers_text2: '2.Youtube博主需要通过您的邀请链接或者推荐码进行注册',
-  Invite_YouTube_bloggers_text3: '3.邀请YouTube博主成为推广员后,他邀请的每一个会员您会得到奖励是{value}TRX',
+  Invite_YouTube_bloggers_text1:
+    '1.邀请YouTube博主成功申请成为推广员系统自动发放奖励',
+  Invite_YouTube_bloggers_text2:
+    '2.Youtube博主需要通过您的邀请链接或者推荐码进行注册',
+  Invite_YouTube_bloggers_text3:
+    '3.邀请YouTube博主成为推广员后,他邀请的每一个会员您会得到奖励是{value}TRX',
   my_youtube_blogger_list: '我的YouTube博主列表',
   YouTube_bloggers_contribute_profits: 'YouTube博主贡献利润',
   my_youtube_blogger: '我的YouTube博主',
@@ -424,9 +436,11 @@ export default {
   Sign_in_task_reward_description: '签到任务奖励说明',
   Sign_in_task_reward_description_text1: '签到任务奖励金额跟邀请好友人数成正比',
   Sign_in_task_reward_description_text2: '邀请人数越多,每日签到奖励越多',
-  Sign_in_task_reward_description_text3: '邀请好友后需要好友完成取款后,系统才会发放奖励',
+  Sign_in_task_reward_description_text3:
+    '邀请好友后需要好友完成取款后,系统才会发放奖励',
   Reward_amount_introduction: '奖励金额介绍',
-  Reward_amount_introduction_text: '累积邀请好友人数满{value1}个每日签到奖励{value2}TRX',
+  Reward_amount_introduction_text:
+    '累积邀请好友人数满{value1}个每日签到奖励{value2}TRX',
   Sign_in_now: '立即签到',
 
   task: '任务',
@@ -435,9 +449,11 @@ export default {
   Receive_award: '领取奖励',
   invite_to_join: '邀请加入',
   Please_select_an_area_code: '请选择区号',
-  The_investment_amount_cannot_be_less_than_the_starting_investment_amount: '投入金额不能小于起投金额',
+  The_investment_amount_cannot_be_less_than_the_starting_investment_amount:
+    '投入金额不能小于起投金额',
 
-  YouTube_profileTelegram_account_information: 'YouTube简介需要有您的Telegram账户信息,管理员将进行审核!',
+  YouTube_profileTelegram_account_information:
+    'YouTube简介需要有您的Telegram账户信息,管理员将进行审核!',
   Please_enter_the_area_code_to_search: '请输入区号检索',
 
   back: '返回',
@@ -530,7 +546,6 @@ export default {
   receiving_address: '接收地址',
   Waiting_for_the_lottery_result: '等待转账完成,TRON生成哈希值计算开奖结果',
   Available_Balance: '可用余额',
-  bet_amount: '下注金额',
   bet: '下注',
   Stop_betting_and_wait_for_the_draw_result: '停止下注，等待获取开奖结果',
   Bet_confirmation: '下注确认',
@@ -553,5 +568,5 @@ export default {
   Winning_information: '中奖信息',
   consumption_quantity: '消费数量',
   Number_of_winnings: '中奖数量',
-  my_VIP_level: '我的VIP等级',
+  my_VIP_level: '我的VIP等级'
 }

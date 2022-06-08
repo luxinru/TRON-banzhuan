@@ -51,9 +51,9 @@ export default {
       //  "follow_telegram_channel_money": 0//关注获得金额
 
       Fetch('/user/get_activity_status').then((res) => {
-        console.log('get_activity_status :>> ', res);
-        const { invitation_rebate1 } = res.data
-        this.invitation_rebate1 = invitation_rebate1
+        console.log('get_activity_status :>> ', res)
+        const { invitation_rebate1: invitationRebate1 } = res.data
+        this.invitation_rebate1 = invitationRebate1
       })
 
       this.loading = true

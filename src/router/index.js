@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const alpha = [{
+const alpha = [
+  {
     path: '/',
     redirect: {
       name: 'Login'
@@ -15,7 +16,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Login" */ '@/views/alpha/login.vue')
+    component: () =>
+      import(/* webpackChunkName: "Login" */ '@/views/alpha/login.vue')
   },
   {
     path: '/register',
@@ -23,7 +25,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Register" */ '@/views/alpha/register.vue')
+    component: () =>
+      import(/* webpackChunkName: "Register" */ '@/views/alpha/register.vue')
   },
   {
     path: '/home',
@@ -31,7 +34,8 @@ const alpha = [{
     meta: {
       hideFooter: false
     },
-    component: () => import( /* webpackChunkName: "Home" */ '@/views/alpha/home.vue')
+    component: () =>
+      import(/* webpackChunkName: "Home" */ '@/views/alpha/home.vue')
   },
   {
     path: '/invest',
@@ -39,7 +43,8 @@ const alpha = [{
     meta: {
       hideFooter: false
     },
-    component: () => import( /* webpackChunkName: "Invest" */ '@/views/alpha/invest.vue')
+    component: () =>
+      import(/* webpackChunkName: "Invest" */ '@/views/alpha/invest.vue')
   },
   {
     path: '/invest-detail',
@@ -47,7 +52,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "InvestDetail" */ '@/views/alpha/invest-detail.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "InvestDetail" */ '@/views/alpha/invest-detail.vue'
+      )
   },
   {
     path: '/withdraw',
@@ -55,7 +63,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Withdraw" */ '@/views/alpha/withdraw.vue')
+    component: () =>
+      import(/* webpackChunkName: "Withdraw" */ '@/views/alpha/withdraw.vue')
   },
   {
     path: '/recharge',
@@ -63,7 +72,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Recharge" */ '@/views/alpha/recharge.vue')
+    component: () =>
+      import(/* webpackChunkName: "Recharge" */ '@/views/alpha/recharge.vue')
   },
   {
     path: '/recharge-detail',
@@ -71,7 +81,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "RechargeDetail" */ '@/views/alpha/recharge-detail.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "RechargeDetail" */ '@/views/alpha/recharge-detail.vue'
+      )
   },
   {
     path: '/share',
@@ -79,7 +92,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Share" */ '@/views/alpha/share.vue')
+    component: () =>
+      import(/* webpackChunkName: "Share" */ '@/views/alpha/share.vue')
   },
   {
     path: '/qiandao',
@@ -87,7 +101,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Qiandao" */ '@/views/alpha/qiandao.vue')
+    component: () =>
+      import(/* webpackChunkName: "Qiandao" */ '@/views/alpha/qiandao.vue')
   },
   {
     path: '/my-invests',
@@ -95,7 +110,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "MyInvests" */ '@/views/alpha/my-invests.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "MyInvests" */ '@/views/alpha/my-invests.vue'
+      )
   },
   {
     path: '/notice',
@@ -103,7 +121,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Notice" */ '@/views/alpha/notice.vue')
+    component: () =>
+      import(/* webpackChunkName: "Notice" */ '@/views/alpha/notice.vue')
   },
   {
     path: '/notice-content',
@@ -111,7 +130,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "NoticeContent" */ '@/views/alpha/notice-content.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "NoticeContent" */ '@/views/alpha/notice-content.vue'
+      )
   },
   {
     path: '/activity',
@@ -119,7 +141,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Activity" */ '@/views/alpha/activity.vue')
+    component: () =>
+      import(/* webpackChunkName: "Activity" */ '@/views/alpha/activity.vue')
   },
   {
     path: '/wallet',
@@ -127,7 +150,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Wallet" */ '@/views/alpha/wallet.vue')
+    component: () =>
+      import(/* webpackChunkName: "Wallet" */ '@/views/alpha/wallet.vue')
   },
   {
     path: '/transfer',
@@ -135,7 +159,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Transfer" */ '@/views/alpha/transfer.vue')
+    component: () =>
+      import(/* webpackChunkName: "Transfer" */ '@/views/alpha/transfer.vue')
   },
   {
     path: '/kefu',
@@ -143,7 +168,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Kefu" */ '@/views/alpha/kefu.vue')
+    component: () =>
+      import(/* webpackChunkName: "Kefu" */ '@/views/alpha/kefu.vue')
   },
   {
     path: '/recharge-record',
@@ -151,7 +177,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "RechargeRecord" */ '@/views/alpha/recharge-record.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "RechargeRecord" */ '@/views/alpha/recharge-record.vue'
+      )
   },
   {
     path: '/withdraw-record',
@@ -159,7 +188,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "WithdrawRecord" */ '@/views/alpha/withdraw-record.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "WithdrawRecord" */ '@/views/alpha/withdraw-record.vue'
+      )
   },
   {
     path: '/manage',
@@ -167,7 +199,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Manage" */ '@/views/alpha/manage.vue')
+    component: () =>
+      import(/* webpackChunkName: "Manage" */ '@/views/alpha/manage.vue')
   },
   {
     path: '/about',
@@ -175,7 +208,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "About" */ '@/views/alpha/about.vue')
+    component: () =>
+      import(/* webpackChunkName: "About" */ '@/views/alpha/about.vue')
   },
   {
     path: '/about-content',
@@ -183,7 +217,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "AboutContent" */ '@/views/alpha/about-content.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "AboutContent" */ '@/views/alpha/about-content.vue'
+      )
   },
   {
     path: '/agreement',
@@ -191,7 +228,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Agreement" */ '@/views/alpha/agreement.vue')
+    component: () =>
+      import(/* webpackChunkName: "Agreement" */ '@/views/alpha/agreement.vue')
   },
   {
     path: '/privacy',
@@ -199,7 +237,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Privacy" */ '@/views/alpha/privacy.vue')
+    component: () =>
+      import(/* webpackChunkName: "Privacy" */ '@/views/alpha/privacy.vue')
   },
   {
     path: '/wallet-management',
@@ -207,7 +246,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "WalletManagement" */ '@/views/alpha/wallet-management.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "WalletManagement" */ '@/views/alpha/wallet-management.vue'
+      )
   },
   {
     path: '/resetpwd',
@@ -215,7 +257,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Resetpwd" */ '@/views/alpha/resetpwd.vue')
+    component: () =>
+      import(/* webpackChunkName: "Resetpwd" */ '@/views/alpha/resetpwd.vue')
   },
   {
     path: '/resetpayment',
@@ -223,7 +266,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Resetpayment" */ '@/views/alpha/resetpayment.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "Resetpayment" */ '@/views/alpha/resetpayment.vue'
+      )
   },
   {
     path: '/findpwd',
@@ -231,7 +277,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Findpwd" */ '@/views/alpha/findpwd.vue')
+    component: () =>
+      import(/* webpackChunkName: "Findpwd" */ '@/views/alpha/findpwd.vue')
   },
   {
     path: '/be-youtube',
@@ -239,7 +286,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "BeYoutube" */ '@/views/alpha/be-youtube.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "BeYoutube" */ '@/views/alpha/be-youtube.vue'
+      )
   },
   {
     path: '/focus-youtube',
@@ -247,7 +297,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "FocusYoutube" */ '@/views/alpha/focus-youtube.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "FocusYoutube" */ '@/views/alpha/focus-youtube.vue'
+      )
   },
   {
     path: '/invite-to-join',
@@ -255,7 +308,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "InviteToJoin" */ '@/views/alpha/invite-to-join.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "InviteToJoin" */ '@/views/alpha/invite-to-join.vue'
+      )
   },
   {
     path: '/main-activity',
@@ -263,7 +319,10 @@ const alpha = [{
     meta: {
       hideFooter: false
     },
-    component: () => import( /* webpackChunkName: "MainActivity" */ '@/views/alpha/main-activity.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "MainActivity" */ '@/views/alpha/main-activity.vue'
+      )
   },
   {
     path: '/team',
@@ -271,7 +330,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "Team" */ '@/views/alpha/team.vue')
+    component: () =>
+      import(/* webpackChunkName: "Team" */ '@/views/alpha/team.vue')
   },
   {
     path: '/invest-confirm',
@@ -279,7 +339,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "InvestConfirm" */ '@/views/alpha/invest-confirm.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "InvestConfirm" */ '@/views/alpha/invest-confirm.vue'
+      )
   },
   {
     path: '/my-investment',
@@ -287,7 +350,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "MyInvestment" */ '@/views/alpha/my-investment.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "MyInvestment" */ '@/views/alpha/my-investment.vue'
+      )
   },
   {
     path: '/my-swap',
@@ -295,7 +361,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "MyInvestment" */ '@/views/alpha/my-swap.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "MyInvestment" */ '@/views/alpha/my-swap.vue'
+      )
   },
   {
     path: '/swap-u-trx',
@@ -303,7 +372,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "MyInvestment" */ '@/views/alpha/swap-u-trx.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "MyInvestment" */ '@/views/alpha/swap-u-trx.vue'
+      )
   },
   {
     path: '/getVIP',
@@ -311,7 +383,8 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "MyInvestment" */ '@/views/alpha/getVIP.vue')
+    component: () =>
+      import(/* webpackChunkName: "MyInvestment" */ '@/views/alpha/getVIP.vue')
   },
   {
     path: '/verify-email',
@@ -319,7 +392,10 @@ const alpha = [{
     meta: {
       hideFooter: true
     },
-    component: () => import( /* webpackChunkName: "VerifyEmail" */ '@/views/alpha/verify-email.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "VerifyEmail" */ '@/views/alpha/verify-email.vue'
+      )
   },
   {
     path: '/mine',
@@ -327,16 +403,17 @@ const alpha = [{
     meta: {
       hideFooter: false
     },
-    component: () => import( /* webpackChunkName: "Mine" */ '@/views/alpha/mine.vue')
+    component: () =>
+      import(/* webpackChunkName: "Mine" */ '@/views/alpha/mine.vue')
   }
 ]
 
 const routers = {
-  alpha: alpha,
+  alpha: alpha
 }
 
 const router = new VueRouter({
-  routes: routers['alpha']
+  routes: routers.alpha
 })
 
 export default router

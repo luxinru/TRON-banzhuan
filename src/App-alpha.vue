@@ -82,14 +82,14 @@
 
 <script>
 import App from './App.vue'
-import Kefu from '@/utils/kefu.vue'
+// import Kefu from '@/utils/kefu.vue'
 
 export default {
   extends: App,
 
   components: {
-    Kefu,
-  },
+    // Kefu
+  }
 }
 </script>
 

@@ -12,30 +12,14 @@
         <div class="qrcode" ref="qrCodeUrl"></div>
       </div>
 
-      <span class="title" v-if=" type == 1">{{
-         $t('trx_address')
-      }}</span>
-      <span class="title" v-if=" type == 2">{{
-         'TRC20-USDT Address'
-      }}</span>
-      <span class="title" v-if=" type == 3">{{
-         'ERC20-USDT Address'
-      }}</span>
-      <span class="title" v-if=" type == 4">{{
-         'BNB Address'
-      }}</span>
-      <span class="title" v-if=" type == 5">{{
-         'BTC Address'
-      }}</span>
-      <span class="title" v-if=" type == 6">{{
-         'ETH Address'
-      }}</span>
-      <span class="title" v-if=" type == 7">{{
-         'DOGE Address'
-      }}</span>
-      <span class="title" v-if=" type == 8">{{
-         'UNI Address'
-      }}</span>
+      <span class="title" v-if="type == 1">{{ $t('trx_address') }}</span>
+      <span class="title" v-if="type == 2">{{ 'TRC20-USDT Address' }}</span>
+      <span class="title" v-if="type == 3">{{ 'ERC20-USDT Address' }}</span>
+      <span class="title" v-if="type == 4">{{ 'BNB Address' }}</span>
+      <span class="title" v-if="type == 5">{{ 'BTC Address' }}</span>
+      <span class="title" v-if="type == 6">{{ 'ETH Address' }}</span>
+      <span class="title" v-if="type == 7">{{ 'DOGE Address' }}</span>
+      <span class="title" v-if="type == 8">{{ 'UNI Address' }}</span>
       <span class="tip2"> </span>
 
       <div class="url">{{ address }}</div>
@@ -71,7 +55,7 @@
 import RechargeDetail from '@/constant/recharge-detail.vue'
 export default {
   name: 'RechargeDetail',
-  extends: RechargeDetail,
+  extends: RechargeDetail
 }
 </script>
 <style lang="less" scoped>

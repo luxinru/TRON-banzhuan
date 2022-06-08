@@ -110,7 +110,7 @@
 import Login from '@/constant/login.vue'
 
 export default {
-  extends: Login,
+  extends: Login
 }
 </script>
 

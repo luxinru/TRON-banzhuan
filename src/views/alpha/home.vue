@@ -249,9 +249,9 @@
 
       <div class="funs_content">
         <div class="part">
-          <span> {{$t('investment_amount')}}(USD) </span>
-          <span> {{$t('cumulative_income')}}(USDT) </span>
-          <span> {{$t('cumulative_income')}}(TRX) </span>
+          <span> {{ $t('investment_amount') }}(USD) </span>
+          <span> {{ $t('cumulative_income') }}(USDT) </span>
+          <span> {{ $t('cumulative_income') }}(TRX) </span>
         </div>
         <div class="part">
           <span> {{ usdSum }} </span>
@@ -275,7 +275,7 @@ export default {
 
   extends: Home,
 
-  components: {},
+  components: {}
 }
 </script>
 

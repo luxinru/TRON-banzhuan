@@ -37,7 +37,7 @@ export default {
       return this.actions.filter(
         (item) => (item.name + '').indexOf(this.actionsText) > -1
       )
-    },
+    }
   },
 
   mounted () {
@@ -76,7 +76,9 @@ export default {
     },
 
     async fetchImgCode () {
-      const { data: { image, uniqid } } = await Fetch('/index/img_code')
+      const {
+        data: { image, uniqid }
+      } = await Fetch('/index/img_code')
       this.captchaUrl = image
       this.uniqid = uniqid
     },
@@ -94,7 +96,9 @@ export default {
         return this.$notify(this.$t('please_enter_your_mobile_phone_number'))
       }
       if (!this.captcha) {
-        return this.$notify(this.$t('Please_enter_the_graphic_verification_code'))
+        return this.$notify(
+          this.$t('Please_enter_the_graphic_verification_code')
+        )
       }
 
       Fetch('/index/register_code', {

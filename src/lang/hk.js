@@ -4,10 +4,10 @@ export default {
   invest: '投資',
   share: '分享',
   mine: '我的',
-  swap:'交換',
-  mts:'MACD交易策略',
-  trade_num:'每天套利次數',
-  trade_fee:'提款費',
+  swap: '交換',
+  mts: 'MACD交易策略',
+  trade_num: '每天套利次數',
+  trade_fee: '提款費',
 
   change_password: '修改密碼',
   old_password: '舊密碼',
@@ -60,7 +60,8 @@ export default {
   membership: '會員數量',
   about_us: '關於我們',
   we_are_at_our_best: '我們正處於最佳狀態',
-  cost_effective: '雲挖掘為比特幣Trx和其他加密貨幣提供了一種潜在的經濟高效的挖掘管道。 同時，定量交易和Defi科技都將允許您以少量資本輕鬆參與區塊鏈交易，並獲得保險等穩定收入',
+  cost_effective:
+    '雲挖掘為比特幣Trx和其他加密貨幣提供了一種潜在的經濟高效的挖掘管道。 同時，定量交易和Defi科技都將允許您以少量資本輕鬆參與區塊鏈交易，並獲得保險等穩定收入',
   global_partners: '全球合作夥伴',
 
   transfer_to_promotion_account: '存入傭金帳戶',
@@ -73,9 +74,11 @@ export default {
   transfer_to_basicaccount: '存入基本帳戶',
   investment_is_divided_into_two_modes: '投資分為兩種模式',
   recharge_text1: '1：充值到基礎帳戶，每天按照斯里蘭卡時區（24:00後）領取收益',
-  recharge_text2: '2：充值到傭金帳戶，可以按照不同週期獲得收益，到期返還本金和收益',
+  recharge_text2:
+    '2：充值到傭金帳戶，可以按照不同週期獲得收益，到期返還本金和收益',
   view_notes: '查看說明',
-  recharge_text3: '投資前，請根據您的投資需求選擇基本帳戶或傭金帳戶進行投資。 請務必等待帳戶充值。 這是一個非常關鍵的問題。',
+  recharge_text3:
+    '投資前，請根據您的投資需求選擇基本帳戶或傭金帳戶進行投資。 請務必等待帳戶充值。 這是一個非常關鍵的問題。',
 
   basic_account_balance: '基本帳戶餘額',
   hour_withdrawal: '小時提現',
@@ -199,7 +202,8 @@ export default {
 
   t_address: '取款地址錯誤，請輸入T開頭的取款地址',
   successful_verification: '驗證成功',
-  using_telegraph: '請使用Telegraph添加好友： {url} 並發送您的帳戶邀請碼：{code} 進行驗證。 通過驗證後，即可提交提幣。',
+  using_telegraph:
+    '請使用Telegraph添加好友： {url} 並發送您的帳戶邀請碼：{code} 進行驗證。 通過驗證後，即可提交提幣。',
   open_link: '打開連結',
   copy_invitation_code: '複製邀請碼',
 
@@ -283,7 +287,8 @@ export default {
   dividend_method: '分紅管道',
   repayment_at_maturity: '每日返息，到期還本',
   referral_reward: '推薦獎勵',
-  click_member_center: '點擊會員中心一邀請好友-轉發到您朋友圈裏，只要您好友通過邀請二維碼注册成為級會員，充值並成功投資次性還款項目，您就可以得到該好友投資金額3.00%的獎勵，注册成功後，系統自動贈送！',
+  click_member_center:
+    '點擊會員中心一邀請好友-轉發到您朋友圈裏，只要您好友通過邀請二維碼注册成為級會員，充值並成功投資次性還款項目，您就可以得到該好友投資金額3.00%的獎勵，注册成功後，系統自動贈送！',
   hours_settlement: '24小時結算',
   Login_account: '登入帳號',
   Please_enter_the_login_account: '請輸入登入帳戶',
@@ -345,7 +350,8 @@ export default {
   Directly_to_account_balance: '直接發放至帳戶餘額',
   Accumulated_sign_in_rewards: '累計簽到獎勵',
   undone: '未完成',
-  please_pay_attention_to_check: '備註：獎勵紅包直接發放到帳戶餘額中，請注意查收！',
+  please_pay_attention_to_check:
+    '備註：獎勵紅包直接發放到帳戶餘額中，請注意查收！',
   Go_to_investment_account: '轉到投資帳戶',
   sign_in2: '簽到',
 
@@ -363,12 +369,15 @@ export default {
   Transfer_amount: '轉入數量',
   x_bound_wallet: '{value}個綁定的錢包',
 
-  Invitation_to_register_successfully_and_reward_XTRX: '邀請注册成功獎勵{value}TRX',
+  Invitation_to_register_successfully_and_reward_XTRX:
+    '邀請注册成功獎勵{value}TRX',
   Follow_the_reward_XTRX: '關注獎勵：{value}TRX',
-  Invite_YouTube_bloggers_text3: '3.邀請YouTube博主成為推廣員後，他邀請的每一個會員您會得到獎勵是{value}TRX',
+  Invite_YouTube_bloggers_text3:
+    '3.邀請YouTube博主成為推廣員後，他邀請的每一個會員您會得到獎勵是{value}TRX',
   Number_of_people_eligible_for_the_award: '符合獎勵人數：{value}人',
   Reward_amount_XTRX: '獎勵金額：{value}TRX',
-  Reward_amount_introduction_text: '累積邀請好友人數滿{value1}個每日簽到獎勵{value2}TRX',
+  Reward_amount_introduction_text:
+    '累積邀請好友人數滿{value1}個每日簽到獎勵{value2}TRX',
   Bounty_task: '賞金任務',
   Invite_Youtube_partners: '邀請Youtube博主做合作夥伴',
   Invite_Youtube_partners_text: '推薦Youtubet博主一起賺錢',
@@ -402,16 +411,21 @@ export default {
   Your_Youtube_channel_link: '您的Youtube頻道連結',
   Number_of_subscriptions_to_your_Youtube_channel: '您的Youtube頻道訂閱數量',
   Your_Telegarm_account: '您的Telegarm帳號',
-  Youtube_profile_needs_your_Telegram_account_information: 'Youtube簡介需要有您的Telegram帳戶資訊，管理員將進行稽核！',
+  Youtube_profile_needs_your_Telegram_account_information:
+    'Youtube簡介需要有您的Telegram帳戶資訊，管理員將進行稽核！',
   Submit_review: '提交稽核',
   Waiting_for_admin_review: '等待管理員稽核中',
-  please_follow_the_Telegram_channel: '為了保證成功進行稽核，請關注Telegram頻道',
+  please_follow_the_Telegram_channel:
+    '為了保證成功進行稽核，請關注Telegram頻道',
   ok: '好的',
   Follow_Telegram_channel: '關注Telegram頻道',
-  Please_follow_the_Telegram_channel_first_to_get_the_code: '請先關注Telegram頻道獲得領取碼',
+  Please_follow_the_Telegram_channel_first_to_get_the_code:
+    '請先關注Telegram頻道獲得領取碼',
   Invite_Youtube_to_join_partner_instructions: '邀請Youtube加入合作夥伴說明',
-  Invite_YouTube_bloggers_text1: '1.邀請YouTube博主成功申請成為推廣員系統自動發放獎勵',
-  Invite_YouTube_bloggers_text2: '2.Youtube博主需要通過您的邀請連結或者推薦碼進行注册',
+  Invite_YouTube_bloggers_text1:
+    '1.邀請YouTube博主成功申請成為推廣員系統自動發放獎勵',
+  Invite_YouTube_bloggers_text2:
+    '2.Youtube博主需要通過您的邀請連結或者推薦碼進行注册',
   my_youtube_blogger_list: '我的YouTube博主清單',
   YouTube_bloggers_contribute_profits: 'YouTube博主貢獻利潤',
   my_youtube_blogger: '我的YouTube博主',
@@ -424,7 +438,8 @@ export default {
   Sign_in_task_reward_description: '簽到任務獎勵說明',
   Sign_in_task_reward_description_text1: '簽到任務獎勵金額跟邀請好友人數成正比',
   Sign_in_task_reward_description_text2: '邀請人數越多，每日簽到獎勵越多',
-  Sign_in_task_reward_description_text3: '邀請好友後需要好友完成取款後，系統才會發放獎勵',
+  Sign_in_task_reward_description_text3:
+    '邀請好友後需要好友完成取款後，系統才會發放獎勵',
   Reward_amount_introduction: '獎勵金額介紹',
   Sign_in_now: '立即簽到',
 
@@ -434,9 +449,11 @@ export default {
   Receive_award: '領取獎勵',
   invite_to_join: '邀請加入',
   Please_select_an_area_code: '請選擇區號',
-  The_investment_amount_cannot_be_less_than_the_starting_investment_amount: '投入金額不能小於起投金額',
+  The_investment_amount_cannot_be_less_than_the_starting_investment_amount:
+    '投入金額不能小於起投金額',
 
-  YouTube_profileTelegram_account_information: 'YouTube簡介需要有您的Telegram帳戶資訊，管理員將進行稽核！',
+  YouTube_profileTelegram_account_information:
+    'YouTube簡介需要有您的Telegram帳戶資訊，管理員將進行稽核！',
   Please_enter_the_area_code_to_search: '請輸入區號檢索',
 
   back: '返回',

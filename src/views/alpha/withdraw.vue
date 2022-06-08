@@ -27,13 +27,13 @@
       <!-- <span class="label">{{ getTitle() }}(TRX)</span> -->
       <span class="tip">24 {{ $t('hour_withdrawal') }}</span>
       <template v-if="active === 1">
-<!--        <div class="info">
+        <!--        <div class="info">
           {{ $t('daily_withdrawal_limit') }}: {{ daily_withdrawal_limit }}
           <br />
           {{ withdrawal_limit_remaining_today }} trx
           {{ $t('withdrawal_limit_remaining_today') }}
         </div> -->
-<!--        <span
+        <!--        <span
           class="btn"
           @click="$router.push('/transfer', { query: { type: 2 } })"
         >
@@ -60,7 +60,9 @@
       <div class="item">
         <span class="title">{{ $t('Withdrawal_limit') }} </span>
         <!-- <span class="title">VIP : {{title}}</span> -->
-        <span class="title">{{title}} {{ $t('trade_fee') }} : {{cash_rate}}%</span>
+        <span class="title"
+          >{{ title }} {{ $t('trade_fee') }} : {{ cash_rate }}%</span
+        >
         <input
           v-model="money"
           type="number"
@@ -85,7 +87,7 @@
     >
       {{ $t('confrm') }}
     </section>
-   <section
+    <section
       class="confirm"
       :class="{ submit_no: gift_status === 0 }"
       style="z-index: 1"
@@ -95,7 +97,7 @@
       {{ $t('confrm') }}
     </section>
 
-<!--    <van-dialog
+    <!--    <van-dialog
       class="dialog"
       v-model="isShowModel"
       closeOnClickOverlay
@@ -124,7 +126,6 @@
     >
       <div class="content">
         <span class="title">{{ $t('tips') }}</span>
-
       </div>
       <div class="btn" @click="isShowConfirmModel = false">
         {{ $t('cancel_withdrawal') }}
@@ -141,7 +142,7 @@ import Withdraw from '@/constant/withdraw.vue'
 export default {
   name: 'Withdraw',
 
-  extends: Withdraw,
+  extends: Withdraw
 }
 </script>
 

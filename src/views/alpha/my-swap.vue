@@ -7,7 +7,7 @@
         color="#fff"
         @click="$router.go(-1)"
       />
-      <span style="color: white;">My Swap</span>
+      <span style="color: white">My Swap</span>
     </section>
 
     <section class="list">
@@ -15,7 +15,7 @@
         <div class="title">
           <span class="value">{{ item.left_market_pair }}</span>
 
-<!--          <van-icon
+          <!--          <van-icon
             class="icon"
             name="arrow"
             color="#000"
@@ -26,13 +26,33 @@
           /> -->
         </div>
         <div class="title">
-          <span class="value"><img style="width: 25px;" :src="getImgUrl(item.left_exchange_id)" alt="">{{ item.left_exchange_name }}</span>
-          <img style="width: 25px;" src="@/assets/images/alpha/refresh.png" alt="">
-          <span class="value">{{ item.right_exchange_name }}<img style="width: 25px;" :src="getImgUrl(item.right_exchange_id)" alt=""></span>
+          <span class="value"
+            ><img
+              style="width: 25px"
+              :src="getImgUrl(item.left_exchange_id)"
+              alt=""
+            />{{ item.left_exchange_name }}</span
+          >
+          <img
+            style="width: 25px"
+            src="@/assets/images/alpha/refresh.png"
+            alt=""
+          />
+          <span class="value"
+            >{{ item.right_exchange_name
+            }}<img
+              style="width: 25px"
+              :src="getImgUrl(item.right_exchange_id)"
+              alt=""
+          /></span>
         </div>
         <div class="title">
           <span class="value">{{ item.left_price }}</span>
-          <img style="width: 25px;" src="@/assets/images/alpha/arrow-right.png" alt="">
+          <img
+            style="width: 25px"
+            src="@/assets/images/alpha/arrow-right.png"
+            alt=""
+          />
           <span class="value">{{ item.right_price }}</span>
         </div>
         <!-- <div class="info">
@@ -41,26 +61,40 @@
         </div> -->
 
         <div class="time">
-          <span>{{ item.money}} {{
-        item.type == 1 ? 'TRX' : 'USDT'
-      }}</span>
-          <span>* {{ (item.profit_ratio  * 100).toFixed(2)}}%</span>
+          <span>{{ item.money }} {{ item.type == 1 ? 'TRX' : 'USDT' }}</span>
+          <span>* {{ (item.profit_ratio * 100).toFixed(2) }}%</span>
           <!-- <div>{{ $t('contract') }}</div> -->
         </div>
         <div class="time">
-          <span>{{ item.profit_money}} {{
-        item.type == 1 ? 'TRX' : 'USDT'
-      }}</span>
-          <div v-if="item.status == 1" >{{ $t('completed') }}</div>
-          <div v-if="item.status == 0" style="padding: 1px;background: 0;margin-left: 0;">
-            <span id="wrapper" style="padding: 1px;background: 0;margin-left: 0;display: block;">
-              <span id="progressbar" style="padding: 1px;margin-left: 0;display: block;">
-                <span id="fill" style="margin-left: 0;display: block;"></span>
+          <span
+            >{{ item.profit_money }} {{ item.type == 1 ? 'TRX' : 'USDT' }}</span
+          >
+          <div v-if="item.status == 1">{{ $t('completed') }}</div>
+          <div
+            v-if="item.status == 0"
+            style="padding: 1px; background: 0; margin-left: 0"
+          >
+            <span
+              id="wrapper"
+              style="
+                padding: 1px;
+                background: 0;
+                margin-left: 0;
+                display: block;
+              "
+            >
+              <span
+                id="progressbar"
+                style="padding: 1px; margin-left: 0; display: block"
+              >
+                <span id="fill" style="margin-left: 0; display: block"></span>
               </span>
             </span>
-            <span>{{progress}}</span>
+            <span>{{ progress }}</span>
           </div>
-          <div v-if="item.status == 2" style="background-color: orangered;">{{ $t('undone') }}</div>
+          <div v-if="item.status == 2" style="background-color: orangered">
+            {{ $t('undone') }}
+          </div>
         </div>
       </div>
     </section>
@@ -74,7 +108,7 @@ export default {
 
   extends: MyInvests,
 
-  components: {},
+  components: {}
 }
 </script>
 
@@ -177,7 +211,7 @@ export default {
           flex: 1 0;
           font-size: 13px;
           font-weight: 500;
-          color: #4E7091;
+          color: #4e7091;
           line-height: 22px;
           word-break: break-word;
         }
@@ -198,43 +232,43 @@ export default {
     }
   }
 }
-  #wrapper {
-    // width: 200px;
-    // height: 100px;
-    // border: 1px solid #000000;
-    // margin: 0 auto;
-  }
+#wrapper {
+  // width: 200px;
+  // height: 100px;
+  // border: 1px solid #000000;
+  // margin: 0 auto;
+}
 
-  #progressbar {
-    // width: 180px;
-    width: 100px;
-    height: 6px;
-    margin: 0 auto;
-    // margin-top: 40px;
-    // border: 1px solid #000000;
-    background: aliceblue;
-  }
+#progressbar {
+  // width: 180px;
+  width: 100px;
+  height: 6px;
+  margin: 0 auto;
+  // margin-top: 40px;
+  // border: 1px solid #000000;
+  background: aliceblue;
+}
 
-  /* 设置进度条动画 */
-  #fill {
-    // animation: move 2s;
-    text-align: center;
-    width: 100px;
-    height: 5px;
-    border-radius: 5px;
-    background-color: rgb(56, 97, 251);
-    color: #ffffff;
-  }
-  .container {
-    // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-left: 0px;
-    padding-right: 0px;
-    position: relative;
-    width: 100%;
-    max-width: 1400px;
-    padding-right: 16px;
-    padding-left: 16px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+/* 设置进度条动画 */
+#fill {
+  // animation: move 2s;
+  text-align: center;
+  width: 100px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: rgb(56, 97, 251);
+  color: #ffffff;
+}
+.container {
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
+}
 </style>

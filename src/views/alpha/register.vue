@@ -139,7 +139,7 @@
 import Register from '@/constant/register.vue'
 
 export default {
-  extends: Register,
+  extends: Register
 }
 </script>
 

@@ -115,7 +115,7 @@ export default {
 
   extends: Findpwd,
 
-  components: {},
+  components: {}
 }
 </script>
 

@@ -26,9 +26,12 @@
           <span>TRX</span>
         </div>
         <div class="line"></div>
-        <div class="item" @click="
+        <div
+          class="item"
+          @click="
             $router.push({ path: '/recharge-detail', query: { type: 2 } })
-          ">
+          "
+        >
           <div class="img_box2">
             <img src="@/assets/images/alpha/组505拷贝@2x.png" alt="" />
           </div>
@@ -43,7 +46,7 @@
       <!-- {{ $t('investment_is_divided_into_two_modes') }} -->
     </section>
 
-<!--    <section class="box">
+    <!--    <section class="box">
       <p>{{ $t('recharge_text1') }}</p>
 
       <p>
@@ -67,7 +70,7 @@ export default {
 
   extends: Recharge,
 
-  components: {},
+  components: {}
 }
 </script>
 

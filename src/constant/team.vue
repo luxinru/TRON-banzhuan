@@ -7,7 +7,7 @@ export default {
 
   components: {},
 
-  data() {
+  data () {
     return {
       active: 0,
       myData: {},
@@ -27,20 +27,20 @@ export default {
       teamData: {},
       isLoading: false,
 
-      s_trx_money_rebate: "0.000000",
-      s_usdt_money_rebate: "0.000000",
+      s_trx_money_rebate: '0.000000',
+      s_usdt_money_rebate: '0.000000',
 
       interest_arbitrage_money_trx: 0,
       interest_arbitrage_money_usdt: 0,
 
-      reward1: "0.00",
-      reward2: "0.00",
-      reward3: "0.00",
+      reward1: '0.00',
+      reward2: '0.00',
+      reward3: '0.00'
     }
   },
 
   computed: {
-    teamList() {
+    teamList () {
       switch (this.active) {
         case 0:
           return this.team.all
@@ -53,15 +53,15 @@ export default {
         default:
           return []
       }
-    },
+    }
   },
 
-  mounted() {
+  mounted () {
     this.start()
   },
 
   methods: {
-    start() {
+    start () {
       this.isLoading = false
       Fetch('/user/info').then((res) => {
         const { data } = res
@@ -77,7 +77,7 @@ export default {
               team_info: teamInfo,
               total_performance: totalPerformance,
               team_count: teamCount,
-              data: teamData,
+              data: teamData
             },
             share,
             profit,
@@ -87,7 +87,7 @@ export default {
             total_contract_amount: totalContractAmount,
             total_contract_list: totalContractList,
             member
-          },
+          }
         } = res
         this.code = share ? share.code : ''
         this.register_url = share ? share.register_url : ''
@@ -102,14 +102,16 @@ export default {
         this.totalContractList = totalContractList || []
         this.member = member
         this.teamData = teamData
-        this.s_trx_money_rebate =res.data.s_trx_money_rebate
-        this.s_usdt_money_rebate=res.data.s_usdt_money_rebate
-        this.reward1=res.data.reward1
-        this.reward2=res.data.reward2
-        this.reward3=res.data.reward3
-        this.interest_arbitrage_money_trx=res.data.team.interest_arbitrage_money_trx
-        this.interest_arbitrage_money_usdt=res.data.team.interest_arbitrage_money_usdt
-        console.log('this.teamData :>> ', this.teamData);
+        this.s_trx_money_rebate = res.data.s_trx_money_rebate
+        this.s_usdt_money_rebate = res.data.s_usdt_money_rebate
+        this.reward1 = res.data.reward1
+        this.reward2 = res.data.reward2
+        this.reward3 = res.data.reward3
+        this.interest_arbitrage_money_trx =
+          res.data.team.interest_arbitrage_money_trx
+        this.interest_arbitrage_money_usdt =
+          res.data.team.interest_arbitrage_money_usdt
+        console.log('this.teamData :>> ', this.teamData)
         if (teamInfo.all) {
           this.active = 0
           this.isLevel = false
@@ -119,15 +121,14 @@ export default {
         }
         this.isLoading = true
       })
-
     },
-    onCopyCode() {
+    onCopyCode () {
       const clipboard = new Clipboard('.code')
       clipboard.on('success', (e) => {
         console.log('e :>> ', e)
         this.$notify({
           type: 'success',
-          message: this.$t('copy_successfully'),
+          message: this.$t('copy_successfully')
         })
         //  释放内存
         clipboard.destroy()
@@ -137,20 +138,20 @@ export default {
         // 不支持复制
         this.$notify({
           type: 'danger',
-          message: this.$t('copy_failed'),
+          message: this.$t('copy_failed')
         })
         // 释放内存
         clipboard.destroy()
       })
     },
 
-    onCopyUrl() {
+    onCopyUrl () {
       const clipboard = new Clipboard('.url')
       clipboard.on('success', (e) => {
         console.log('e :>> ', e)
         this.$notify({
           type: 'success',
-          message: this.$t('copy_successfully'),
+          message: this.$t('copy_successfully')
         })
         //  释放内存
         clipboard.destroy()
@@ -160,15 +161,15 @@ export default {
         // 不支持复制
         this.$notify({
           type: 'danger',
-          message: this.$t('copy_failed'),
+          message: this.$t('copy_failed')
         })
         // 释放内存
         clipboard.destroy()
       })
     },
-    onChangeType(type) {
+    onChangeType (type) {
       this.active = type
-    },
-  },
+    }
+  }
 }
 </script>

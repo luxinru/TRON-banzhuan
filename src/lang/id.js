@@ -4,9 +4,9 @@ export default {
   invest: 'Menginvestasikan',
   share: 'Membagikan',
   mine: 'Milikku',
-mts:'Strategi Perdagangan MACD',
-trade_num:'Waktu arbitrase harian',
-trade_fee:'Biaya penarikan',
+  mts: 'Strategi Perdagangan MACD',
+  trade_num: 'Waktu arbitrase harian',
+  trade_fee: 'Biaya penarikan',
   change_password: 'Ganti kata sandi',
   old_password: 'password lama',
   new_password: 'kata sandi baru',
@@ -38,7 +38,8 @@ trade_fee:'Biaya penarikan',
   deposit: 'Menyetorkan',
   withdrawal: 'Penarikan',
   trx_deposit_quantity: 'Kuantitas Setoran TRX',
-  recharge_text: 'Isi ulang setidaknya 5trx untuk memulai akun dan menyalakan fungsi penarikan',
+  recharge_text:
+    'Isi ulang setidaknya 5trx untuk memulai akun dan menyalakan fungsi penarikan',
   team: 'Tim',
   app_services: 'Daftar Keuntungan',
   proft_list: 'Pindah ke dasar',
@@ -52,28 +53,35 @@ trade_fee:'Biaya penarikan',
   account: 'Akun',
   promotion: 'Promosi',
   millionaire: 'Bergabunglah untuk menjadi Jutawan TRON',
-  technology: 'Gunakan penambangan awan dan teknologi Defi untuk memastikan bahwa semua pengguna mendapatkan pendapatan TRX paling banyak',
+  technology:
+    'Gunakan penambangan awan dan teknologi Defi untuk memastikan bahwa semua pengguna mendapatkan pendapatan TRX paling banyak',
   details: 'rincian',
   accumulated_profit: 'Akumulasi keuntungan',
   membership: 'Keanggotaan',
   about_us: 'Tentang kami',
   we_are_at_our_best: 'Kami dalam kondisi terbaik kami',
-  cost_effective: 'Penambangan awan menawarkan cara penambangan yang berpotensi hemat biaya untuk Bitcoins Trx dan cryptocurrency lainnya. Pada saat yang sama, baik perdagangan Kuantitatif dan teknologi Defi akan memungkinkan Anda berpartisipasi dengan mudah dalam transaksi blockchain dengan modal kecil, dan memperoleh pendapatan stabil seperti asuransi.',
+  cost_effective:
+    'Penambangan awan menawarkan cara penambangan yang berpotensi hemat biaya untuk Bitcoins Trx dan cryptocurrency lainnya. Pada saat yang sama, baik perdagangan Kuantitatif dan teknologi Defi akan memungkinkan Anda berpartisipasi dengan mudah dalam transaksi blockchain dengan modal kecil, dan memperoleh pendapatan stabil seperti asuransi.',
   global_partners: 'Mitra global',
 
   transfer_to_promotion_account: 'Transfer ke akun promosi',
   trx_address: 'Alamat TRX',
   copy_address: 'Salin alamat',
-  recharge_other_text: 'Harap jangan mengisi ulang aset non TRX lainnya. Ini akan direkam sekitar 5-10 menit setelah pengisian daya',
-  investment_text: 'Jika sudah lama tidak datang, silahkan refresh halaman ini .Minimal investasi 5TRX',
+  recharge_other_text:
+    'Harap jangan mengisi ulang aset non TRX lainnya. Ini akan direkam sekitar 5-10 menit setelah pengisian daya',
+  investment_text:
+    'Jika sudah lama tidak datang, silahkan refresh halaman ini .Minimal investasi 5TRX',
   recharge_completed: 'Isi ulang selesai',
 
   transfer_to_basicaccount: 'Transfer ke akun dasar',
   investment_is_divided_into_two_modes: 'Investasi dibagi menjadi dua mode',
-  recharge_text1: '1: Isi ulang ke akun dasar dan terima pendapatan sesuai dengan zona waktu Sri Lanka (setelah 24:00) setiap hari ',
-  recharge_text2: '2: Isi ulang ke akun promosi, Anda dapat menerima pendapatan sesuai dengan siklus yang berbeda, Mengembalikan pokok dan pendapatan pada saat jatuh tempo',
+  recharge_text1:
+    '1: Isi ulang ke akun dasar dan terima pendapatan sesuai dengan zona waktu Sri Lanka (setelah 24:00) setiap hari ',
+  recharge_text2:
+    '2: Isi ulang ke akun promosi, Anda dapat menerima pendapatan sesuai dengan siklus yang berbeda, Mengembalikan pokok dan pendapatan pada saat jatuh tempo',
   view_notes: 'Lihat catatan',
-  recharge_text3: 'Sebelum berinvestasi, silakan pilih akun dasar atau akun promosi untuk berinvestasi sesuai dengan kebutuhan investasi Anda. Harap pastikan untuk menunggu akun diisi ulang. Ini adalah masalah yang sangat kritis.',
+  recharge_text3:
+    'Sebelum berinvestasi, silakan pilih akun dasar atau akun promosi untuk berinvestasi sesuai dengan kebutuhan investasi Anda. Harap pastikan untuk menunggu akun diisi ulang. Ini adalah masalah yang sangat kritis.',
 
   basic_account_balance: 'Saldo akun dasar ( TRX )',
   hour_withdrawal: 'penarikan jam',
@@ -95,7 +103,8 @@ trade_fee:'Biaya penarikan',
   or_friends_and_earn_rewards: 'atau Teman dan Dapatkan Hadiah',
   copy_link: 'Salin tautan',
   refer_and_earn_rewards: 'Referensikan dan Dapatkan Hadiah',
-  share_your_referal_link_and_start_earning: 'Bagikan tautan referensi Anda dan mulailah menghasilkan',
+  share_your_referal_link_and_start_earning:
+    'Bagikan tautan referensi Anda dan mulailah menghasilkan',
 
   trading_list: 'Daftar perdagangan',
 
@@ -121,13 +130,15 @@ trade_fee:'Biaya penarikan',
   sign_in: 'Masuk',
   sign_up: 'Daftar',
 
-  please_enter_your_security_password: 'Silakan masukkan kata sandi Keamanan Anda',
+  please_enter_your_security_password:
+    'Silakan masukkan kata sandi Keamanan Anda',
   invite_code: 'Kode invitasi',
   please_enter_your_invite_code: 'Silakan masukkan kode Undangan Anda',
   attach: 'Menempel',
   please_enter_attach: 'Silakan masukkan Lampirkan',
   encrypted_registration: 'Pendaftaran terenkripsi',
-  register_text: 'Kata sandi disimpan dengan cara yang terdesentralisasi dan tidak dapat diambil kembali setelah hilang . Harap ingat kata sandi Anda',
+  register_text:
+    'Kata sandi disimpan dengan cara yang terdesentralisasi dan tidak dapat diambil kembali setelah hilang . Harap ingat kata sandi Anda',
   send_code: 'kirim kode',
 
   mobile_phone_number_cannot_be_blank: 'Nomor ponsel tidak dapat kosong',
@@ -139,12 +150,16 @@ trade_fee:'Biaya penarikan',
   verification_passed: 'Verifikasi lulus',
   very_sorry_this_is_wrong: 'Maafkan aku, ini salah.',
   verification_failed: 'Verifikasi gagal',
-  operating_environment: 'Dideteksi bahwa lingkungan operasi Anda saat ini dalam bahaya. Silakan masukkan kode verifikasi',
-  incorrect_verification_code: 'Galat kode pemeriksaan, silakan masukkan kembali',
+  operating_environment:
+    'Dideteksi bahwa lingkungan operasi Anda saat ini dalam bahaya. Silakan masukkan kode verifikasi',
+  incorrect_verification_code:
+    'Galat kode pemeriksaan, silakan masukkan kembali',
   sent_successfully: 'Dikirim dengan sukses',
-  does_not_match: 'Kata sandi baru tidak konsisten dengan kata sandi yang dikonfirmasi',
+  does_not_match:
+    'Kata sandi baru tidak konsisten dengan kata sandi yang dikonfirmasi',
   please_enter_verification_code: 'Silakan masukkan kode verifikasi',
-  please_agree_to_the_user_agreement: 'Silakan setuju dengan kesepakatan pengguna',
+  please_agree_to_the_user_agreement:
+    'Silakan setuju dengan kesepakatan pengguna',
   registration_success: 'login berhasil',
   registration_failed: 'Registrasi gagal, silakan mendaftar kembali',
   new_password_cannot_be_blank: 'Kata sandi baru tidak dapat kosong',
@@ -158,7 +173,8 @@ trade_fee:'Biaya penarikan',
   please_enter_the_investment_amount: 'Silakan masukkan jumlah masukan',
   please_enter_transaction_password: 'Silakan masukkan sandi pembayaran',
   investment_success: 'Investasi sukses',
-  please_click_refresh_every_few_minutes: 'Jika tidak, tolong klik segar setiap beberapa menit',
+  please_click_refresh_every_few_minutes:
+    'Jika tidak, tolong klik segar setiap beberapa menit',
   English: 'Inggris',
   Japanese: 'Jepang',
   Korean: 'Korea',
@@ -174,13 +190,15 @@ trade_fee:'Biaya penarikan',
   all: 'semua',
   commission_account: 'Promosi rekening',
   transfer_to_commission_account: 'Transfer ke akun promosi',
-  not_allowed_temporarily: 'Karena waktu kontrak kurang dari 1 tahun, transfer ke akun komisi tidak diizinkan sementara!',
+  not_allowed_temporarily:
+    'Karena waktu kontrak kurang dari 1 tahun, transfer ke akun komisi tidak diizinkan sementara!',
 
   available_balance: 'Akaun keseimbangan komisi yang tersedia: {value} TRX',
   operable_conversion: 'Batas konversi operabel: {value} TRX',
   gift_account: 'Akaun pemberian',
   withdrawal_limit_remaining_today: 'The remaining can be withdrawn today',
-  withdrawal_address_cannot_be_modified: '*Tip: alamat penarikan tidak dapat diubah setelah masuk!!!',
+  withdrawal_address_cannot_be_modified:
+    '*Tip: alamat penarikan tidak dapat diubah setelah masuk!!!',
   please_enter_the_withdrawal_address: 'Silakan masukkan alamat penarikan',
   please_enter_withdrawal_limit: 'Silakan masukkan batas penarikan',
   please_enter_the_withdrawal_password: 'Silakan masukkan sandi pembayaran',
@@ -195,9 +213,11 @@ trade_fee:'Biaya penarikan',
 
   not_yet_open: 'Belum terbuka',
 
-  t_address: 'Alamat penarikan salah. Silakan masukkan alamat penarikan yang dimulai dengan T',
+  t_address:
+    'Alamat penarikan salah. Silakan masukkan alamat penarikan yang dimulai dengan T',
   successful_verification: 'Diverifikasi dengan sukses',
-  using_telegraph: 'Silakan gunakan telegraf untuk menambah teman: {url} Dan kirim kode undangan rekening Anda: {code} untuk verifikasi. After passing the verification, you can submit the withdrawal.',
+  using_telegraph:
+    'Silakan gunakan telegraf untuk menambah teman: {url} Dan kirim kode undangan rekening Anda: {code} untuk verifikasi. After passing the verification, you can submit the withdrawal.',
   open_link: 'Buka link',
   copy_invitation_code: 'Salin kode undangan',
 
@@ -209,7 +229,8 @@ trade_fee:'Biaya penarikan',
   total_reward: 'Jumlah hadiah',
   person: 'orang',
   achievements: 'pencapaian',
-  terarn_partners: 'Partner Terarn menikmati  {value}% dari pendapatan saham yang diperoleh kembali oleh semua anggota subordinat.',
+  terarn_partners:
+    'Partner Terarn menikmati  {value}% dari pendapatan saham yang diperoleh kembali oleh semua anggota subordinat.',
   invitation_link: 'Hubungan undangan',
   invitation_code: 'Kode undangan',
   all_subordinates: 'Semua subordinat',
@@ -235,12 +256,14 @@ trade_fee:'Biaya penarikan',
   Grade: 'Grade',
   Profit: 'keuntungan',
   daily_withdrawal: 'Pengunduran sehari-hari',
-  customer_service: 'Jika Anda punya pertanyaan, silakan hubungi layanan pelanggan online kami',
+  customer_service:
+    'Jika Anda punya pertanyaan, silakan hubungi layanan pelanggan online kami',
   rebate_invitation: 'Kembalian undangan',
   recharge_rebate: 'Isi ulang rebate',
   mining_rebate: 'Pengurangan pengurangan',
   tips: 'isyarat',
-  income_of_tomorrow: 'Jika Anda memutuskan untuk menarik diri, pendapatan besok akan mengurangi pendapatan tambang {value}!',
+  income_of_tomorrow:
+    'Jika Anda memutuskan untuk menarik diri, pendapatan besok akan mengurangi pendapatan tambang {value}!',
   cancel_withdrawal: 'Batalkan penarikan dan terus mendapatkan pendapatan',
   confirm_withdrawal: 'Konfirmasi penarikan',
 
@@ -249,7 +272,8 @@ trade_fee:'Biaya penarikan',
   risk_control: 'Manajemen Risiko',
   APP_download: 'Turun Aplikasi',
   popular_activities: 'Aktivitas popular',
-  invite_friends_to_invest_cash_back: 'Memundang teman untuk menginvestasikan uang tunai kembali',
+  invite_friends_to_invest_cash_back:
+    'Memundang teman untuk menginvestasikan uang tunai kembali',
   user_agreement: 'Kesepakatan pengguna',
   user_code_of_conduct: 'Kode kelakuan pengguna',
   retrieve_login_password: 'Dapatkan sandi daftar masuk',
@@ -279,9 +303,11 @@ trade_fee:'Biaya penarikan',
   earnings_calculation: 'Perhitungan pendapatan',
   total_daily_earnings: 'Total pendapatan harian',
   dividend_method: 'Metode Dividend',
-  repayment_at_maturity: 'Pembayaran bunga sehari dan pembayaran utama pada masa dewasa',
+  repayment_at_maturity:
+    'Pembayaran bunga sehari dan pembayaran utama pada masa dewasa',
   referral_reward: 'Hadiah rekomendasi',
-  click_member_center: 'Klik mengundang teman di pusat anggota - maju ke lingkaran teman Anda. Selama teman Anda mendaftar sebagai anggota kelas pertama melalui kode QR undangan, memuat ulang dan berhasil menginvestasikan dalam proyek pembayaran kedua, Anda dapat mendapatkan hadiah 3,00% dari jumlah investasi teman. Setelah mendaftar berhasil, sistem akan memberikannya secara otomatis!',
+  click_member_center:
+    'Klik mengundang teman di pusat anggota - maju ke lingkaran teman Anda. Selama teman Anda mendaftar sebagai anggota kelas pertama melalui kode QR undangan, memuat ulang dan berhasil menginvestasikan dalam proyek pembayaran kedua, Anda dapat mendapatkan hadiah 3,00% dari jumlah investasi teman. Setelah mendaftar berhasil, sistem akan memberikannya secara otomatis!',
   hours_settlement: 'penyelesaian 24 jam',
   Login_account: 'Akaun daftar masuk',
   Please_enter_the_login_account: 'Silakan masukkan akun daftar masuk',
@@ -322,8 +348,10 @@ trade_fee:'Biaya penarikan',
   Receivable_time: 'Waktu yang dapat diterima',
   completed: 'Selesai',
   Set_a_new_login_password: 'Tetapkan sandi daftar masuk baru',
-  email_verification: 'Silakan selesaikan verifikasi kotak surat dan periksa kotak surat spam',
-  Please_enter_email_verification_code: 'Silakan masukkan kode verifikasi email',
+  email_verification:
+    'Silakan selesaikan verifikasi kotak surat dan periksa kotak surat spam',
+  Please_enter_email_verification_code:
+    'Silakan masukkan kode verifikasi email',
   complete_verification: 'Validasi lengkap',
   Please_enter_the_password_again: 'Silakan masukkan sandi lagi',
   Please_enter_the_invitation_code: 'Silakan masukkan kode undangan (pilihan)',
@@ -343,43 +371,54 @@ trade_fee:'Biaya penarikan',
   Directly_to_account_balance: 'Pembayaran langsung ke bilangan rekening',
   Accumulated_sign_in_rewards: 'Tanda kumpulan sebagai balasan',
   undone: 'Bertahanlah di udara',
-  please_pay_attention_to_check: 'Perhatian: amplop bonus secara langsung didistribusikan ke bilangan rekening. Silakan perhatikan untuk memeriksa!',
+  please_pay_attention_to_check:
+    'Perhatian: amplop bonus secara langsung didistribusikan ke bilangan rekening. Silakan perhatikan untuk memeriksa!',
   Go_to_investment_account: 'Transfer ke akun investasi',
   sign_in2: 'Daftar masuk',
 
   verification_code: 'Kode Verifikasi',
   Invest_now: 'Investasi segera',
-  open_the_withdrawal_function: 'Isi ulang jumlah Trx apapun untuk mengaktifkan akun dan menyalakan fungsi penarikan',
+  open_the_withdrawal_function:
+    'Isi ulang jumlah Trx apapun untuk mengaktifkan akun dan menyalakan fungsi penarikan',
   x_new_message: '{value} pesan baru',
   contract: 'kontrak',
   Please_enter_the_investment_amount: 'Silakan masukkan jumlah masukan',
   Please_enter_payment_password: 'Silakan masukkan sandi pembayaran',
-  less_than_the_minimum_investment_amount: 'Jumlah investasi tidak dapat kurang dari jumlah investasi awal',
+  less_than_the_minimum_investment_amount:
+    'Jumlah investasi tidak dapat kurang dari jumlah investasi awal',
   investment_success2: 'Investasi sukses',
   Verify_phone_number: 'Periksa nomor ponsel',
   payment_password: 'Kata sandi pembayaran',
   Transfer_amount: 'Transfer dalam jumlah',
   x_bound_wallet: '{value} dompet terikat',
 
-  Invitation_to_register_successfully_and_reward_XTRX: 'Penghargaan sukses pendaftaran undangan {value} TRX',
+  Invitation_to_register_successfully_and_reward_XTRX:
+    'Penghargaan sukses pendaftaran undangan {value} TRX',
   Follow_the_reward_XTRX: 'Hadiah fokus: {value} TRX',
-  Invite_YouTube_bloggers_text3: '3. Setelah mengundang blogger YouTube untuk menjadi promotor, Anda akan diberi penghargaan dengan {value} TRX untuk setiap anggota yang diundangnya',
+  Invite_YouTube_bloggers_text3:
+    '3. Setelah mengundang blogger YouTube untuk menjadi promotor, Anda akan diberi penghargaan dengan {value} TRX untuk setiap anggota yang diundangnya',
   Number_of_people_eligible_for_the_award: 'Jumlah orang yang berhak: {value}',
   Reward_amount_XTRX: 'Jumlah bayaran: {value} TRX',
-  Reward_amount_introduction_text: 'Jumlah kumulatif teman yang diundang lebih dari {value1}, dan hadiah check-in sehari-hari {value2} TRX',
+  Reward_amount_introduction_text:
+    'Jumlah kumulatif teman yang diundang lebih dari {value1}, dan hadiah check-in sehari-hari {value2} TRX',
   Bounty_task: 'Misi Hadiah',
   Invite_Youtube_partners: 'Invite YouTube bloggers as partners',
-  Invite_Youtube_partners_text: 'Rekomendasikan bloger YouTube untuk membuat uang bersama-sama',
+  Invite_Youtube_partners_text:
+    'Rekomendasikan bloger YouTube untuk membuat uang bersama-sama',
   Daily_check_in_tasks: 'Tugas pemeriksaan sehari-hari',
   Daily_check_in_tasks_text: 'Tandatangan setiap hari untuk menerima pahala',
   Invite_friends_task: 'Undang tugas teman',
-  Invite_friends_task_text: 'Panggil teman untuk mendaftar dan menarik uang dengan sukses',
+  Invite_friends_task_text:
+    'Panggil teman untuk mendaftar dan menarik uang dengan sukses',
   YouTube_Blogger_Promoter: 'Aplikasi untuk menjadi promotor bloger YouTube',
-  YouTube_Blogger_Promoter_text: 'Panggil setiap anggota terdaftar untuk membalas {value}trx',
+  YouTube_Blogger_Promoter_text:
+    'Panggil setiap anggota terdaftar untuk membalas {value}trx',
   Follow_Telegram_channel_tasks: 'Ikuti tugas saluran telegraf',
-  Follow_Telegram_channel_tasks_text: 'Hadiah untuk mengikuti saluran telegraf yang dinyatakan',
+  Follow_Telegram_channel_tasks_text:
+    'Hadiah untuk mengikuti saluran telegraf yang dinyatakan',
   Participate_mining_investment: 'Dalam investasi pertambangan',
-  Participate_mining_investment_text: 'Hadiah untuk investasi dalam penambangan untuk pertama kalinya',
+  Participate_mining_investment_text:
+    'Hadiah untuk investasi dalam penambangan untuk pertama kalinya',
   go_to_pick_up: 'Pergi untuk mengumpulkan',
   received: 'Diterima',
   invite_now: 'Undang sekarang',
@@ -389,40 +428,55 @@ trade_fee:'Biaya penarikan',
   Participate_in_mining: 'Dalam pertambangan',
   participated: 'Dalam',
   become_a_promoter: 'Menjadi promotor',
-  Advantages_of_Youtube_Blogger_Promoter: 'Keuntungan menjadi promotor blog YouTube',
+  Advantages_of_Youtube_Blogger_Promoter:
+    'Keuntungan menjadi promotor blog YouTube',
   Ordinary_member: 'Anggota biasa',
   Youtube_Blogger_Promoter: 'promotor blogger YouTube',
   No_Youtube_video_reward: 'Tidak ada penghargaan video YouTube',
   Have_Youtube_Video_Rewards: 'Hadiah video YouTube',
   low_task_reward: 'Kurang hadiah tugas',
-  Update_Youtube_blogger_task_rewards: 'Kemaskini penghargaan tugas blogger YouTube dari waktu ke waktu',
-  Apply_to_join_Youtube_Blogger_Promoter: 'Aplikasi untuk bergabung dengan promotor bloger YouTube',
+  Update_Youtube_blogger_task_rewards:
+    'Kemaskini penghargaan tugas blogger YouTube dari waktu ke waktu',
+  Apply_to_join_Youtube_Blogger_Promoter:
+    'Aplikasi untuk bergabung dengan promotor bloger YouTube',
   Your_Youtube_channel_link: 'Hubungan saluran YouTube Anda',
-  Number_of_subscriptions_to_your_Youtube_channel: 'Jumlah subskripsi saluran YouTube yang Anda miliki',
+  Number_of_subscriptions_to_your_Youtube_channel:
+    'Jumlah subskripsi saluran YouTube yang Anda miliki',
   Your_Telegarm_account: 'Akaun telegam Anda',
-  Youtube_profile_needs_your_Telegram_account_information: 'Profil YouTube membutuhkan informasi rekening telepon Anda, dan administrator akan menganalisisnya!',
+  Youtube_profile_needs_your_Telegram_account_information:
+    'Profil YouTube membutuhkan informasi rekening telepon Anda, dan administrator akan menganalisisnya!',
   Submit_review: 'Mengirim untuk penelitian',
   Waiting_for_admin_review: 'Pendekaan administrator',
-  please_follow_the_Telegram_channel: 'Untuk memastikan audisi berhasil, tolong perhatikan saluran telegraf',
+  please_follow_the_Telegram_channel:
+    'Untuk memastikan audisi berhasil, tolong perhatikan saluran telegraf',
   ok: 'Baiklah.',
   Follow_Telegram_channel: 'Ikuti saluran telegraf',
-  Please_follow_the_Telegram_channel_first_to_get_the_code: 'Silakan perhatikan saluran telegraf untuk mendapatkan kode penerima pertama',
-  Invite_Youtube_to_join_partner_instructions: 'Instruksi untuk mengundang YouTube untuk bergabung dengan mitra',
-  Invite_YouTube_bloggers_text1: '1. Panggil bloger YouTube untuk berhasil menerapkan untuk menjadi promotor, dan sistem akan secara otomatis mengeluarkan hadiah',
-  Invite_YouTube_bloggers_text2: '2. Blogger YouTube perlu mendaftar melalui link undangan atau kode rekomendasi Anda',
+  Please_follow_the_Telegram_channel_first_to_get_the_code:
+    'Silakan perhatikan saluran telegraf untuk mendapatkan kode penerima pertama',
+  Invite_Youtube_to_join_partner_instructions:
+    'Instruksi untuk mengundang YouTube untuk bergabung dengan mitra',
+  Invite_YouTube_bloggers_text1:
+    '1. Panggil bloger YouTube untuk berhasil menerapkan untuk menjadi promotor, dan sistem akan secara otomatis mengeluarkan hadiah',
+  Invite_YouTube_bloggers_text2:
+    '2. Blogger YouTube perlu mendaftar melalui link undangan atau kode rekomendasi Anda',
   my_youtube_blogger_list: 'Daftar blogger saya di YouTube',
-  YouTube_bloggers_contribute_profits: 'Blogger YouTube berkontribusi keuntungan',
+  YouTube_bloggers_contribute_profits:
+    'Blogger YouTube berkontribusi keuntungan',
   my_youtube_blogger: 'Blogger YouTube-ku',
   my_invitation_reward: 'Hadiah undanganku',
   YouTube_Blogger_Referral_Member: 'blogger YouTube merekomendasikan anggota',
   my_reward: 'Hadiahku',
   bonus_time: 'Waktu balasan',
   daily_check_in: 'Periksa setiap hari',
-  Invite_friends_to_withdraw_successfully: 'Jumlah teman yang berhasil diundang',
+  Invite_friends_to_withdraw_successfully:
+    'Jumlah teman yang berhasil diundang',
   Sign_in_task_reward_description: 'Tandatangan dalam deskripsi hadiah tugas',
-  Sign_in_task_reward_description_text1: 'Jumlah hadiah dari tugas check-in secara langsung proporsional dengan jumlah teman yang diundang',
-  Sign_in_task_reward_description_text2: 'Semakin banyak orang yang Anda jemput, semakin banyak hadiah Anda akan mendapatkan untuk menandatangani setiap hari',
-  Sign_in_task_reward_description_text3: 'Setelah mengundang teman, sistem akan mengeluarkan hadiah hanya setelah teman menarik uang',
+  Sign_in_task_reward_description_text1:
+    'Jumlah hadiah dari tugas check-in secara langsung proporsional dengan jumlah teman yang diundang',
+  Sign_in_task_reward_description_text2:
+    'Semakin banyak orang yang Anda jemput, semakin banyak hadiah Anda akan mendapatkan untuk menandatangani setiap hari',
+  Sign_in_task_reward_description_text3:
+    'Setelah mengundang teman, sistem akan mengeluarkan hadiah hanya setelah teman menarik uang',
   Reward_amount_introduction: 'Pengenalan untuk jumlah hadiah',
   Sign_in_now: 'Tanda tangan sekarang',
 
@@ -432,10 +486,13 @@ trade_fee:'Biaya penarikan',
   Receive_award: 'Terima hadiah',
   invite_to_join: 'Undang untuk bergabung',
   Please_select_an_area_code: 'Silakan pilih kode area',
-  The_investment_amount_cannot_be_less_than_the_starting_investment_amount: 'Jumlah investasi tidak dapat kurang dari jumlah investasi awal',
+  The_investment_amount_cannot_be_less_than_the_starting_investment_amount:
+    'Jumlah investasi tidak dapat kurang dari jumlah investasi awal',
 
-  YouTube_profileTelegram_account_information: 'Profil YouTube membutuhkan informasi rekening telepon Anda, dan administrator akan menganalisisnya!',
-  Please_enter_the_area_code_to_search: 'Silakan masukkan kode area untuk mencari',
+  YouTube_profileTelegram_account_information:
+    'Profil YouTube membutuhkan informasi rekening telepon Anda, dan administrator akan menganalisisnya!',
+  Please_enter_the_area_code_to_search:
+    'Silakan masukkan kode area untuk mencari',
 
   back: 'Kembali',
 
@@ -443,7 +500,8 @@ trade_fee:'Biaya penarikan',
   withdrawn: 'Tarik uang tunai',
   did_not_pass: 'Gagal',
   Captcha: 'Kode verifikasi grafik',
-  Please_enter_the_graphic_verification_code: 'Silakan masukkan kode verifikasi grafik',
+  Please_enter_the_graphic_verification_code:
+    'Silakan masukkan kode verifikasi grafik',
 
   Recharge_total_reward: 'Jumlah penghargaan total',
   Total_contract_reward: 'imbalan kontrak',

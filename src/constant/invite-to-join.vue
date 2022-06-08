@@ -32,7 +32,12 @@ export default {
       })
 
       const {
-        data: { youtube_team: youtubeTeam, team, team_num: teamNum, reward_money: rewardMoney }
+        data: {
+          youtube_team: youtubeTeam,
+          team,
+          team_num: teamNum,
+          reward_money: rewardMoney
+        }
       } = await Fetch('/user/get_rebate_record')
       this.youtube_team = team
       this.team = youtubeTeam
@@ -40,9 +45,9 @@ export default {
       this.reward_money = rewardMoney
 
       Fetch('/user/get_rebate_record').then((res) => {
-        console.log('res :>> ', res);
-        const { invitation_rebate1 } = res.data
-        this.invitation_rebate1 = invitation_rebate1
+        console.log('res :>> ', res)
+        const { invitation_rebate1: invitationRebate1 } = res.data
+        this.invitation_rebate1 = invitationRebate1
       })
     },
 

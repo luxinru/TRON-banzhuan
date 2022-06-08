@@ -16,7 +16,7 @@ export default {
       isShow: false,
       telegramuRL: '',
       invitation_rebate1: 0,
-      invitation_rebate2: 0,
+      invitation_rebate2: 0
     }
   },
 
@@ -26,10 +26,18 @@ export default {
 
   methods: {
     async init () {
-      const { data: { telegram_channel: telegramChannel, data: innerData, status, invitation_rebate1, invitation_rebate2 } } = await Fetch('/user/get_youtube_promoter')
+      const {
+        data: {
+          telegram_channel: telegramChannel,
+          data: innerData,
+          status,
+          invitation_rebate1: invitationRebate1,
+          invitation_rebate2: invitationRebate2
+        }
+      } = await Fetch('/user/get_youtube_promoter')
       this.status = status
-      this.invitation_rebate1 = invitation_rebate1
-      this.invitation_rebate2 = invitation_rebate2
+      this.invitation_rebate1 = invitationRebate1
+      this.invitation_rebate2 = invitationRebate2
       if (this.status === 1) {
         this.innerStatus = innerData.status
         this.telegramuRL = telegramChannel
@@ -42,11 +50,24 @@ export default {
     async submit () {
       if (this.status === 1) return
 
-      if (!this.telegram_channel) return this.$notify(this.$t('please_enter') + this.$t('Your_Youtube_channel_link'))
-      if (!this.youtube_num_concerns) return this.$notify(this.$t('please_enter') + this.$t('Number_of_subscriptions_to_your_Youtube_channel'))
-      if (!this.telegram_account) return this.$notify(this.$t('please_enter') + this.$t('Your_Telegarm_account'))
+      if (!this.telegram_channel) {
+        return this.$notify(
+          this.$t('please_enter') + this.$t('Your_Youtube_channel_link')
+        )
+      }
+      if (!this.youtube_num_concerns) {
+        return this.$notify(
+          this.$t('please_enter') +
+            this.$t('Number_of_subscriptions_to_your_Youtube_channel')
+        )
+      }
+      if (!this.telegram_account) {
+        return this.$notify(
+          this.$t('please_enter') + this.$t('Your_Telegarm_account')
+        )
+      }
 
-      const { data } = await Fetch('/user/set_youtube_promoter', {
+      await Fetch('/user/set_youtube_promoter', {
         youtube_link: this.telegram_channel,
         youtube_num_concerns: this.youtube_num_concerns,
         telegram_account: this.telegram_account

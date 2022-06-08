@@ -28,7 +28,9 @@ export default {
 
   computed: {
     showActions () {
-      return this.actions.filter(item => (item.name + '').indexOf(this.actionsText) > -1)
+      return this.actions.filter(
+        (item) => (item.name + '').indexOf(this.actionsText) > -1
+      )
     }
   },
 
@@ -51,16 +53,22 @@ export default {
       })
     },
 
-    async fetchImgCode() {
-      const { data: { image, uniqid } } = await Fetch('/index/img_code')
+    async fetchImgCode () {
+      const {
+        data: { image, uniqid }
+      } = await Fetch('/index/img_code')
       this.captcha = image
       this.uniqid = uniqid
     },
 
     onSendCode () {
-      if (!this.data.captcha) return this.$notify(this.$t('Please_enter_the_graphic_verification_code'))
-      if (!this.data.prefix) return this.$notify(this.$t('Please_select_an_area_code'))
-      if (!this.data.mobile) return this.$notify(this.$t('please_enter_your_mobile_phone_number'))
+      if (!this.data.captcha) {
+        return this.$notify(
+          this.$t('Please_enter_the_graphic_verification_code')
+        )
+      }
+      if (!this.data.prefix) { return this.$notify(this.$t('Please_select_an_area_code')) }
+      if (!this.data.mobile) { return this.$notify(this.$t('please_enter_your_mobile_phone_number')) }
 
       Fetch('/index/forget_code', {
         mobile: this.data.mobile,

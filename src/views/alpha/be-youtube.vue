@@ -137,13 +137,13 @@ export default {
 
   components: {},
 
-  data() {
+  data () {
     return {}
   },
 
-  mounted() {},
+  mounted () {},
 
-  methods: {},
+  methods: {}
 }
 </script>
 
