@@ -4,15 +4,15 @@
       <van-icon
         class="icon"
         name="arrow-left"
-        color="#fff"
+        color="rgba(0, 0, 0, 1)"
         @click="$router.go(-1)"
       />
       <span>{{ $t('notifcation') }}</span>
     </section>
 
-    <section class="new_msg">
+    <!-- <section class="new_msg">
       {{ $t('x_new_message', { value: isMsg }) }}
-    </section>
+    </section> -->
 
     <section class="list">
       <div
@@ -23,12 +23,21 @@
           $router.push({ path: '/notice-content', query: { id: item.id } })
         "
       >
-        <div class="title">
-          <span class="value">{{ $t('dear_user') }}</span>
-          <span class="time">{{ item.time | dateFormat }}</span>
+        <div class="header">
+          <img src="@/assets/images/alpha/消息.png" alt="" />
+          <span>系统消息</span>
+          <div class="view_all">
+            {{ $t('view_all') }}
+            <van-icon
+              class="icon"
+              name="arrow"
+              color="rgba(189, 191, 203, 1)"
+            />
+          </div>
         </div>
-        <div class="text">
-          {{ item.title }}
+        <div class="title">
+          <span class="value">{{ item.title }}</span>
+          <span class="time">{{ item.time | dateFormat }}</span>
         </div>
       </div>
     </section>
@@ -48,14 +57,14 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 0 0;
+  padding: 48px 13px;
   min-height: 100vh;
 
   .topbar {
-    background-color: rgba(4, 66, 164, 1);
+    background-color: rgba(247, 246, 249, 1);
 
     span {
-      color: #fff;
+      color: rgba(0, 0, 0, 1);
     }
   }
 
@@ -83,48 +92,75 @@ export default {
     align-items: center;
 
     .item {
-      width: 348px;
-      min-height: 88px;
-      background: #ffffff;
-      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      min-height: 138px;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 9px 0px rgba(19, 19, 20, 0.08);
       border-radius: 7px;
       display: flex;
       flex-direction: column;
       padding: 16px;
       margin-top: 16px;
 
-      .title {
+      .header {
         width: 100%;
+        height: 60px;
         display: flex;
         align-items: center;
+        border-bottom: 1px solid rgba(225, 227, 234, 1);
+
+        img {
+          height: 23px;
+          margin-right: 16px;
+        }
+
+        span {
+          flex: 1 0;
+          font-size: 15px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #3B4257;
+        }
+
+        .view_all {
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #BDBFCB;
+
+          i {
+            font-size: 12px;
+            margin-left: 16px;
+          }
+        }
+      }
+
+      .title {
+        width: 100%;
+        flex: 1 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 16px;
 
         .value {
           flex: 1 0;
           word-break: break-word;
-          font-size: 13px;
+          font-size: 15px;
           font-family: PingFang SC;
-          font-weight: bold;
-          color: #323232;
+          font-weight: 500;
+          color: #38394B;
         }
 
         .time {
-          font-size: 13px;
+          font-size: 12px;
           font-family: PingFang SC;
-          font-weight: 500;
-          color: #6f6d70;
-          margin-left: 16px;
+          font-weight: 400;
+          color: #BEC1CB;
+          margin-top: 13px;
         }
-      }
-
-      .text {
-        width: 100%;
-        font-size: 13px;
-        font-family: PingFang SC;
-        font-weight: 400;
-        color: #6f6d70;
-        line-height: 17px;
-        word-break: break-word;
-        margin-top: 13px;
       }
     }
   }
