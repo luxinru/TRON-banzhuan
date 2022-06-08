@@ -22,7 +22,9 @@ export default {
       google: '',
       showPopover: false,
       actions: LANGUAGE,
-      vip: 'VIP-1'
+      vip: 'VIP-1',
+      isShowModel: false,
+      active: 1
     }
   },
 

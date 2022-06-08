@@ -10,72 +10,65 @@
       <span>{{ $t('withdrawal') }}</span>
     </section>
 
-    <section class="tabs">
-      <!-- <span :class="{ active: active === 1 }" @click="onChangeType(1)">
-        {{ $t('basic_account') }}
-      </span> -->
-      <span :class="{ active: active === 2 }" @click="onChangeType(2)">
-        TRX
-      </span>
-      <span :class="{ active: active === 1 }" @click="onChangeType(1)">
-        USDT
-      </span>
+    <section class="bar">
+      <div class="info">
+        <p @click="onChangeType(2)">TRX</p>
+        <span class="line"></span>
+        <p @click="onChangeType(1)">USDT</p>
+      </div>
+      <div class="bar_item">
+        <div class="item" :class="{ active: active === 2 }">
+          <span></span>
+        </div>
+        <div class="item" :class="{ active: active === 1 }">
+          <span></span>
+        </div>
+      </div>
     </section>
 
     <section class="info_box">
-      <span class="value">{{ getPrice() }}</span>
-      <!-- <span class="label">{{ getTitle() }}(TRX)</span> -->
       <span class="tip">24 {{ $t('hour_withdrawal') }}</span>
-      <template v-if="active === 1">
-        <!--        <div class="info">
-          {{ $t('daily_withdrawal_limit') }}: {{ daily_withdrawal_limit }}
-          <br />
-          {{ withdrawal_limit_remaining_today }} trx
-          {{ $t('withdrawal_limit_remaining_today') }}
-        </div> -->
-        <!--        <span
-          class="btn"
-          @click="$router.push('/transfer', { query: { type: 2 } })"
-        >
-          {{ $t('transfer_to_commission_account') }}
-        </span> -->
-      </template>
-    </section>
-
-    <section class="tips">
-      <img src="@/assets/images/alpha/拷贝@2x.png" alt="" />
-      <span>{{ $t('withdrawal_address_cannot_be_modified') }}</span>
+      <span class="value">{{ getPrice() }}</span>
     </section>
 
     <section class="input_box">
       <div class="item">
-        <span class="title">{{ $t('Withdrawal_address') }}</span>
+        <span class="title">
+          <p>*</p>
+          {{ $t('Withdrawal_address') }}
+        </span>
         <input
           type="text"
           :disabled="diasabledInput"
           v-model="address"
           :placeholder="$t('please_enter_the_withdrawal_address')"
         />
+        <span class="tip">
+          {{ $t('withdrawal_address_cannot_be_modified') }}
+        </span>
       </div>
       <div class="item">
-        <span class="title">{{ $t('Withdrawal_limit') }} </span>
+        <span class="title"><p>*</p>{{ $t('Withdrawal_limit') }} </span>
         <!-- <span class="title">VIP : {{title}}</span> -->
-        <span class="title"
-          >{{ title }} {{ $t('trade_fee') }} : {{ cash_rate }}%</span
-        >
         <input
           v-model="money"
           type="number"
           :placeholder="$t('please_enter_withdrawal_limit')"
         />
+        <span class="tip">
+          {{ title }} {{ $t('trade_fee') }} : {{ cash_rate }}%
+        </span>
       </div>
       <div class="item">
-        <span class="title">{{ $t('Withdrawal_password') }}</span>
+        <span class="title"><p>*</p>{{ $t('Withdrawal_password') }}</span>
         <input
           v-model="pwd"
           type="password"
           :placeholder="$t('please_enter_the_withdrawal_password')"
         />
+        <span class="tip">
+          6位数安全密码
+        </span>
       </div>
     </section>
 
@@ -148,44 +141,77 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 0 0;
+  padding: 48px 0 0 0;
   min-height: 100vh;
-  background-color: rgba(245, 244, 250, 1);
+  background-color: rgba(245, 245, 245, 1);
 
   .topbar {
-    background-color: rgba(245, 244, 250, 1);
+    background-color: rgba(255, 255, 255, 1);
   }
 
-  .tabs {
+  .bar {
     width: 100%;
-    height: 48px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 13px;
+    height: 52px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
 
-    span {
-      height: 100%;
+    .info {
+      width: 100%;
+      flex: 1 0;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 15px;
-      font-family: PingFang SC;
-      font-weight: 500;
-      color: #000000;
-      border-bottom: 2px solid rgba(245, 244, 250, 1);
+
+      p {
+        flex: 1 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #000000;
+      }
+
+      .line {
+        width: 1px;
+        height: 22px;
+        background: rgba(0, 0, 0, 0.1);
+      }
     }
 
-    .active {
-      border-bottom: 2px solid rgba(4, 58, 152, 1);
+    .bar_item {
+      width: 100%;
+      height: 3px;
+      display: flex;
+      .item {
+        flex: 1 0;
+        display: flex;
+        justify-content: center;
+
+        span {
+          width: 24px;
+          height: 100%;
+          border-radius: 2px;
+          background-color: transparent;
+        }
+      }
+
+      .active {
+        span {
+          background-color: rgba(245, 167, 0, 1);
+        }
+      }
     }
   }
 
   .info_box {
     width: 348px;
-    background: #ffffff;
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
+    background: #FFFFFF;
+    box-shadow: 0px 2px 9px 0px rgba(19, 19, 20, 0.08);
     border-radius: 7px;
-    padding: 20px;
+    padding: 42px 20px;
     margin-top: 25px;
     display: flex;
     flex-direction: column;
@@ -194,36 +220,19 @@ export default {
     .value {
       width: 100%;
       text-align: center;
-      font-size: 42px;
-      font-family: Arial;
+      font-size: 36px;
+      font-family: DIN Alternate;
       font-weight: bold;
-      color: #353338;
-      margin-top: 13px;
+      color: #222222;
+      margin-top: 21px;
       word-break: break-word;
-    }
-
-    .label {
-      font-size: 14px;
-      font-family: PingFang SC;
-      font-weight: 500;
-      color: #353338;
-      word-break: break-word;
-      margin-top: 18px;
-      text-align: center;
     }
 
     .tip {
-      padding: 0 30px;
-      height: 26px;
-      font-size: 13px;
+      font-size: 15px;
       font-family: PingFang SC;
       font-weight: 500;
-      color: #043a98;
-      display: flex;
-      align-items: center;
-      margin-top: 14px;
-      background: rgba(6, 62, 159, 0.2);
-      border-radius: 4px;
+      color: #747474;
     }
 
     .info {
@@ -274,59 +283,77 @@ export default {
   }
 
   .input_box {
-    width: 100%;
-    background: #ffffff;
-    border-radius: 0px;
-    padding: 17px 13px;
+    width: 348px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 9px 0px rgba(19, 19, 20, 0.08);
+    border-radius: 7px;
+    padding: 30px 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin: 11px 0 0 0;
 
     .item {
-      margin-top: 18px;
+      margin-top: 33px;
       width: 100%;
       display: flex;
       flex-direction: column;
 
       &:first-child {
-        margin-top: 6px;
+        margin-top: 0px;
       }
 
       .title {
         font-size: 15px;
         font-family: PingFang SC;
-        font-weight: 500;
-        color: #323232;
+        font-weight: 400;
+        color: #727380;
+        display: flex;
+        align-items: center;
+        margin-left: -15px;
+
+        p {
+          font-size: 15px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #FF0000;
+          margin-right: 6px;
+        }
       }
 
       input {
         width: 100%;
-        height: 47px;
-        background: #fbfbfe;
-        border: 1px solid #f4f4f6;
-        border-radius: 4px;
-        padding: 0 21px;
+        height: 54px;
         display: flex;
         align-items: center;
-        margin-top: 8px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(93, 101, 121, 0.2);
+      }
+
+      .tip {
+        font-size: 13px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #F5A700;
+        margin-top: 9px;
       }
     }
   }
 
   .confirm {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(4, 58, 152, 1);
+    width: 329px;
+    height: 47px;
+    background: #F5A700;
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 16px;
     font-family: PingFang SC;
-    font-weight: 500;
-    color: #ffffff;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 16px 0;
   }
   .submit_no {
     background-color: rgba(188, 190, 192, 1);

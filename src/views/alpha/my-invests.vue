@@ -1,28 +1,31 @@
 <template>
   <div class="page_root">
-    <section class="header">
-      <div class="topbar">
-        <van-icon
-          class="icon"
-          name="arrow-left"
-          color="#fff"
-          @click="$router.go(-1)"
-        />
-        <span>{{ $t('my_investment') }}</span>
-      </div>
+    <section class="topbar">
+      <van-icon
+        class="icon"
+        name="arrow-left"
+        color="#000"
+        @click="$router.go(-1)"
+      />
+      <span>{{ $t('my_investment') }}</span>
     </section>
 
     <section class="list">
-      <div class="item" v-for="(item, index) in data" :key="index">
+      <div
+        class="item"
+        v-for="(item, index) in data"
+        :key="index"
+        @click="
+          $router.push({ path: '/my-investment', query: { id: item.id } })
+        "
+      >
         <div class="title">
           <span class="value">{{ item.title }}</span>
           <van-icon
             class="icon"
             name="arrow"
-            color="#000"
-            @click="
-              $router.push({ path: '/my-investment', query: { id: item.id } })
-            "
+            color="rgba(71, 71, 71, 1)"
+            size="12"
           />
         </div>
 
@@ -32,7 +35,7 @@
         </div> -->
 
         <div class="time">
-          <span>{{ $t('investment_amount') }}: {{ item.money }}TRX</span>
+          {{ $t('investment_amount') }}(TRX): <span>{{ item.money }}</span>
           <!-- <div>{{ $t('contract') }}</div> -->
         </div>
       </div>
@@ -53,20 +56,28 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 60px 0;
+  padding: 48px 13px;
   min-height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
 
-  .header {
-    width: 100%;
-    min-height: 191px;
-    background: linear-gradient(180deg, #043895 0%, #055ace 100%);
-    display: flex;
-    flex-direction: column;
+  .topbar {
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(222, 222, 222, 1);
+    span {
+      color: rgba(0, 0, 0, 1);
+    }
 
-    .topbar {
-      background-color: transparent;
+    .select {
+      position: absolute;
+      right: 16px;
+      display: flex;
+      align-items: center;
+
       span {
         color: rgba(255, 255, 255, 1);
+        font-size: 12px;
+        font-weight: 400;
+        margin-right: 4px;
       }
     }
   }
@@ -76,21 +87,16 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -127px;
 
     .item {
-      width: 348px;
+      width: 100%;
       background: #ffffff;
-      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
+      box-shadow: 0px 1px 18px 0px rgba(0, 29, 124, 0.08);
       border-radius: 7px;
       display: flex;
       flex-direction: column;
-      margin-top: 15px;
-      padding: 4px 20px 20px;
-
-      &:first-child {
-        margin-top: 0;
-      }
+      margin-top: 12px;
+      padding: 16px;
 
       .title {
         width: 100%;
@@ -98,14 +104,13 @@ export default {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid rgba(233, 234, 236, 1);
 
         .value {
           flex: 1 0;
-          font-size: 15px;
+          font-size: 14px;
           font-family: PingFang SC;
-          font-weight: bold;
-          color: #323232;
+          font-weight: 500;
+          color: #141c30;
           margin-right: 16px;
         }
 
@@ -134,31 +139,22 @@ export default {
       }
 
       .time {
-        margin-top: 8px;
+        margin-top: 18px;
         width: 100%;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
+        height: 46px;
+        background: #f4f8fe;
+        font-size: 12px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #151c31;
+        word-break: break-word;
 
         span {
-          flex: 1 0;
-          font-size: 13px;
-          font-family: PingFang SC;
-          font-weight: 500;
-          color: #2d2d2d;
-          word-break: break-word;
-        }
-        div {
-          padding: 0 16px;
-          height: 26px;
-          background: rgba(4, 58, 152, 1);
-          border-radius: 4px;
-          display: flex;
-          align-items: center;
-          font-size: 13px;
-          font-family: PingFang SC;
-          font-weight: 500;
-          color: rgba(255, 255, 255, 1);
-          margin-left: 16px;
+          color: rgba(245, 167, 0, 1);
+          margin-left: 5px;
         }
       }
     }

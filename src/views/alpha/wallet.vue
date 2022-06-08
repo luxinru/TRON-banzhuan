@@ -4,46 +4,28 @@
       <van-icon
         class="icon"
         name="arrow-left"
-        color="#fff"
+        color="rgba(0, 0, 0, 1)"
         @click="$router.go(-1)"
       />
       <span>{{ $t('Transaction_details') }}</span>
-
-<!--      <div class="select" @click="isShowSelect = true">
-        <span>
-          {{ name }}
-        </span>
-        <van-icon name="arrow-down" color="#fff" size="12" />
-      </div> -->
     </div>
-
-    <!-- <section class="balance">
-      <div class="info">
-        <span>10000.000000</span>
-        <span>{{ $t('total_balance') }}（TRX）</span>
-      </div>
-      <div class="btns">
-        <div class="item">
-          <img src="@/assets/images/alpha/分享－自动转入.png" alt="">
-          <span>{{ $t('transfer_in') }}</span>
-        </div>
-        <div class="item">
-          <img src="@/assets/images/alpha/分享－自动转入 (1).png" alt="">
-          <span>{{ $t('transfer_out') }}</span>
-        </div>
-      </div>
-    </section> -->
 
     <section class="info_item" v-for="(item, index) in list" :key="index">
       <div class="info">
         <span>{{ item.reason }}</span>
         <span>{{ item.time }}</span>
       </div>
-      <div
-        class="value"
-        :style="item.type == 2 ? 'color:#E85420' : 'color:#6AAF99'"
-      >
-        {{ item.type == 1 ? '+' : '-' }}{{ item.money }}
+      <div class="value">
+        <span
+          :style="
+            item.type === 2
+              ? 'color: rgba(255, 0, 0, 1)'
+              : 'color: rgba(16, 174, 0, 1)'
+          "
+        >
+          {{ item.type === 1 ? '+' : '-' }}
+        </span>
+        {{ item.money }}
       </div>
     </section>
 
@@ -72,13 +54,14 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 0 0;
+  padding: 48px 21px;
   min-height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
 
   .topbar {
-    background-color: rgba(4, 61, 158, 1);
+    background-color: rgba(255, 255, 255, 1);
     span {
-      color: rgba(255, 255, 255, 1);
+      color: rgba(0, 0, 0, 1);
     }
 
     .select {
@@ -98,7 +81,7 @@ export default {
 
   .balance {
     position: relative;
-    width: 348px;
+    width: 100%;
     background: #ffffff;
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
     border-radius: 7px;
@@ -168,12 +151,11 @@ export default {
   }
 
   .info_item {
-    width: 348px;
-    min-height: 77px;
-    background: #ffffff;
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    min-height: 80px;
+    background: rgba(246, 248, 250, 1);
     border-radius: 7px;
-    margin-top: 15px;
+    margin-top: 12px;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -190,16 +172,16 @@ export default {
         &:first-child {
           font-size: 15px;
           font-family: PingFang SC;
-          font-weight: bold;
-          color: #323232;
+          font-weight: 500;
+          color: #3b4257;
         }
 
         &:last-child {
           font-size: 13px;
           font-family: PingFang SC;
-          font-weight: 500;
-          color: #6f6d70;
-          margin-top: 14px;
+          font-weight: 400;
+          color: #a1a9be;
+          margin-top: 16px;
         }
       }
     }
@@ -209,10 +191,12 @@ export default {
       margin-left: 16px;
       word-break: break-word;
       font-size: 17px;
-      font-family: PingFang SC;
+      font-family: DIN Alternate;
       font-weight: bold;
-      color: #ee322a;
-      text-align: right;
+      color: #3b4257;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
     }
   }
 }

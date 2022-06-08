@@ -1,48 +1,67 @@
 <template>
   <div class="page_root">
-    <section class="header">
-      <div class="topbar">
-        <van-icon
-          class="icon"
-          name="arrow-left"
-          color="#fff"
-          @click="$router.go(-1)"
-        />
-        <span>{{ $t('my_investment') }}</span>
-      </div>
-
-      <div class="btns">
-        <div class="item">
-          <span>{{ data.money }}</span>
-          <span>{{ $t('investment_amount') }}(USDT)</span>
-          <span>{{ $t('investment_time') }}: {{ data.addtime_date }}</span>
-        </div>
-        <div class="item">
-          <span>{{ data.apr_money }}</span>
-          <span>{{ $t('Expected_earnings') }}(USDT)</span>
-          <span>{{ $t('Expire_date') }}: {{ data.end_time_date }}</span>
-        </div>
-      </div>
+    <section class="topbar">
+      <van-icon
+        class="icon"
+        name="arrow-left"
+        color="#000"
+        @click="$router.go(-1)"
+      />
+      <span>{{ $t('my_investment') }}</span>
     </section>
 
-<!--    <section class="list">
+    <section class="list">
       <div class="item" v-for="item in data.apr_plan" :key="item.id">
         <div class="title">
           <span class="value">{{ item.title }}</span>
-          <span class="status">{{ item.time2 !== "0000-00-00 00:00:00" ? $t('finish') : $t('undone') }}</span>
+          <span class="status">{{
+            item.time2 !== '0000-00-00 00:00:00' ? $t('finish') : $t('undone')
+          }}</span>
         </div>
 
         <div class="info">
-          <span>{{ $t('investment_amount') }}: {{ item.money2 }}TRX</span>
-          <span>{{ $t('Expected_earnings') }}: {{ item.money1 }}TRX</span>
-        </div>
+          <div class="info_item">
+            <span class="tick"></span>
+            <span class="label">
+              {{ $t('investment_amount') }}:
+            </span>
+            <span class="value">
+              {{ item.money2 }}TRX
+            </span>
+          </div>
 
-        <div class="time">
-          <span>{{ $t('Receivable_time') }}: {{ item.time1 }}</span>
-          <div v-if="item.time2 !== '0000-00-00 00:00:00'">{{ $t('completed') }}</div>
+          <div class="info_item">
+            <span class="tick"></span>
+            <span class="label">
+              {{ $t('Expected_earnings') }}:
+            </span>
+            <span class="value">
+              {{ item.money1 }}TRX
+            </span>
+          </div>
+
+          <div class="info_item">
+            <span class="tick"></span>
+            <span class="label">
+              {{ $t('Receivable_time') }}:
+            </span>
+            <span class="value">
+              {{ item.time1 }}
+            </span>
+          </div>
+
+          <div class="info_item"  v-if="item.time2 !== '0000-00-00 00:00:00'">
+            <span class="tick"></span>
+            <span class="label">
+              {{ $t('Expire_date') }}
+            </span>
+            <span class="value">
+              {{ item.time2 }}
+            </span>
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 
@@ -59,63 +78,28 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 60px 0;
+  padding: 48px 13px;
   min-height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
 
-  .header {
-    width: 100%;
-    min-height: 191px;
-    background: linear-gradient(180deg, #043895 0%, #055ace 100%);
-    display: flex;
-    flex-direction: column;
-
-    .topbar {
-      background-color: transparent;
-      span {
-        color: rgba(255, 255, 255, 1);
-      }
+  .topbar {
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(222, 222, 222, 1);
+    span {
+      color: rgba(0, 0, 0, 1);
     }
 
-    .btns {
-      margin: 0 auto;
-      width: calc(100% - 10px * 2);
-      flex: 1 0;
+    .select {
+      position: absolute;
+      right: 16px;
       display: flex;
       align-items: center;
 
-      .item {
-        flex: 1 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        span {
-          margin-top: 15px;
-          width: 100%;
-          text-align: center;
-          word-break: break-word;
-          &:nth-child(1) {
-            font-size: 20px;
-            font-family: Arial;
-            font-weight: bold;
-            color: #FFFFFF;
-            margin-top: 0;
-          }
-          &:nth-child(2) {
-            font-size: 15px;
-            font-family: PingFang SC;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.8);
-          }
-          &:nth-child(3) {
-            font-size: 13px;
-            font-family: PingFang SC;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.8);
-          }
-        }
+      span {
+        color: rgba(255, 255, 255, 1);
+        font-size: 12px;
+        font-weight: 400;
+        margin-right: 4px;
       }
     }
   }
@@ -125,21 +109,16 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -16px;
 
     .item {
-      width: 348px;
+      width: 100%;
       background: #FFFFFF;
-      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
+      box-shadow: 0px 1px 18px 0px rgba(0, 29, 124, 0.08);
       border-radius: 7px;
       display: flex;
       flex-direction: column;
-      margin-top: 15px;
-      padding: 4px 20px 20px;
-
-      &:first-child {
-        margin-top: 0;
-      }
+      margin-top: 16px;
+      padding: 16px;
 
       .title {
         width: 100%;
@@ -147,14 +126,13 @@ export default {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid rgba(233, 234, 236, 1);
 
         .value {
           flex: 1 0;
-          font-size: 15px;
+          font-size: 14px;
           font-family: PingFang SC;
-          font-weight: bold;
-          color: #323232;
+          font-weight: 500;
+          color: #141C30;
           margin-right: 16px;
         }
 
@@ -162,7 +140,7 @@ export default {
           font-size: 13px;
           font-family: PingFang SC;
           font-weight: 500;
-          color: #ED2B2A;
+          color: #ed2b2a;
         }
       }
 
@@ -170,43 +148,43 @@ export default {
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 2px;
+        margin-top: 20px;
+        background: #F4F8FE;
+        padding: 20px 16px;
 
-        span {
-          margin-top: 11px;
-          font-size: 13px;
-          font-family: PingFang SC;
-          font-weight: 500;
-          color: #2D2D2D;
-          word-break: break-word;
-        }
-      }
-
-      .time {
-        margin-top: 3px;
-        width: 100%;
-        display: flex;
-        align-items: flex-end;
-
-        span {
-          flex: 1 0;
-          font-size: 13px;
-          font-family: PingFang SC;
-          font-weight: 500;
-          color: #6F6D70;
-        }
-        div {
-          padding: 0 16px;
-          height: 26px;
-          background: rgba(243, 134, 24, 0.2);
-          border-radius: 4px;
+        .info_item {
+          width: 100%;
           display: flex;
           align-items: center;
-          font-size: 13px;
-          font-family: PingFang SC;
-          font-weight: 500;
-          color: #FF661B;
-          margin-left: 16px;
+          margin-top: 16px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          .tick {
+            width: 4px;
+            height: 4px;
+            background: #F5A700;
+            border-radius: 50%;
+          }
+
+          .label {
+            font-size: 13px;
+            font-family: PingFang SC;
+            font-weight: 400;
+            color: #151C31;
+            margin-left: 10px;
+          }
+
+          .value {
+            flex: 1 0;
+            font-size: 13px;
+            font-family: PingFang SC;
+            font-weight: 400;
+            color: #151C31;
+            text-align: right;
+          }
         }
       }
     }

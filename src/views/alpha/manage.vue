@@ -4,7 +4,7 @@
       <van-icon
         class="icon"
         name="arrow-left"
-        color="#000"
+        color="rgba(0, 0, 0, 1)"
         @click="$router.go(-1)"
       />
       <span>{{ $t('Account_management') }}</span>
@@ -39,7 +39,7 @@
         <span class="name">{{ $t('Modify_login_password') }}</span>
         <div class="left_info">
           <span></span>
-          <img src="@/assets/images/alpha/方向 - 下 拷贝 10.png" alt="">
+          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
         </div>
       </div>
 
@@ -47,7 +47,7 @@
         <span class="name">{{ $t('Change_payment_password') }}</span>
         <div class="left_info">
           <span></span>
-          <img src="@/assets/images/alpha/方向 - 下 拷贝 10.png" alt="">
+          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
         </div>
       </div>
 
@@ -55,7 +55,7 @@
         <span class="name">{{ $t('user_agreement') }}</span>
         <div class="left_info">
           <span></span>
-          <img src="@/assets/images/alpha/方向 - 下 拷贝 10.png" alt="">
+          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
         </div>
       </div>
 
@@ -63,7 +63,7 @@
         <span class="name">{{ $t('Privacy_Policy') }}</span>
         <div class="left_info">
           <span></span>
-          <img src="@/assets/images/alpha/方向 - 下 拷贝 10.png" alt="">
+          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
         </div>
       </div>
 
@@ -71,7 +71,7 @@
         <span class="name">{{ $t('log_out') }}</span>
         <div class="left_info">
           <span></span>
-          <img src="@/assets/images/alpha/方向 - 下 拷贝 10.png" alt="">
+          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
         </div>
       </div>
     </section>
@@ -91,11 +91,29 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 0 0;
+  padding: 48px 13px;
   min-height: 100vh;
+  background-color: rgba(247, 246, 249, 1);
 
   .topbar {
-    background-color: #fff;
+    background-color: rgba(247, 246, 249, 1);
+    span {
+      color: rgba(0, 0, 0, 1);
+    }
+
+    .select {
+      position: absolute;
+      right: 16px;
+      display: flex;
+      align-items: center;
+
+      span {
+        color: rgba(255, 255, 255, 1);
+        font-size: 12px;
+        font-weight: 400;
+        margin-right: 4px;
+      }
+    }
   }
 
   .box {
@@ -103,8 +121,10 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 12px;
-    background-color: #fff;
+    padding: 0 20px;
+    background: #ffffff;
+    box-shadow: 0px 2px 9px 0px rgba(19, 19, 20, 0.08);
+    border-radius: 7px;
 
     .item {
       width: 100%;
@@ -120,10 +140,10 @@ export default {
       }
 
       .name {
-        font-size: 15px;
+        font-size: 14px;
         font-family: PingFang SC;
         font-weight: 400;
-        color: #000000;
+        color: #0d1114;
       }
 
       .left_info {
@@ -134,12 +154,12 @@ export default {
           font-size: 15px;
           font-family: PingFang SC;
           font-weight: 400;
-          color: #043D9E;
+          color: #043d9e;
         }
 
         img {
-          height: 14px;
-          margin-left: 20px;
+          height: 5px;
+          margin-left: 16px;
         }
       }
     }

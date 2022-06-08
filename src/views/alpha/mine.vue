@@ -34,7 +34,13 @@
           </div>
 
           <div class="btns">
-            <div class="btn" @click="$router.push('/recharge')">
+            <div
+              class="btn"
+              @click="
+                active = 1
+                isShowModel = true
+              "
+            >
               {{ $t('recharge') }}
             </div>
             <div class="line none"></div>
@@ -56,11 +62,11 @@
       <div class="funs">
         <div class="item" @click="$router.push('/team')">
           <span>{{ $t('team') }}</span>
-          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
+          <img src="@/assets/images/alpha/矩形 792.png" />
         </div>
         <div class="item" @click="$router.push('/wallet')">
           <span>{{ $t('Transaction_details') }}</span>
-          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
+          <img src="@/assets/images/alpha/矩形 792.png" />
         </div>
         <div
           v-if="footerType === 'n2'"
@@ -68,16 +74,16 @@
           @click="$router.push('/recharge-record')"
         >
           <span>{{ $t('Recharge_record') }}</span>
-          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
+          <img src="@/assets/images/alpha/矩形 792.png" />
         </div>
         <div class="item" @click="$router.push('/withdraw-record')">
           <span>{{ $t('Withdrawals_record') }}</span>
-          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
+          <img src="@/assets/images/alpha/矩形 792.png" />
         </div>
 
         <div class="item" @click="$router.push('/manage')">
           <span>{{ $t('Account_Settings') }}</span>
-          <img src="@/assets/images/alpha/矩形 792.png" alt="" />
+          <img src="@/assets/images/alpha/矩形 792.png" />
         </div>
       </div>
 
@@ -92,6 +98,57 @@
         <p>2019 © SwapIt(TRWinSwap) Tech Pte Ltd. All Rights Reserved.</p>
       </div>
     </section>
+
+    <van-dialog
+      v-model="isShowModel"
+      closeOnClickOverlay
+      :showConfirmButton="false"
+    >
+      <div class="dialog">
+        <span class="title"> 选择充值方式 </span>
+        <div class="content">
+          <div
+            class="item"
+            :class="{ active: active === 1 }"
+            @click="active = 1"
+          >
+            <img class="img1" src="@/assets/images/alpha/USDT (3) 拷贝.png" />
+            <span>TRC20-USDT</span>
+            <div class="img">
+              <img src="@/assets/images/alpha/勾 拷贝.png" />
+            </div>
+          </div>
+
+          <div
+            class="item"
+            :class="{ active: active === 2 }"
+            @click="active = 2"
+          >
+            <img class="img1" src="@/assets/images/alpha/TRX (2) 拷贝.png" />
+            <span>TRC20-USDT</span>
+            <div class="img">
+              <img src="@/assets/images/alpha/勾 拷贝.png" />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <img
+            src="@/assets/images/alpha/差 (1) 拷贝.png"
+            @click="isShowModel = false"
+          />
+          <img
+            src="@/assets/images/alpha/箭头 (1).png"
+            @click="
+              $router.push({
+                path: '/recharge-detail',
+                query: { type: active },
+              })
+            "
+          />
+        </div>
+      </div>
+    </van-dialog>
   </div>
 </template>
 
@@ -100,17 +157,7 @@ import Mine from '@/constant/mine.vue'
 export default {
   name: 'Mine',
 
-  extends: Mine,
-
-  components: {},
-
-  data () {
-    return {}
-  },
-
-  mounted () {},
-
-  methods: {}
+  extends: Mine
 }
 </script>
 
@@ -356,10 +403,101 @@ export default {
         font-size: 13px;
         font-family: PingFang SC;
         font-weight: 400;
-        color: #54575E;
+        color: #54575e;
         line-height: 22px;
         text-align: center;
         word-break: break-word;
+      }
+    }
+  }
+
+  .dialog {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 2px 9px 0px rgba(19, 19, 20, 0.08);
+    border-radius: 7px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-size: 18px;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color: #222222;
+    }
+
+    .content {
+      width: 100%;
+      margin-top: 11px;
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border: 1px solid RGBA(131, 131, 131, 1);
+        border-radius: 24px;
+        padding: 0 20px;
+        margin-top: 18px;
+
+        .img1 {
+          height: 25px;
+        }
+
+        span {
+          flex: 1 0;
+          font-size: 13px;
+          font-family: PingFang SC;
+          font-weight: 500;
+          color: RGBA(131, 131, 131, 1);
+          margin-left: 10px;
+        }
+
+        .img {
+          width: 16px;
+          height: 16px;
+          background-color: RGBA(131, 131, 131, 1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+
+          img {
+            height: 6px;
+          }
+        }
+      }
+
+      .active {
+        border: 1px solid rgba(245, 167, 0, 1);
+
+        span {
+          color: rgba(245, 167, 0, 1);
+        }
+
+        .img {
+          background-color: rgba(245, 167, 0, 1);
+        }
+      }
+    }
+
+    .footer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 35px;
+
+      img {
+        height: 15px;
+
+        &:last-child {
+          height: 18px;
+        }
       }
     }
   }

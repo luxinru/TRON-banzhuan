@@ -4,7 +4,7 @@
       <van-icon
         class="icon"
         name="arrow-left"
-        color="#fff"
+        color="#000"
         @click="$router.go(-1)"
       />
       <span>{{ $t('Change_payment_password') }}</span>
@@ -59,15 +59,28 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 0 0;
+  padding: 48px 30px;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 1);
 
   .topbar {
-    background-color: rgba(4, 66, 164, 1);
-
+    background-color: rgba(255, 255, 255, 1);
     span {
-      color: #fff;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    .select {
+      position: absolute;
+      right: 16px;
+      display: flex;
+      align-items: center;
+
+      span {
+        color: rgba(255, 255, 255, 1);
+        font-size: 12px;
+        font-weight: 400;
+        margin-right: 4px;
+      }
     }
   }
 
@@ -75,13 +88,13 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 13px;
-    margin-top: 25px;
+    // padding: 0 13px;
     .tip {
-      font-size: 15px;
+      font-size: 22px;
       font-family: PingFang SC;
       font-weight: 500;
-      color: #323232;
+      color: #1F1F1F;
+      margin: 50px 0 20px;
     }
 
     .item {
@@ -89,30 +102,31 @@ export default {
       margin-top: 18px;
       display: flex;
       flex-direction: column;
+      margin-top: 30px;
 
       .title{
         font-size: 15px;
         font-family: PingFang SC;
-        font-weight: 500;
-        color: #323232;
+        font-weight: 400;
+        color: #525252;
       }
 
       .input_box {
         width: 100%;
         height: 47px;
-        background: #FBFBFE;
-        border: 1px solid #F4F4F6;
-        border-radius: 4px;
         display: flex;
         align-items: center;
-        padding: 0 10px;
-        margin-top: 10px;
+        border-bottom: 1px solid rgba(228, 228, 228, 1);
 
         input {
           flex: 1 0;
           height: 100%;
           outline: none;
           border: none;
+          font-size: 13px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #B8B8B8;
         }
 
         .code {
@@ -133,18 +147,18 @@ export default {
   }
 
   .confirm {
-    width: 348px;
+    width: 100%;
     height: 47px;
-    background: rgba(4, 61, 158, 1);
-    border-radius: 7px;
+    background: #F5A700;
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 17px;
+    font-size: 16px;
     font-family: PingFang SC;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    margin: 18px 0;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 50px 0;
   }
 }
 </style>

@@ -4,7 +4,7 @@
       <van-icon
         class="icon"
         name="arrow-left"
-        color="#fff"
+        color="rgba(0, 0, 0, 1)"
         @click="$router.go(-1)"
       />
       <span>{{ title }}</span>
@@ -27,14 +27,15 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 0 0;
+  padding: 48px 13px;
   min-height: 100vh;
+  background-color: rgba(247, 246, 249, 1);
 
   .topbar {
-    background-color: rgba(4, 66, 164, 1);
+    background-color: rgba(247, 246, 249, 1);
 
     span {
-      color: #fff;
+      color: rgba(0, 0, 0, 1);
     }
   }
 

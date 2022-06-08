@@ -16,7 +16,8 @@ export default {
       btn_show: false,
       uid: '',
       apiUrl: '',
-      trx2usdt: 0
+      trx2usdt: 0,
+      active: 1
     }
   },
 

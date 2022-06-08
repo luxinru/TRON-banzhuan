@@ -4,39 +4,20 @@
       <van-icon
         class="icon"
         name="arrow-left"
-        color="#fff"
+        color="rgba(0, 0, 0, 1)"
         @click="$router.go(-1)"
       />
       <span>{{ $t('Recharge_record') }}</span>
     </div>
-
-    <!-- <section class="balance">
-      <div class="info">
-        <span>10000.000000</span>
-        <span>{{ $t('total_balance') }}（TRX）</span>
-      </div>
-      <div class="btns">
-        <div class="item">
-          <img src="@/assets/images/alpha/分享－自动转入.png" alt="">
-          <span>{{ $t('transfer_in') }}</span>
-        </div>
-        <div class="item">
-          <img src="@/assets/images/alpha/分享－自动转入 (1).png" alt="">
-          <span>{{ $t('transfer_out') }}</span>
-        </div>
-      </div>
-    </section> -->
 
     <section class="info_item" v-for="(item, index) in data.list" :key="index">
       <div class="info">
         <span>{{ item.type }}</span>
         <span>{{ item.time }}</span>
       </div>
-      <div
-        class="value"
-        :style="item.type == 2 ? 'color:#E85420' : 'color:#6AAF99'"
-      >
-        +{{ item.money }}
+      <div class="value">
+        <span style="color: rgba(16, 174, 0, 1)"> + </span>
+        {{ item.money }}
       </div>
     </section>
   </div>
@@ -55,13 +36,28 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 0 0;
+  padding: 48px 21px;
   min-height: 100vh;
+  background-color: rgba(255, 255, 255, 1);
 
   .topbar {
-    background-color: rgba(4, 61, 158, 1);
+    background-color: rgba(255, 255, 255, 1);
     span {
-      color: rgba(255, 255, 255, 1);
+      color: rgba(0, 0, 0, 1);
+    }
+
+    .select {
+      position: absolute;
+      right: 16px;
+      display: flex;
+      align-items: center;
+
+      span {
+        color: rgba(255, 255, 255, 1);
+        font-size: 12px;
+        font-weight: 400;
+        margin-right: 4px;
+      }
     }
   }
 
@@ -137,12 +133,11 @@ export default {
   }
 
   .info_item {
-    width: 348px;
-    min-height: 77px;
-    background: #ffffff;
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    min-height: 80px;
+    background: rgba(246, 248, 250, 1);
     border-radius: 7px;
-    margin-top: 15px;
+    margin-top: 12px;
     display: flex;
     align-items: center;
     padding: 20px;
