@@ -26,11 +26,11 @@ module.exports = defineConfig({
     proxy: {
       '/api': {
         target: TARGET,
-        changeOrigin: true,
+        changeOrigin: true
       },
-      'apilc': {
+      apilc: {
         target: TARGET,
-        changeOrigin: true,
+        changeOrigin: true
       }
     }
   }
