@@ -40,10 +40,14 @@ export default {
   }
 
   .main {
-    width: 100%;
     height: max-content;
     padding: 16px 13px;
     overflow: hidden;
+    width: 348px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 9px 0px rgba(19, 19, 20, 0.08);
+    border-radius: 7px;
+    margin-top: 16px;
 
     /deep/ p {
       font-size: 15px;

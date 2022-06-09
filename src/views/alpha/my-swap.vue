@@ -4,96 +4,78 @@
       <van-icon
         class="icon"
         name="arrow-left"
-        color="#fff"
+        color="#000"
         @click="$router.go(-1)"
       />
-      <span style="color: white">My Swap</span>
+      <span>My Swap</span>
     </section>
 
     <section class="list">
       <div class="item" v-for="(item, index) in swapData" :key="index">
-        <div class="title">
-          <span class="value">{{ item.left_market_pair }}</span>
+        <div class="main_title">
+          {{ item.left_market_pair }}
+        </div>
+        <div class="item_info">
+          <div class="title">
+            <img :src="getImgUrl(item.left_exchange_id)" alt="" />
+            <span>
+              {{ item.left_exchange_name }}
+            </span>
+          </div>
+          <div class="value">{{ item.left_price }}</div>
+        </div>
 
-          <!--          <van-icon
-            class="icon"
-            name="arrow"
-            color="#000"
-            size="12"
-            @click="
-              $router.push({ path: '/my-investment', query: { id: item.id } })
-            "
-          /> -->
+        <div class="jiantou">
+          <img src="@/assets/images/alpha/箭头 (2).png" alt="" />
         </div>
-        <div class="title">
-          <span class="value"
-            ><img
-              style="width: 25px"
-              :src="getImgUrl(item.left_exchange_id)"
-              alt=""
-            />{{ item.left_exchange_name }}</span
-          >
-          <img
-            style="width: 25px"
-            src="@/assets/images/alpha/refresh.png"
-            alt=""
-          />
-          <span class="value"
-            >{{ item.right_exchange_name
-            }}<img
-              style="width: 25px"
-              :src="getImgUrl(item.right_exchange_id)"
-              alt=""
-          /></span>
-        </div>
-        <div class="title">
-          <span class="value">{{ item.left_price }}</span>
-          <img
-            style="width: 25px"
-            src="@/assets/images/alpha/arrow-right.png"
-            alt=""
-          />
-          <span class="value">{{ item.right_price }}</span>
-        </div>
-        <!-- <div class="info">
-          <span>{{ $t('investment_amount') }}: {{ item.money }}TRX</span>
-          <div>{{ $t('contract') }}</div>
-        </div> -->
 
-        <div class="time">
-          <span>{{ item.money }} {{ item.type == 1 ? 'TRX' : 'USDT' }}</span>
-          <span>* {{ (item.profit_ratio * 100).toFixed(2) }}%</span>
-          <!-- <div>{{ $t('contract') }}</div> -->
+        <div class="item_info">
+          <div class="title">
+            <img :src="getImgUrl(item.right_exchange_id)" alt="" />
+            <span>
+              {{ item.right_exchange_name }}
+            </span>
+          </div>
+          <div class="value">{{ item.right_price }}</div>
         </div>
-        <div class="time">
-          <span
-            >{{ item.profit_money }} {{ item.type == 1 ? 'TRX' : 'USDT' }}</span
-          >
-          <div v-if="item.status == 1">{{ $t('completed') }}</div>
-          <div
-            v-if="item.status == 0"
-            style="padding: 1px; background: 0; margin-left: 0"
-          >
+
+        <div class="box">
+          <div class="time">
+            <span>{{ item.money }} {{ item.type == 1 ? 'TRX' : 'USDT' }}</span>
+            <span>* {{ (item.profit_ratio * 100).toFixed(2) }}%</span>
+            <!-- <div>{{ $t('contract') }}</div> -->
+          </div>
+          <div class="time">
             <span
-              id="wrapper"
-              style="
-                padding: 1px;
-                background: 0;
-                margin-left: 0;
-                display: block;
-              "
+              >{{ item.profit_money }}
+              {{ item.type == 1 ? 'TRX' : 'USDT' }}</span
+            >
+            <div v-if="item.status == 1">{{ $t('completed') }}</div>
+            <div
+              v-if="item.status == 0"
+              style="padding: 1px; background: 0; margin-left: 0"
             >
               <span
-                id="progressbar"
-                style="padding: 1px; margin-left: 0; display: block"
+                id="wrapper"
+                style="
+                  padding: 1px;
+                  background: 0;
+                  margin-left: 0;
+                  display: block;
+                "
               >
-                <span id="fill" style="margin-left: 0; display: block"></span>
+                <span
+                  id="progressbar"
+                  style="padding: 1px; margin-left: 0; display: block"
+                >
+                  <span id="fill" style="margin-left: 0; display: block"></span>
+                </span>
               </span>
-            </span>
-            <span>{{ progress }}</span>
-          </div>
-          <div v-if="item.status == 2" style="background-color: orangered">
-            {{ $t('undone') }}
+              <span>{{ progress }}</span>
+            </div>
+            <div v-if="item.status == 2" style="background-color: orangered">
+              {{ $t('undone') }}
+            </div>
           </div>
         </div>
       </div>
@@ -114,26 +96,13 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 60px 0;
+  padding: 48px 0 0 0;
   min-height: 100vh;
 
   .topbar {
-    width: 100%;
-    min-height: 264px;
-    height: max-content;
-    // background: url('~@/assets/images/bochang2/波场 2 (2).png') no-repeat;
-    background-size: 100% 100%;
-    justify-content: flex-start;
-    display: flex;
-    flex-direction: column;
-
+    border-bottom: 1px solid rgba(222, 222, 222, 1);
     span {
-      margin-top: 22px;
-    }
-
-    .icon {
-      position: fixed;
-      margin-top: 24px;
+      color: #000;
     }
   }
 
@@ -142,91 +111,121 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -127px;
+    // margin-top: -127px;
     z-index: 1;
+    background-color: #fff;
 
     .item {
-      width: 348px;
-      background: #ffffff;
-      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
-      border-radius: 7px;
+      width: 100%;
       display: flex;
       flex-direction: column;
+      align-items: center;
       margin-top: 15px;
-      padding: 4px 20px 20px;
+      padding: 0 20px;
+      border-bottom: 10px solid rgba(0, 0, 0, 0.04);
 
-      &:first-child {
-        margin-top: 0;
+      .main_title {
+        font-size: 17px;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #f5a700;
       }
 
-      .title {
-        width: 100%;
-        height: 46px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        // border-bottom: 1px solid rgba(233, 234, 236, 1);
-
-        .value {
-          text-align: center;
-          flex: 1 0;
-          font-size: 15px;
-          font-family: PingFang SC;
-          font-weight: bold;
-          color: rgba(5, 52, 100, 1);
-          margin-right: 16px;
-        }
-
-        .status {
-          font-size: 13px;
-          font-family: PingFang SC;
-          font-weight: 500;
-          color: #ed2b2a;
-        }
-      }
-
-      .info {
+      .item_info {
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 2px;
+        align-items: center;
+        margin-top: 23px;
 
-        span {
-          margin-top: 11px;
-          font-size: 13px;
+        .title {
+          background: #f3f3f3;
+          border-radius: 20px;
+          padding: 10px 16px;
+          display: flex;
+          align-items: center;
+
+          img {
+            height: 17px;
+            margin-right: 16px;
+          }
+          span {
+            font-size: 18px;
+            font-family: PingFang SC;
+            font-weight: 500;
+            color: #000000;
+          }
+        }
+
+        .value {
+          font-size: 24px;
           font-family: PingFang SC;
           font-weight: 500;
-          color: #2d2d2d;
-          word-break: break-word;
+          color: #000000;
+          margin-top: 26px;
+        }
+
+        .unit {
+          font-size: 12px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #5a5c65;
+          margin-top: 16px;
         }
       }
 
-      .time {
-        margin-top: 8px;
+      .jiantou {
         width: 100%;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid rgba(222, 222, 222, 1);
+        margin-top: 14px;
 
-        span {
-          flex: 1 0;
-          font-size: 13px;
-          font-weight: 500;
-          color: #4e7091;
-          line-height: 22px;
-          word-break: break-word;
+        img {
+          height: 17px;
         }
-        div {
-          padding: 0 16px;
-          height: 26px;
-          background: rgba(167, 184, 215, 0.2);
-          border-radius: 4px;
+      }
+
+      .box {
+        width: 100%;
+        background: rgba(245, 167, 0, 0.1);
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        margin: 19px 0;
+        padding: 24px;
+
+        .time {
+          width: 100%;
           display: flex;
           align-items: center;
-          font-size: 13px;
+          font-size: 12px;
           font-family: PingFang SC;
           font-weight: 500;
-          color: rgba(34, 78, 155, 1);
-          margin-left: 16px;
+          color: #3B3A40;
+
+          &:last-child {
+            margin-top: 18px;
+          }
+
+          span {
+            flex: 1 0;
+            word-break: break-word;
+
+            &:last-child {
+              text-align: right;
+            }
+          }
+          div {
+            padding: 0 16px;
+            height: 26px;
+            background: rgba(167, 184, 215, 0.2);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            margin-left: 16px;
+          }
         }
       }
     }
@@ -237,6 +236,7 @@ export default {
   // height: 100px;
   // border: 1px solid #000000;
   // margin: 0 auto;
+  margin-right: 16px;
 }
 
 #progressbar {
@@ -256,7 +256,7 @@ export default {
   width: 100px;
   height: 5px;
   border-radius: 5px;
-  background-color: rgb(56, 97, 251);
+  background-color: rgba(245, 167, 0, 1);
   color: #ffffff;
 }
 .container {

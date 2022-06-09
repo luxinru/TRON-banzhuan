@@ -9,90 +9,48 @@
       />
       <span>VIP</span>
     </div>
-    <section class="funs" style="overflow: hidden">
-      <van-swipe class="swipe" indicator-color="black">
-        <van-swipe-item>
-          <div class="currency_slider_item item">
-            <div class="currency_slider_item_top">
-              <img src="@/assets/images/alpha/financial-profit.png" alt="" />
-              <div class="fs-12 fw-500">
-                {{ vip }}<span balances_ps_usd="100"></span>
-              </div>
-              <!-- <img style="width: 15px;" @click="$router.go(0)" src="@/assets/images/alpha/refresh.png" alt="" /> -->
-            </div>
-            <div class="currency_slider_item_bottom" style="color: black">
-              <div class="fs-12 fw-500">
-                {{ $t('investment_amount') }}<span balances_ps_usd="100"></span>
-              </div>
-              <div class="fs-22 fw-250">
-                <span balances_ps="100">( TRX + USDT ) </span>
-                <!-- <span class="color-00004 fs-12 fw-500"> USD</span> -->
-              </div>
-              <div class="fs-22 fw-250">
-                <span balances_ps="100">{{ usdSum }} </span>
-                <span class="color-00004 fs-12 fw-500"> USD</span>
-              </div>
-              <!-- <div class="fs-12 fw-500">USD <span balances_ps_usd="100">{{usdt}}</span></div> -->
-            </div>
-            <div class="currency_slider_item_bottom" style="color: black">
-              <!-- <div class="fs-12 fw-500">TRX <span balances_ps_usd="100"></span></div> -->
 
-              <!--             <div class="fs-22 fw-250">
-                <span balances_ps="100">{{trxProfit}} </span>
-                <span class="color-00004 fs-12 fw-500"> TRX</span>
-              </div> -->
-              <!-- <div class="fs-12 fw-500">USD <span balances_ps_usd="100">{{(price_in_usd * trx).toFixed(6)}}</span></div> -->
-            </div>
-          </div>
-        </van-swipe-item>
-      </van-swipe>
+    <section class="header"></section>
+
+    <section class="current">
+      <span class="current_vip">当前级别</span>
+      <div class="value">
+        <img src="@/assets/images/alpha/等级.png" alt="" />
+        <span>{{ vip }}</span>
+      </div>
+      <div class="money">
+        <span class="label"> {{ $t('investment_amount') }}(TRX+USDT) </span>
+        <span class="money_value"> {{ usdSum }}USD </span>
+      </div>
+    </section>
+
+    <section class="main_title">
+      {{ $t('VIP_level') }}
     </section>
 
     <section class="info_item" v-for="(item, index) in dataInfo" :key="index">
+      <span class="name">{{ item.title }}</span>
       <div class="info">
-        <span
-          style="
-            text-align: center;
-            font-size: 20px;
-            font-weight: 700;
-            text-align: center;
-          "
-          >{{ item.title }}</span
-        >
-
-        <span
-          style="
-            background: linear-gradient(
-              92.43deg,
-              #f5b67d 0.81%,
-              #ec4553 99.58%
-            );
-            text-align: center;
-            border-radius: 20px;
-            color: white;
-            padding: 6px;
-            font-weight: 700;
-          "
-        >
-          {{ $t('investment_amount') }} : {{ item.money }} USD (TRX +
-          USDT)</span
-        >
-        <span>
-          {{ $t('trade_num') }} : {{ item.interest_arbitrage_num }} swap</span
-        >
-        <span> {{ $t('trade_fee') }} : {{ item.cash_rate }}%</span>
-        <!-- <span> {{$t('project_deadline')}} : 2032-01-01</span> -->
-        <!--        <span v-if="item.status == 1" :style="item.status == 0 ? 'color:#E85420' : 'color:#6AAF99'">
-          {{$t('trading')}} :
-          {{ item.status == 1 ? '' : '' }} {{ item.money }} TRX
-        </span> -->
+        <div class="item">
+          <span>
+            <img src="@/assets/images/alpha/勾 (1).png" alt="" />
+          </span>
+          {{ $t('investment_amount') }} : {{ item.money }} USD (TRX + USDT)
+        </div>
+        <div class="item">
+          <span>
+            <img src="@/assets/images/alpha/勾 (1).png" alt="" />
+          </span>
+          {{ $t('trade_num') }} : {{ item.interest_arbitrage_num }} swap
+        </div>
+        <div class="item">
+          <span>
+            <img src="@/assets/images/alpha/勾 (1).png" alt="" />
+          </span>
+          {{ $t('trade_fee') }} : {{ item.cash_rate }}%
+        </div>
       </div>
-
-      <!--      <div class="buy" v-if="item.status == 1" @click="goBuy(item.id)">
-        {{$t('upgrade')}}
-      </div> -->
     </section>
-    <!-- <div class="rocket"></div> -->
   </div>
 </template>
 
@@ -157,131 +115,196 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
+  position: relative;
   padding: 0 0 0 0;
   min-height: 100vh;
 
   .topbar {
-    background-color: rgba(4, 61, 158, 1);
+    position: relative;
+    background-color: transparent;
+    z-index: 2;
 
     span {
       color: rgba(255, 255, 255, 1);
     }
-
-    .select {
-      position: absolute;
-      right: 16px;
-      display: flex;
-      align-items: center;
-
-      span {
-        color: rgba(255, 255, 255, 1);
-        font-size: 12px;
-        font-weight: 400;
-        margin-right: 4px;
-      }
-    }
   }
 
-  .balance {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 249px;
+    background: #282d54;
+    border-radius: 0 0 10% 10%;
+  }
+
+  .current {
     position: relative;
-    width: 348px;
-    background: #ffffff;
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.05);
-    border-radius: 7px;
-    margin-top: -136px;
+    width: 326px;
+    height: 152px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    justify-content: space-between;
+    padding: 21px 26px;
+    background: url('~@/assets/images/alpha/形状 3.png') no-repeat;
+    background-size: 100% 100%;
+    margin-top: 70px;
 
-    .info {
-      width: 100%;
-      padding: 0 13px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 34px;
-      padding-bottom: 60px;
-
-      span {
-        width: 100%;
-        text-align: center;
-        font-size: 30px;
-        font-family: Arial;
-        font-weight: bold;
-        color: #ed5217;
-        word-break: break-word;
-      }
-    }
-
-    .btns {
+    .current_vip {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 41px;
-      background: #fafafa;
-      border-radius: 7px;
-      display: flex;
-
-      .item {
-        flex: 1 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-          height: 16px;
-          margin-right: 13px;
-        }
-
-        span {
-          font-size: 14px;
-          font-family: PingFang SC;
-          font-weight: 500;
-          color: #636363;
-        }
-      }
-    }
-  }
-
-  .info_item {
-    width: 348px;
-    min-height: 77px;
-    background: url('@/assets/images/alpha/left-crl.png') 10px 1px / 35px
-      no-repeat rgb(255, 255, 255);
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    margin-top: 15px;
-    display: grid;
-    align-items: center;
-    padding: 20px;
-
-    .info {
-      flex: 1 0;
-      display: flex;
-      flex-direction: column;
-
-      span {
-        width: 100%;
-        word-break: break-word;
-
-        font-size: 14px;
-        font-family: PingFang SC;
-        font-weight: 500;
-        color: #6f6d70;
-        margin-top: 14px;
-      }
+      right: 8px;
+      top: 4px;
+      font-size: 11px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #ffffff;
     }
 
     .value {
-      flex: 1 0;
-      margin-left: 16px;
-      word-break: break-word;
-      font-size: 17px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 15px;
+        margin-right: 8px;
+      }
+
+      span {
+        font-size: 20px;
+        font-family: DIN Alternate;
+        font-weight: bold;
+        color: #35517a;
+      }
+    }
+
+    .money {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        font-size: 12px;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #5a79a3;
+      }
+
+      .money_value {
+        font-size: 27px;
+        font-family: DIN Alternate;
+        font-weight: bold;
+        color: #35517a;
+      }
+    }
+  }
+
+  .main_title {
+    width: 326px;
+    font-size: 18px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #141c30;
+    margin: 25px 0;
+  }
+
+  .info_item {
+    position: relative;
+    width: 326px;
+    height: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 21px 16px;
+    margin-top: 14px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .name {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65px;
+      height: 25px;
+      font-size: 11px;
       font-family: PingFang SC;
-      font-weight: bold;
-      color: #ee322a;
-      text-align: right;
+      font-weight: 400;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #35517a;
+        margin-top: 11px;
+
+        span {
+          width: 13px;
+          height: 13px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background-color: RGBA(53, 81, 122, 1);
+          margin-right: 9px;
+
+          img {
+            height: 6px;
+          }
+        }
+      }
+    }
+
+    &:nth-child(3n + 1) {
+      background: url('~@/assets/images/alpha/形状 3 (2).png') no-repeat;
+      background-size: 100% 100%;
+
+      .info {
+        .item {
+          color: rgba(95, 107, 178, 1);
+
+          span {
+            background-color: rgba(95, 107, 178, 1);
+          }
+        }
+      }
+    }
+
+    &:nth-child(3n + 2) {
+      background: url('~@/assets/images/alpha/形状 3.png') no-repeat;
+      background-size: 100% 100%;
+    }
+
+    &:nth-child(3n + 3) {
+      background: url('~@/assets/images/alpha/形状 3 (1).png') no-repeat;
+      background-size: 100% 100%;
+
+      .info {
+        .item {
+          color: rgba(172, 118, 46, 1);
+
+          span {
+            background-color: rgba(172, 118, 46, 1);
+          }
+        }
+      }
     }
   }
 }

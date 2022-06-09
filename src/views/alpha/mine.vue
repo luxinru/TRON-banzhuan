@@ -23,30 +23,34 @@
         <template v-if="footerType === 'n2'">
           <div class="value">
             <span>{{ data.money || 0 }}</span>
-            <div class="line"></div>
+            <p class="line"></p>
             <span>{{ data.promotion || 0 }}</span>
           </div>
 
           <div class="label">
             <span>USDT</span>
-            <div class="line none"></div>
+            <p class="line none"></p>
             <span>TRX</span>
           </div>
 
           <div class="btns">
-            <div
-              class="btn"
-              @click="
-                active = 1
-                isShowModel = true
-              "
-            >
-              {{ $t('recharge') }}
-            </div>
-            <div class="line none"></div>
-            <div class="btn" @click="$router.push('/withdraw')">
-              {{ $t('withdrawal') }}
-            </div>
+            <span>
+              <div
+                class="btn"
+                @click="
+                  active = 1
+                  isShowModel = true
+                "
+              >
+                {{ $t('recharge') }}
+              </div>
+            </span>
+            <p class="line none"></p>
+            <span>
+              <div class="btn" @click="$router.push('/withdraw')">
+                {{ $t('withdrawal') }}
+              </div>
+            </span>
           </div>
         </template>
       </div>
@@ -271,18 +275,6 @@ export default {
       background: linear-gradient(164deg, #febf37 0%, #fea820 100%);
       border-radius: 7px;
 
-      .line {
-        width: 1px;
-        height: 27px;
-        background: #ffffff;
-        margin: 16px 16px 0;
-      }
-
-      .none {
-        opacity: 0;
-        margin: 0 16px 0;
-      }
-
       .value {
         width: 100%;
         display: flex;
@@ -317,16 +309,33 @@ export default {
         width: 100%;
         display: flex;
         align-items: flex-start;
-        div {
-          width: max-content;
-          padding: 6.5px 24px;
-          background: rgba(255, 255, 255, 1);
-          border-radius: 16px;
-          font-size: 15px;
-          font-family: PingFang SC;
-          font-weight: 400;
-          color: #feaa22;
+
+        span {
+          flex: 1 0;
+          div {
+            width: max-content;
+            padding: 6.5px 24px;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 16px;
+            font-size: 15px;
+            font-family: PingFang SC;
+            font-weight: 400;
+            color: #feaa22;
+          }
         }
+      }
+
+      .line {
+        width: 1px;
+        height: 27px;
+        background: #ffffff;
+        margin: 16px 16px 0;
+      }
+
+      .none {
+        opacity: 0;
+        margin: 0 16px 0;
+        padding: 0;
       }
     }
 

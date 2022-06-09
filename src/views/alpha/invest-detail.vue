@@ -10,33 +10,19 @@
       <span>{{ $t('project_details') }}</span>
     </section>
 
-    <img class="logo" :src="data.thumb" />
+    <!-- <img class="logo" :src="data.thumb" /> -->
 
     <section class="detail">
+      <div class="daily">
+        <img src="@/assets/images/alpha/日期 (1).png" />
+        <span
+          >{{ $t('investment_cycle') }}：:{{ data.day }}{{ $t('day') }}</span
+        >
+      </div>
       <div class="title">
-        <span>{{ data.title }}</span>
-        <div>{{ $t('investment_cycle') }}：:{{ data.day }}{{ $t('day') }}</div>
+        {{ data.title }}
       </div>
-      <span class="tip" v-if="data.type_name">{{ data.desc }}</span>
-
-      <div class="info">
-        <div class="info_item">
-          <span style="color: rgba(255, 59, 67, 1)">≈ {{ (data.rate * data.day).toFixed(2) || 0 }}%</span>
-          <span></span>
-        </div>
-       <div class="info_item">
-          <span>{{ data.min || 0 }}USDT</span>
-          <span>{{ $t('minimum_investment_amount') }}</span>
-        </div>
- <!--       <div class="info_item">
-          <span>{{ data.apr_money || 0 }}TRX</span>
-          <span>{{ $t('daily_dividend') }}</span>
-        </div> -->
-<!--        <div class="info_item">
-          <span>{{ data.sun_apr_money || 0 }}TRX</span>
-          <span>{{ $t('total_dividend') }}</span>
-        </div> -->
-      </div>
+      <!-- <span class="tip" v-if="data.type_name">{{ data.desc }}</span> -->
 
       <div class="bar">
         <div class="background">
@@ -44,39 +30,74 @@
         </div>
         <span class="percentage">{{ data.percent }}%</span>
       </div>
+
+      <div class="info">
+        <div class="info_item">
+          {{ $t('Expected_earnings') }}：≈{{
+            (data.rate * data.day).toFixed(2) || 0
+          }}%
+        </div>
+        <div class="info_item">
+          {{ $t('minimum_investment_amount') }}：{{ data.min || 0 }}USDT
+        </div>
+        <!--       <div class="info_item">
+          <span>{{ data.apr_money || 0 }}TRX</span>
+          <span>{{ $t('daily_dividend') }}</span>
+        </div> -->
+        <!--        <div class="info_item">
+          <span>{{ data.sun_apr_money || 0 }}TRX</span>
+          <span>{{ $t('total_dividend') }}</span>
+        </div> -->
+      </div>
     </section>
 
+    <span class="main_title">
+      {{ $t('product_details') }}
+    </span>
+
     <section class="product_info">
-      <span class="title">
-        {{ $t('product_details') }}
-      </span>
       <div class="item">
         <span>{{ $t('project_name') }}</span>
-        <span>{{ data.title }}</span>
+        <div class="item_info">
+          <img src="@/assets/images/alpha/勾.png" alt="" />
+          <span>{{ data.title }}</span>
+        </div>
       </div>
       <div class="item">
         <span>{{ $t('project_deadline') }}</span>
-        <span>{{
-          $t('holidays_are_counted_as_usual', { value: data.day })
-        }}</span>
+        <div class="item_info">
+          <img src="@/assets/images/alpha/勾.png" alt="" />
+          <span>
+            {{ $t('holidays_are_counted_as_usual', { value: data.day }) }}
+          </span>
+        </div>
       </div>
       <div class="item">
         <span>{{ $t('earnings_calculation') }}</span>
-        <span>
-<!--          {{ $t('daily_dividend') }}
+        <div class="item_info">
+          <img src="@/assets/images/alpha/勾.png" alt="" />
+          <span>
+            <!--          {{ $t('daily_dividend') }}
           ≈{{ data.apr_money }}TRX *
           {{ $t('investment_cycle') }} {{ data.day }}{{ $t('day') }} =
           {{ $t('total_dividend') }} -->
-          ≈{{ data.sun_apr_money }}USDT
-        </span>
+            ≈{{ data.sun_apr_money }}USDT
+          </span>
+        </div>
       </div>
       <div class="item" v-if="data.type_name">
         <span>{{ $t('dividend_method') }}</span>
-        <span>{{ data.type_name }}</span>
+        <div class="item_info">
+          <img src="@/assets/images/alpha/勾.png" alt="" />
+          <span>{{ data.type_name }}</span>
+        </div>
       </div>
       <div class="item">
         <span>{{ $t('referral_reward') }}</span>
-        <span>{{ $t('click_member_center') }}</span>
+        <div class="item_info">
+          <img src="@/assets/images/alpha/勾.png" alt="" />
+          <span>{{ $t('click_member_center') }}</span>
+        </div>
       </div>
     </section>
 
@@ -102,56 +123,63 @@ export default {
 
 <style lang="less" scoped>
 .page_root {
-  padding: 0 0 0 0;
-  min-height: 100vh;
-  background-color: #fff;
+  padding: 48px 13px;
+  min-height: 822px;
+  background: linear-gradient(151deg, #fff7df 0%, #ffffff 100%);
 
   .logo {
     width: 353px;
     height: 181px;
   }
 
+  .topbar {
+    background-color: transparent;
+  }
+
   .detail {
     width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 2px 9px 0px rgba(19, 19, 20, 0.08);
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
     margin-top: 19px;
-    padding: 0 13px;
+    padding: 18px 0 0 0;
     overflow: hidden;
-    border-bottom: 14px solid rgba(249, 249, 249, 1);
 
-    .title {
-      width: 100%;
-      min-height: 29px;
+    .daily {
+      width: max-content;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      min-height: 29px;
-      overflow: hidden;
+      background: #f9f4ee;
+      border: 1px solid #ff7236;
+      border-radius: 1px;
+      padding: 1px 4px;
+      margin: 0 18px;
+
+      img {
+        height: 11px;
+        margin-right: 4px;
+      }
 
       span {
-        flex: 1 0;
-        font-size: 15px;
+        font-size: 9px;
         font-family: PingFang SC;
-        font-weight: 500;
-        color: #444254;
-        margin-right: 16px;
-        word-break: break-word;
+        font-weight: 400;
+        color: #ff7236;
       }
+    }
 
-      div {
-        width: max-content;
-        height: 29px;
-        background: linear-gradient(0deg, #f68431 0%, #fdcb4a 100%);
-        border-radius: 7px;
-        padding: 0 15px;
-        font-size: 12px;
-        font-family: PingFang SC;
-        font-weight: 500;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-      }
+    .title {
+      width: calc(100% - 18px * 2);
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-family: PingFang SC;
+      font-weight: 500;
+      color: #303030;
+      margin: 13px 18px 0;
+      word-break: break-word;
     }
 
     .tip {
@@ -171,109 +199,114 @@ export default {
 
     .info {
       width: 100%;
+      min-height: 53px;
+      background: linear-gradient(90deg, #faecd8 0%, #f5cd9d 100%);
+      border-radius: 0px 0px 7px 7px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(1, 1fr);
       grid-column-gap: 10px;
-      padding: 0 13px;
+      margin-top: 13px;
 
       .info_item {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        margin-top: 16px;
-
-        span {
-          font-size: 17px;
-          font-family: PingFang SC;
-          font-weight: bold;
-          color: #000000;
-          word-break: break-word;
-
-          &:last-child {
-            font-size: 13px;
-            font-family: PingFang SC;
-            font-weight: 500;
-            color: #a0a0a0;
-            margin-top: 8px;
-          }
-        }
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #987345;
       }
     }
 
     .bar {
-      margin: 24px 0;
-      padding: 0 13px;
-      width: 100%;
+      margin: 13px 18px 0;
+      width: calc(100% - 18px * 2);
       display: flex;
       align-items: center;
 
       .background {
         position: relative;
         flex: 1 0;
-        height: 8px;
-        background: rgba(27, 37, 55, 0.2);
-        border-radius: 4px;
+        height: 5px;
+        background: rgba(0, 0, 0, 0.04);
+        border-radius: 3px;
         overflow: hidden;
-        margin-right: 16px;
+        margin-right: 23px;
 
         .value {
           position: absolute;
           top: 0;
           left: 0;
-          height: 8px;
-          background: #033692;
-          border-radius: 4px;
+          height: 5px;
+          background: rgba(245, 167, 0, 1);
+          border-radius: 3px;
         }
       }
 
       .percentage {
-        font-size: 13px;
+        font-size: 14px;
         font-family: PingFang SC;
-        font-weight: bold;
-        color: #033692;
+        font-weight: 400;
+        color: #757d8e;
       }
     }
+  }
+
+  .main_title {
+    font-size: 18px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #141c30;
+    margin-top: 20px;
   }
 
   .product_info {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px 16px;
-
-    .title {
-      font-size: 18px;
-      font-family: PingFang SC;
-      font-weight: bold;
-      color: #050505;
-      margin-top: 9px;
-    }
+    // padding: 20px 16px;
+    margin-top: 20px;
+    background: #ffffff;
+    box-shadow: 0px 2px 9px 0px rgba(19, 19, 20, 0.08);
+    border-radius: 7px;
+    padding: 35px 28px;
 
     .item {
       width: 100%;
       min-height: 80px;
       padding: 16px 0;
-      border-bottom: 1px solid rgba(222, 222, 222, 0.5);
       display: flex;
       flex-direction: column;
 
       span {
         word-break: break-word;
-        &:first-child {
-          width: 100%;
-          font-size: 15px;
-          font-family: PingFang SC;
-          font-weight: 500;
-          color: #333333;
+        width: 100%;
+        font-size: 15px;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: #3b4257;
+      }
+
+      .item_info {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 13px;
+
+        img {
+          height: 17px;
+          margin-right: 14px;
+          margin-top: 2px;
         }
 
-        &:last-child {
-          font-size: 13px;
+        span {
+          flex: 1 0;
+          word-break: break-word;
+          font-size: 14px;
           font-family: PingFang SC;
-          font-weight: 500;
-          color: #666666;
-          line-height: 15px;
-          margin-top: 13px;
+          font-weight: 400;
+          color: #3b4257;
           width: 100%;
         }
       }
@@ -281,18 +314,18 @@ export default {
   }
 
   .btn {
-    width: calc(100% - 16px * 2);
-    height: 42px;
-    background: #033692;
-    border-radius: 4px;
-    margin: 18px auto;
+    width: 329px;
+    height: 47px;
+    background: #f5a700;
+    border-radius: 24px;
+    font-size: 16px;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 24px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    font-family: PingFang SC;
-    font-weight: bold;
-    color: #ffffff;
   }
 }
 </style>

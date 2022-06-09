@@ -396,21 +396,19 @@ export default {
         span {
           width: 100%;
           display: flex;
-          align-items: flex-start;
+          flex-direction: column;
           font-size: 12px;
           font-family: PingFang SC;
           font-weight: 400;
           color: #151c31;
-          white-space: nowrap;
-          overflow: hidden;
 
           p {
             flex: 1 0;
             color: rgba(245, 167, 0, 1);
-            margin-left: 5px;
             word-break: break-word;
             text-align: left;
             white-space: normal;
+            margin-top: 3px;
           }
         }
       }

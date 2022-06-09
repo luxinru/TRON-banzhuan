@@ -351,115 +351,80 @@
       / {{ interest_arbitrage_num }} )
     </section>
 
-    <van-dialog
-      class="dialog"
-      v-model="isShowModel"
-      closeOnClickOverlay
-      :showConfirmButton="false"
-    >
-      <div
-        class=""
-        style="background-color: white; float: right"
-        @click="onClosePop"
-      >
-        <img
-          style="width: 25px"
-          src="@/assets/images/alpha/cancel.png"
-          alt=""
-        />
+    <section class="dialog_page" v-if="isShowModel">
+      <div class="top_bar">
+        {{ $t('swap') }}
+        <span @click="isShowModel = false">取消</span>
       </div>
+
       <div class="content">
-        <div class="currency_slider_item item">
-          <div class="currency_slider_item_top">
-            <img :src="getImgUrl(left.id)" alt="" />
-            <span style="font-size: 14px; font-weight: 700">{{
-              left.name
-            }}</span>
-          </div>
-          <div class="currency_slider_item_bottom">
-            <div class="fs-22 fw-250">
-              <span
-                balances_ps="100"
-                style="
-                  font-family: PingFang SC;
-                  font-weight: 400;
-                  color: #8f8f8f;
-                  text-decoration: none;
-                  font-weight: 500;
-                "
-                >{{ left.price }}
+        <div class="info">
+          <div class="item">
+            <div class="title">
+              <img :src="getImgUrl(left.id)" alt="" />
+              <span>
+                {{ left.name }}
               </span>
-              <span class="color-00004 fs-12 fw-500" style="color: black">{{
+            </div>
+            <div class="value">{{ left.price }}</div>
+            <div class="unit">
+              {{
                 left.pairs
-              }}</span>
+              }}
             </div>
           </div>
-        </div>
-        <img
-          style="width: 25px"
-          src="@/assets/images/alpha/refresh-button.png"
-          alt=""
-        />
-        <div class="currency_slider_item item">
-          <div class="currency_slider_item_top">
-            <!-- :src="getImgUrl(item.exchangeId)" -->
-            <img :src="getImgUrl(right.id)" alt="" />
-            <span style="font-size: 14px; font-weight: 700">{{
+
+          <div class="jiantou">
+            <img src="@/assets/images/alpha/箭头 (2).png" alt="" />
+          </div>
+
+          <div class="item">
+            <div class="title">
+              <img :src="getImgUrl(right.id)" alt="" />
+              <span>
+                {{
               right.name
-            }}</span>
-          </div>
-          <div class="currency_slider_item_bottom">
-            <div class="fs-22 fw-250">
-              <span
-                balances_ps="100"
-                style="
-                  font-family: PingFang SC;
-                  font-weight: 400;
-                  color: #8f8f8f;
-                  text-decoration: none;
-                  font-weight: 500;
-                "
-                >{{ right.price }}
+            }}
               </span>
-              <span class="color-00004 fs-12 fw-500" style="color: black">{{
-                left.pairs
-              }}</span>
             </div>
-            <!-- <div class="fs-12 fw-500">{{item.marketPair}} <span balances_ps_usd="100"></span></div> -->
+            <div class="value">{{ right.price }}</div>
+            <div class="unit">
+              {{
+                left.pairs
+              }}
+            </div>
           </div>
         </div>
 
-        <!-- <span class="cSTqvK">Orders are processed within 5 minutes</span> -->
-        <div class="cSTqvK" style="flex-direction: column">
-          <img
-            src="@/assets/images/alpha/financial-profit.png"
-            style="width: 25px"
-            alt=""
-          />
-          {{ $t('trading_profit') }}: {{ (profit * 100).toFixed(2) }}%
+        <div class="lirun">
+          <img src="@/assets/images/alpha/financial-profit.png" alt="" />
+          <span>{{ $t('trading_profit') }}: {{ (profit * 100).toFixed(2) }}%</span>
+        </div>
+
+        <div class="btns">
+          <div class="item">
+            <img src="@/assets/images/alpha/financial-profit.png" alt="" />
+            <div class="info">
+              <span class="tilte"> USDT: {{ usdt }} </span>
+              <div class="value">
+                <span>{{ $t('trading_profit') }}: {{ (usdt * profit).toFixed(6) }}USDT</span>
+              </div>
+              <span class="btn" @click="onSwap2(usdt, oid)"> Swap USDT </span>
+            </div>
+          </div>
+          <div class="item">
+            <img src="@/assets/images/alpha/financial-profit.png" alt="" />
+            <div class="info">
+              <span class="tilte"> TRX: {{ trx }} </span>
+              <div class="value">
+                <span>{{ $t('trading_profit') }}: {{ (trx * profit).toFixed(6) }}TRX</span>
+              </div>
+              <span class="btn" @click="onSwap1(trx, oid)"> Swap TRX </span>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="cSTqvK" style="flex-direction: column">
-        <img
-          src="@/assets/images/alpha/financial-profit.png"
-          style="width: 25px"
-          alt=""
-        /><span class="">USDT : {{ usdt }}</span
-        >{{ $t('trading_profit') }} : {{ (usdt * profit).toFixed(6) }}USDT
-      </div>
-      <div class="btn" @click="onSwap2(usdt, oid)">Swap USDT</div>
-
-      <div class="cSTqvK" style="flex-direction: column">
-        <img
-          src="@/assets/images/alpha/financial-profit.png"
-          style="width: 25px"
-          alt=""
-        /><span class="">TRX : {{ trx }}</span
-        >{{ $t('trading_profit') }} : {{ (trx * profit).toFixed(6) }}TRX
-      </div>
-      <div class="btn" @click="onSwap1(trx, oid)">Swap TRX</div>
-    </van-dialog>
+    </section>
   </div>
 </template>
 
@@ -1131,6 +1096,191 @@ export default {
       font-size: 14px;
       padding: 0px 24px;
       line-height: 24px;
+    }
+  }
+
+  .dialog_page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    background-color: #fff;
+
+    .top_bar {
+      position: relative;
+      width: 100%;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(222, 222, 222, 1);
+
+      span {
+        position: absolute;
+        font-size: 14px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #367acf;
+        right: 22px;
+      }
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0 21px;
+
+      .info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 23px;
+
+          .title {
+            background: #f3f3f3;
+            border-radius: 20px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+
+            img {
+              height: 17px;
+              margin-right: 16px;
+            }
+            span {
+              font-size: 18px;
+              font-family: PingFang SC;
+              font-weight: 500;
+              color: #000000;
+            }
+          }
+
+          .value {
+            font-size: 24px;
+            font-family: PingFang SC;
+            font-weight: 500;
+            color: #000000;
+            margin-top: 26px;
+          }
+
+          .unit {
+            font-size: 12px;
+            font-family: PingFang SC;
+            font-weight: 400;
+            color: #5a5c65;
+            margin-top: 16px;
+          }
+        }
+
+        .jiantou {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid rgba(222, 222, 222, 1);
+          margin-top: 14px;
+
+          img {
+            height: 17px;
+          }
+        }
+      }
+
+      .lirun {
+        width: max-content;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        margin: 19px auto 0;
+        background-color: rgba(245, 167, 0, 0.1);
+
+        img {
+          height: 23px;
+          margin-right: 10px;
+        }
+
+        span {
+          font-size: 15px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #2c254c;
+        }
+      }
+
+      .btns {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        .item {
+          width: 100%;
+          display: flex;
+          background: #f3f3f3;
+          border-radius: 7px;
+          align-items: flex-start;
+          padding: 20px 16px;
+          margin-top: 16px;
+
+          img {
+            height: 23px;
+            margin-right: 13px;
+          }
+
+          .info {
+            flex: 1 0;
+            display: flex;
+            flex-direction: column;
+
+            .title {
+              font-size: 17px;
+              font-family: PingFang SC;
+              font-weight: 500;
+              color: #2c254c;
+            }
+
+            .value {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              margin-top: 19px;
+
+              span {
+                flex: 1 0;
+                font-size: 13px;
+                font-family: PingFang SC;
+                font-weight: 400;
+                color: #808080;
+
+                &:last-child {
+                  margin-left: 5px;
+                }
+              }
+            }
+
+            .btn {
+              width: max-content;
+              padding: 10px 16px;
+              background: #f5a700;
+              border-radius: 18px;
+              margin-top: 16px;
+              font-size: 14px;
+              font-family: PingFang SC;
+              font-weight: 500;
+              color: #ffffff;
+            }
+          }
+        }
+      }
     }
   }
 }
