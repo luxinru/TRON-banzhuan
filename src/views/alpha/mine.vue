@@ -116,7 +116,8 @@
             :class="{ active: active === 1 }"
             @click="active = 1"
           >
-            <img class="img1" src="@/assets/images/alpha/USDT (3) 拷贝.png" />
+            <img v-if="active === 1" class="img1" src="@/assets/images/alpha/USDT(3)拷贝@2x.png" />
+            <img v-else class="img1" src="@/assets/images/alpha/USDT(3)拷贝2@2x.png" />
             <span>TRC20-USDT</span>
             <div class="img">
               <img src="@/assets/images/alpha/勾 拷贝.png" />
@@ -128,7 +129,8 @@
             :class="{ active: active === 2 }"
             @click="active = 2"
           >
-            <img class="img1" src="@/assets/images/alpha/TRX (2) 拷贝.png" />
+            <img v-if="active === 2" class="img1" src="@/assets/images/alpha/TRX(2)拷贝2@2x.png" />
+            <img v-else class="img1" src="@/assets/images/alpha/TRX(2)拷贝@2x.png" />
             <span>TRC20-USDT</span>
             <div class="img">
               <img src="@/assets/images/alpha/勾 拷贝.png" />
